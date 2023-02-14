@@ -2,7 +2,7 @@
 title: "Elementi di Econometria"
 subtitle: ""
 details: |
-  1018133 • Anno Accademico 2022/2023<br>Dipartimento di Economia e Diretto<br>Laurea triennale in Economia e Finanza<br>Sapienza, Universit di Roma
+  1018133 • Anno Accademico 2022/2023<br>Dipartimento di Economia e Diretto<br>Laurea triennale in Economia e Finanza<br>Sapienza, Sapienza, Università di Roma
 sidebar: false
 toc: false
 page-layout: full
@@ -10,7 +10,7 @@ format:
   html:
     template-partials:
       - html/home/title-block.html
-course-logo: /files/img/eval-hires.png
+course-logo: /files/img/elementilogo.png
 ---
 
 
@@ -24,7 +24,7 @@ course-logo: /files/img/eval-hires.png
 - {{< fa user >}} &nbsp; [{{< var instructor.name >}}]({{< var instructor.url >}})
 - {{< fa university >}} &nbsp; {{< var instructor.office >}}
 - {{< fa envelope >}} &nbsp; <a href="mailto:{{< var instructor.email >}}">{{< var instructor.email >}}</a>
-- {{< fa calendar-check >}} &nbsp; [Schedule an appointment]({{< var instructor.appointment_url >}})
+- {{< fa calendar-check >}} &nbsp; [Prenotazione ricevimento]({{< var instructor.appointment_url >}})
 :::
 
 ::: {.g-col-12 .g-col-sm-6 .g-col-md-4}
@@ -39,8 +39,9 @@ course-logo: /files/img/eval-hires.png
 
 ::: {.g-col-12 .g-col-md-4 .contact-policy}
 ### Contatti
+Prima di inviare una E-mail: **1.** che le vostre domande non trovino risposta nel materiale pubblicato sul sito; **2.** di usare come soggetto del messaggio _[Elementi di Econometria]_; **3.** di utilizzare un tono, una sintassi e un'ortografia adeguati.
 
-{{< var instructor.contact_policy >}}
+E-mail che non soddisfano questi tre requisiti, non verranno prese in considerazione.
 :::
 
 :::

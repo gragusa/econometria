@@ -16,24 +16,39 @@ description-meta: "Elementi di Econometria 2022/2023 - Giuseppe Ragusa - Sapienz
 
 website:
   title: "Elementi di Econometria"
-  site-url: "https://econometria.classes.gragusa.org"
+  site-url: "https://econometria.corsi.gragusa.org"
 
   favicon: "/files/icon-512.png"
 
   navbar:
     pinned: true
-    background: "#EE6A24"
+    background: "#344454"
     right:
-      - text: Syllabus
-        file: syllabus.qmd
-      - text: "Programma del corso"
-        file: programma.qmd
-      - text: "Slides"
-        file: slides/index.qmd
+      - syllabus.qmd
+      - programma.qmd
+      - text: "Materiale didattico"
+        file: materiale.qmd
       - text: "Risorse"
-        file: risorse/index.qmd
-      - text: "News"
-        file: notizie/index.qmd
+        file: risorse.qmd
+
+  sidebar:
+  - title: "materiale"
+    style: "docked"
+    search: false
+    background: dark
+    contents:
+      - section: "Introduzione"
+        contents:
+        - text: "1: Introduzione all'econometria"
+          file: slides/01-introduzione.qmd
+        - text: "2: Richiami di probabilità e statistica"
+          file: slides/02-richiami.qmd
+      - section: "Modello Lineare Univariato"
+        contents:
+        - text: "3: Formalizzazione e stima"
+          file: slides/03-modello_linear_stima.qmd
+        - text: "4: Predizioni e effetti causali"
+          file: slides/04-modello_linear_effetti.qmd
 
   page-footer:
     left: |
@@ -44,5 +59,8 @@ format:
     theme:
       - litera
       - html/custom.scss
+    grid:
+      sidebar-width: 375px
     toc: true
     highlight-style: monokai
+

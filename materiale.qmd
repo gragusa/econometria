@@ -1,0 +1,26 @@
+---
+title: "Materiale didattico"
+---
+
+
+```{r packages-data, include=FALSE}
+library(pacman)
+p_load(tidyverse)
+p_load(knitr)
+p_load(kableExtra)
+p_load(xlsx)
+```
+
+::: {.home}
+
+- Questa pagina contiene i collegamenti al materiale didattico del corso. (Nella sidebar qui a sinistra)
+
+- Il materiale didattico è organizzato per lezione e a ciscuna lezione è associato
+  1. [le slide]() ({{< fa brands slideshare >}})
+  2. [il codice `R`]() ({{< fa laptop-code >}})
+  3. [letture consigliate]() ({{< fa book-open-reader >}})
+
+- I collegamenti si attiveranno in sincrono con la progressione del corso.
+
+
+:::

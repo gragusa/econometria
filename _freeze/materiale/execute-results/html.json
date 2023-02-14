@@ -1,0 +1,16 @@
+{
+  "hash": "92c9d06e3e8c401e44606032c49ccc7b",
+  "result": {
+    "markdown": "---\ntitle: \"Materiale didattico\"\n---\n\n\n\n\n::: {.home}\n\n- Questa pagina contiene i collegamenti al materiale didattico del corso. (Nella sidebar qui a sinistra)\n\n- Il materiale didattico è organizzato per lezione e a ciscuna lezione è associato\n  1. [le slide]() ({{< fa brands slideshare >}})\n  2. [il codice `R`]() ({{< fa laptop-code >}})\n  3. [letture consigliate]() ({{< fa book-open-reader >}})\n\n- I collegamenti si attiveranno in sincrono con la progressione del corso.\n\n\n:::\n",
+    "supporting": [
+      "materiale_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

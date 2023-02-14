@@ -57,7 +57,6 @@ $link-hover-color: $yellow;
 
 $monokai-bg: #2e3440;
 
-
 /*-- scss:rules --*/
 h2 {
   border-bottom: none;
@@ -243,6 +242,7 @@ main {
 .sidebar-navigation .sidebar-item{
   line-height: 1.2;
   padding-bottom: 0.4rem;
+  min-width: 400px;
 }
 
 .sidebar-item .sidebar-item-toggle .bi {
