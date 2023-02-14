@@ -1,0 +1,31 @@
+author: Giuseppe Ragusa
+
+instructor:
+  name: Prof. Giuseppe Ragusa
+  name_no_title: Giuseppe Ragusa
+  email: giuseppe.ragusa@uniroma1.it
+  url: "https://www.gragusa.org"
+  github: gragusa
+  office: "Viale del Castro Laurenziano, 9"
+  contact_policy: >-
+    Il modo migliore per contattarmi è mediante E-mail, ma prima di scrivere per questioni riguardanti il corso consulate le istruzioni email.
+  appointment_url: https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2fyaaAmgT-dFyJm_Ry8h7mnrxrY2O5s0-7GorrLVUdtJc4lDjN1oYBzNiV9_J06NYSnY2HJwxs
+
+course:
+  number: "1018133"
+  semester: "2022-2023"
+  days: "Lunedì, Mercoledì e Venerdì"
+  time: "10:00–12:00"
+  location: "TBA"
+  dates: "20 february, 2023 - 1 giugno 2023"
+  github: "https://www.github.com/gragusa/elementidieconometria"
+  url: "https://econometria.corsi.gragusa.org"
+  copyright_year: "2023"
+
+university:
+  name: Sapienza, Università di Roma
+  url: "https://www.sapienza.it"
+
+school:
+  name: Dipartimento di Economia e Diritto
+  url: "https://https://web.uniroma1.it/dip_ecodir/"

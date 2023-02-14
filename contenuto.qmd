@@ -1,0 +1,33 @@
+---
+title: "Programma del corso"
+---
+
+
+```{r packages-data, include=FALSE}
+library(pacman)
+p_load(tidyverse)
+p_load(knitr)
+p_load(kableExtra)
+p_load(xlsx)
+```
+
+::: {.home}
+[Programma del corso]()
+
+Questa pagina contiene il materiale didattico del corso.
+
+
+
+```{r, echo=FALSE}
+topics <- xlsx::read.xlsx("topics.xlsx", 2)
+topics$Data <- as.character(topics$Data, format="%d/%m/%y")
+topics[is.na(topics)] <- ""
+topics %>%
+  select(-Macro.Argomento) %>%
+  select(-Settimana) %>%
+  kbl(escape = FALSE, align = "rclll", table.attr = 'class="schedule-table"') %>%
+    kable_styling() %>%
+    pack_rows(index = topics$Macro.Argomento,
+    label_row_css = "border-bottom: 2px solid #000000;")
+```
+:::

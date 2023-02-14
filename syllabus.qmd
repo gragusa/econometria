@@ -1,0 +1,93 @@
+---
+title: "Syllabus"
+---
+
+
+::: {.grid .course-details}
+
+::: {.g-col-6}
+### Docente
+
+- {{< fa user >}} &nbsp; [{{< var instructor.name >}}]({{< var instructor.url >}})
+- {{< fa university >}} &nbsp; {{< var instructor.office >}}
+- {{< fa envelope >}} &nbsp; <a href="mailto:{{< var instructor.email >}}">{{< var instructor.email >}}</a>
+- {{< fa calendar-check >}} &nbsp; [Schedule an appointment]({{< var instructor.appointment_url >}})
+:::
+
+::: {.g-col-6}
+### Course details
+
+- {{< fa calendar >}} &nbsp; {{< var course.days >}}
+- {{< fa calendar-alt >}} &nbsp; {{< var course.dates >}}
+- {{< fa clock >}} &nbsp; {{< var course.time >}}
+- {{< fa location-dot >}} &nbsp; {{< var course.location >}}
+
+:::
+
+:::
+
+## Descrizione del corso
+
+L'obiettivo del corso è quello di introdurre gli studenti allo studio dell'econometria mediante un approccio prevalentemente applicato. Sebbene il corso si concentra sia sugli aspetti teorici sia su quelli pratici della disciplina, l'enfasi è sulla comprensione intuitiva dei concetti fondamentali della materia e sulla loro applicazione empirica su temi microeconomici, macroeconomici e finanziari.
+
+## Obiettivi del corso
+
+Al termine del corso lo studente dovrà essere in grado di svolgere autonomamente un'analisi empirica ed interpretarne i risultati, valutando l'adeguatezza delle assunzioni necessarie per la correttezza delle interpretazioni.
+
+In particolare, lo studente sarà in grado di
+
+1. Spiegare la filosofia dei modelli introdotti e la loro capacità di catturare relazioni causali o di fornire predizioni di buona qualità;
+2. Valutare l'adeguatezza delle assunzioni sottostanti i modelli econometrici;
+3. Valutare la qualità delle predizioni mediante rigorose misure statistiche;
+4. Usare R per stimare e valutare i modelli econometrici su dati reali.
+
+## Libro di testo
+
+::: {.grid .libro}
+
+::: {.g-col-4}
+![](sw.png){width=75%}
+:::
+
+::: {.g-col-8}
+Il libro di testo utilizzato in questo corso è:
+
+Stock, J. H. e Watson, M.W: *Introduzione all'econometria*, Pearson Italia, 2005.
+
+:::
+:::
+
+## Software
+
+::: {.grid .r}
+
+::: {.g-col-4}
+![](https://www.r-project.org/Rlogo.png)
+:::
+
+
+::: {.g-col-8}
+Il corso prevede l'utilizzo di [R](http://r-project.org), uno dei linguaggi di programmazione statistico/econometrico più diffusi e potenti.
+
+[R](http://r-project.org) ha una licenza open-source (GNU GPL), è compatibile con i maggiori sistemi operativi (GNU/Linux, macOS, Microsoft Windows).
+:::
+
+:::
+
+## Orari di ricevimento
+
+Gli orari di ricevimento sono:
+
+| Giorno    | Orario      |
+| --------- | ----------- |
+| Lunedì    | 15:00-16:00 |
+| Mercoledì | 12:00-13:00 |
+
+E' obbligatorio prenotare un appuntamento utilizzando questo link:
+
+## Modalità di valutazione
+
+La modalità di esame consiste in una prova scritta e una verifica orale.
+
+
+

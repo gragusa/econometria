@@ -1,0 +1,48 @@
+project:
+  type: website
+  render:
+    - "*.qmd"
+    - "!slides/"
+  resources:
+    - "files/"
+
+# See https://quarto.org/docs/projects/code-execution.html#freeze
+execute:
+  freeze: auto  # Re-render only when source changes
+
+bibliography: files/bib/references.bib
+csl: files/bib/chicago-author-date.csl
+description-meta: "Elementi di Econometria 2022/2023 - Giuseppe Ragusa - Sapienza"
+
+website:
+  title: "Elementi di Econometria"
+  site-url: "https://econometria.classes.gragusa.org"
+
+  favicon: "/files/icon-512.png"
+
+  navbar:
+    pinned: true
+    background: "#EE6A24"
+    right:
+      - text: Syllabus
+        file: syllabus.qmd
+      - text: "Programma del corso"
+        file: programma.qmd
+      - text: "Slides"
+        file: slides/index.qmd
+      - text: "Risorse"
+        file: risorse/index.qmd
+      - text: "News"
+        file: notizie/index.qmd
+
+  page-footer:
+    left: |
+    right: |
+
+format:
+  html:
+    theme:
+      - litera
+      - html/custom.scss
+    toc: true
+    highlight-style: monokai
