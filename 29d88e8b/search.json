@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Elementi di Econometria",
+    "section": "",
+    "text": "Econometria | 1018133\n        \n        \n            \n        \n        \n            Anno Accademico 2022/2023Dipartimento di Economia e DirittoLaurea triennale in Economia e FinanzaSapienza, Sapienza, Università di Roma\n        \n    \n    \n      \n        \n        \n        \n      \n    \n\n\n\n\n\nDocente\n\n   Prof. Giuseppe Ragusa\n   Viale del Castro Laurenziano, 9\n   giuseppe.ragusa@uniroma1.it\n   Prenotazione ricevimento\n\n\n\nCourse details\n\n   Lunedì, Mercoledì e Venerdì\n   20 february, 2023 - 1 giugno 2023\n   10:00–12:00\n   TBA\n\n\n\nContatti\nPrima di inviare una E-mail: 1. che le vostre domande non trovino risposta nel materiale pubblicato sul sito; 2. di usare come soggetto del messaggio [Elementi di Econometria]; 3. di utilizzare un tono, una sintassi e un’ortografia adeguati.\nE-mail che non soddisfano questi tre requisiti, non verranno prese in considerazione."
+  },
+  {
+    "objectID": "materiale.html",
+    "href": "materiale.html",
+    "title": "Materiale didattico",
+    "section": "",
+    "text": "Questa pagina contiene i collegamenti al materiale didattico del corso. (Nella sidebar qui a sinistra)\nIl materiale didattico è organizzato per lezione e a ciscuna lezione è associato\n\nle slide ()\nil codice R ()\nletture consigliate ()\n\nI collegamenti si attiveranno in sincrono con la progressione del corso."
+  },
+  {
+    "objectID": "programma.html",
+    "href": "programma.html",
+    "title": "Programma del corso",
+    "section": "",
+    "text": "Programma del corso Questa pagina contiene il programma dettagliato del corso.\n\n\n\n\n \n  \n    Lezione \n    Data \n    Argomento \n    Letture \n    Materiale \n  \n \n\n  \n    1 \n    20/02/23 \n    Introduzione all'econometria \n    Cap. 1 \n     \n  \n  \n    2 \n    27/02/23 \n    Richiami di probabilità e statistica \n    Cap. 2-3 \n     \n  \n  Modello Lineare Univariato\n\n    3 \n    01/03/23 \n    Formalizzazione e stima dei coefficienti \n    Cap. 4 \n     \n  \n  \n    4 \n    03/03/23 \n    Predizioni ed effetti causali \n     \n     \n  \n  \n    5 \n    06/03/23 \n    Inferenza sui coefficienti \n     \n     \n  \n  \n    6 \n    08/03/23 \n    R e il modello lineare \n     \n     \n  \n  Modello Lineare Multivariato\n\n    7 \n    13/03/23 \n    Distorsioni da variabili omesse \n    Cap. 5 \n     \n  \n  \n    8 \n    15/03/23 \n    Stima dei parametri \n     \n     \n  \n  \n    9 \n    17/03/23 \n    Inferenza su singoli parametri \n     \n     \n  \n  \n    10 \n    20/03/23 \n    Inferenza su più parametri \n     \n     \n  \n  \n    11 \n    22/03/23 \n    Tutti i modelli sono sbagliati, alcuni sono utili \n     \n     \n  \n  \n    12 \n    24/03/23 \n    Variabili misurate con errore \n     \n     \n  \n  Econometria in azione (I)\n\n    13 \n    27/03/23 \n    Il caso dei salari italiani \n    Slides \n     \n  \n  Funzioni di regressioni non lineari\n\n    14 \n    29/03/23 \n    Polinomi e trasformazioni logaritmiche \n    Cap. 6 \n     \n  \n  \n    15 \n    31/03/23 \n    Interazioni fra variabili \n     \n     \n  \n  Regressione con variabile dipendente binaria\n\n    16 \n    03/04/23 \n    Modelli Logit e Probit: motivazioni \n    Cap. 9 \n     \n  \n  \n    17 \n    05/04/23 \n    Stima dei coefficienti e inferenza \n     \n     \n  \n  \n    18 \n    12/04/23 \n    Clasificazione e predire di probabilità \n     \n     \n  \n  Valutazione di studi basati sulla regressione multipla\n\n    19 \n    14/04/23 \n    Validità interna e validità esterna \n    Cap. 7 \n     \n  \n  Dati Panel\n\n    20 \n    17/04/23 \n    Caratteristiche dei dati panel \n    Cap. 8 \n     \n  \n  \n    21 \n    19/04/23 \n    Regressioni in differenza \n     \n     \n  \n  \n    22 \n    21/04/23 \n    Regressioni con effetti fissi \n     \n     \n  \n  \n    23 \n    26/04/23 \n    Inferenze in dati panel \n     \n     \n  \n  Econometria in azione (II)\n\n    24 \n    28/04/23 \n    Armi e crimine \n    Slides \n     \n  \n  Variabili Strumentali\n\n    25 \n    03/05/23 \n    Introduzione  variabili strumentali \n    Cap. 10 \n     \n  \n  \n    26 \n    05/05/23 \n    Il modello di regressione IV \n     \n     \n  \n  \n    27 \n    08/05/23 \n    Inferenza con strumenti forti \n     \n     \n  \n  \n    28 \n    10/05/23 \n    Inferenza con strumenti deboli \n     \n     \n  \n  Econometria in azione (III)\n\n    29 \n    12/05/23 \n    Il valore dell'istruzione \n     \n     \n  \n  Esperimenti e quasi-esperimenti\n\n    30 \n    15/05/23 \n    Esperimenti ideali ed effetti causali \n    Cap. 11 \n     \n  \n  \n    31 \n    17/05/23 \n    Stima degli effetti causali con esperimenti \n     \n     \n  \n  \n    32 \n    19/05/23 \n    Quasi-esperimenti \n     \n     \n  \n  Regressioni per serie temporali di tipo economico\n\n    33 \n    22/05/23 \n    Previsioni economiche \n    Cap. 12-13 \n     \n  \n  \n    34 \n    24/05/23 \n    Correlazione seriale e stazionarietà \n     \n     \n  \n  \n    35 \n    26/05/23 \n    Qualità delle previsioni multiperiodali \n     \n     \n  \n  \n    36 \n    29/05/23 \n    Stima degli effetti causali dinamici"
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Prof. Giuseppe Ragusa\n   Viale del Castro Laurenziano, 9\n   giuseppe.ragusa@uniroma1.it\n   Schedule an appointment\n\n\n\n\n\n   Lunedì, Mercoledì e Venerdì\n   20 february, 2023 - 1 giugno 2023\n   10:00–12:00\n   TBA"
+  },
+  {
+    "objectID": "syllabus.html#descrizione-del-corso",
+    "href": "syllabus.html#descrizione-del-corso",
+    "title": "Syllabus",
+    "section": "Descrizione del corso",
+    "text": "Descrizione del corso\nL’obiettivo del corso è quello di introdurre gli studenti allo studio dell’econometria mediante un approccio prevalentemente applicato. Sebbene il corso si concentra sia sugli aspetti teorici sia su quelli pratici della disciplina, l’enfasi è sulla comprensione intuitiva dei concetti fondamentali della materia e sulla loro applicazione empirica su temi microeconomici, macroeconomici e finanziari."
+  },
+  {
+    "objectID": "syllabus.html#obiettivi-del-corso",
+    "href": "syllabus.html#obiettivi-del-corso",
+    "title": "Syllabus",
+    "section": "Obiettivi del corso",
+    "text": "Obiettivi del corso\nAl termine del corso lo studente dovrà essere in grado di svolgere autonomamente un’analisi empirica ed interpretarne i risultati, valutando l’adeguatezza delle assunzioni necessarie per la correttezza delle interpretazioni.\nIn particolare, lo studente sarà in grado di\n\nSpiegare la filosofia dei modelli introdotti e la loro capacità di catturare relazioni causali o di fornire predizioni di buona qualità;\nValutare l’adeguatezza delle assunzioni sottostanti i modelli econometrici;\nValutare la qualità delle predizioni mediante rigorose misure statistiche;\nUsare R per stimare e valutare i modelli econometrici su dati reali."
+  },
+  {
+    "objectID": "syllabus.html#libro-di-testo",
+    "href": "syllabus.html#libro-di-testo",
+    "title": "Syllabus",
+    "section": "Libro di testo",
+    "text": "Libro di testo\n\n\n\n\n\nIl libro di testo utilizzato in questo corso è:\nStock, J. H. e Watson, M.W: Introduzione all’econometria, Pearson Italia, 2005."
+  },
+  {
+    "objectID": "syllabus.html#software",
+    "href": "syllabus.html#software",
+    "title": "Syllabus",
+    "section": "Software",
+    "text": "Software\n\n\n\n\n\nIl corso prevede l’utilizzo di R, uno dei linguaggi di programmazione statistico/econometrico più diffusi e potenti.\nR ha una licenza open-source (GNU GPL), è compatibile con i maggiori sistemi operativi (GNU/Linux, macOS, Microsoft Windows)."
+  },
+  {
+    "objectID": "syllabus.html#orari-di-ricevimento",
+    "href": "syllabus.html#orari-di-ricevimento",
+    "title": "Syllabus",
+    "section": "Orari di ricevimento",
+    "text": "Orari di ricevimento\nGli orari di ricevimento sono:\n\n\n\nGiorno\nOrario\n\n\n\n\nLunedì\n15:00-16:00\n\n\nMercoledì\n12:00-13:00\n\n\n\nE’ obbligatorio prenotare un appuntamento utilizzando questo link:"
+  },
+  {
+    "objectID": "syllabus.html#modalità-di-valutazione",
+    "href": "syllabus.html#modalità-di-valutazione",
+    "title": "Syllabus",
+    "section": "Modalità di valutazione",
+    "text": "Modalità di valutazione\nLa modalità di esame consiste in una prova scritta e una verifica orale."
+  }
+]
