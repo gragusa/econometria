@@ -1,8 +1,8 @@
 ---
-title: "Elementi di Econometria"
+title: "Econometria | 1018133"
 subtitle: ""
 details: |
-  1018133 • Anno Accademico 2022/2023<br>Dipartimento di Economia e Diretto<br>Laurea triennale in Economia e Finanza<br>Sapienza, Sapienza, Università di Roma
+   Anno Accademico 2022/2023<br>Dipartimento di Economia e Diritto<br>Laurea triennale in Economia e Finanza<br>Sapienza, Sapienza, Università di Roma
 sidebar: false
 toc: false
 page-layout: full
