@@ -15,7 +15,7 @@ csl: files/bib/chicago-author-date.csl
 description-meta: "Elementi di Econometria 2022/2023 - Giuseppe Ragusa - Sapienza"
 
 website:
-  title: "Elementi di Econometria"
+  title: "Econometria"
   site-url: "https://econometria.corsi.gragusa.org"
 
   favicon: "/files/icon-512.png"
