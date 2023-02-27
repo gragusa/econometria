@@ -1,0 +1,5 @@
+---
+title: "Lecture 02 - Richiami di probabilità e statistica"
+---
+
+- [Slides](../Lecture12.pdf)
