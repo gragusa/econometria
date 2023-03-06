@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://econometria.corsi.gragusa.org/IntroduzioneR.html</loc>
+    <lastmod>2023-03-06T23:51:12.056Z</lastmod>
+  </url>
+  <url>
     <loc>https://econometria.corsi.gragusa.org/index.html</loc>
-    <lastmod>2023-02-27T08:55:07.259Z</lastmod>
+    <lastmod>2023-03-06T23:51:12.584Z</lastmod>
   </url>
   <url>
     <loc>https://econometria.corsi.gragusa.org/materiale.html</loc>
-    <lastmod>2023-02-27T08:55:10.035Z</lastmod>
+    <lastmod>2023-03-06T23:51:13.076Z</lastmod>
   </url>
   <url>
     <loc>https://econometria.corsi.gragusa.org/programma.html</loc>
-    <lastmod>2023-02-27T08:55:10.579Z</lastmod>
+    <lastmod>2023-03-06T23:51:13.884Z</lastmod>
   </url>
   <url>
     <loc>https://econometria.corsi.gragusa.org/syllabus.html</loc>
-    <lastmod>2023-02-27T08:55:11.011Z</lastmod>
+    <lastmod>2023-03-06T23:51:14.540Z</lastmod>
   </url>
 </urlset>
