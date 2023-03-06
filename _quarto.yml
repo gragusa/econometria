@@ -39,16 +39,20 @@ website:
     contents:
       - section: "Introduzione"
         contents:
-        - text: "1: Introduzione all'econometria"
-          file: slides/01-introduzione.qmd
-        - text: "2: Richiami di probabilità e statistica"
-          file: slides/02-richiami.qmd
+        - text: "1: Introduzione all'econometria {{< fa brands slideshare >}}"
+          file: ../Lecture13.pdf
+        - text: "2: Richiami di probabilità e statistica {{< fa brands slideshare >}}"
+          file: ../Lecture13b.pdf
+        - text: "3a: Introduzione ad R {{< iconify carbon logo-r-script >}}"
+          file: ../IntroduzioneR.html
+        - text: "3b: Introduzione ad R {{< fa laptop-code >}}"
+          file: ../IntroduzioneR.Rmd
       - section: "Modello Lineare Univariato"
         contents:
-        - text: "3: Formalizzazione e stima"
-          file: slides/03-modello_linear_stima.qmd
-        - text: "4: Predizioni e effetti causali"
-          file: slides/04-modello_linear_effetti.qmd
+        - text: "4: Formalizzazione e stima {{< fa brands slideshare >}}"
+          file: ../Lecture45.pdf
+        - text: "5: Predizioni e effetti causali {{< fa brands slideshare >}}"
+          file: ../Lecture45b.pdf
 
   page-footer:
     left: |

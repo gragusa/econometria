@@ -1,5 +1,7 @@
 ---
 title: "Materiale didattico"
+resources: |
+  Lecture13.pdf, Lecture35.pdf, IntroduzioneR.Rmd
 ---
 
 
@@ -17,10 +19,14 @@ p_load(xlsx)
 
 - Il materiale didattico è organizzato per lezione e a ciscuna lezione è associato
   1. [le slide]() ({{< fa brands slideshare >}})
-  2. [il codice `R`]() ({{< fa laptop-code >}})
+  2. [dispense `R`]() ({{< iconify carbon logo-r-script >}})
+  2. [il codice `R`]() in formato Rmd ({{< fa laptop-code >}})
   3. [letture consigliate]() ({{< fa book-open-reader >}})
 
 - I collegamenti si attiveranno in sincrono con la progressione del corso.
 
 
 :::
+
+
+

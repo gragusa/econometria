@@ -11,6 +11,7 @@ format:
     template-partials:
       - html/home/title-block.html
 course-logo: /files/img/elementilogo.png
+resources: [Lecture13.pdf, Lecture13b.pdf, Lecture45.pdf, Lecture13b.pdf, IntroduzioneR.Rmd]
 ---
 
 
