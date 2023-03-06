@@ -12,9 +12,9 @@ instructor:
 course:
   number: "1018133"
   semester: "2022-2023"
-  days: "Lunedì, Mercoledì e Venerdì"
-  time: "10:00–12:00"
-  location: "TBA"
+  days: "Lunedì, Martedì e Venerdì"
+  time: "(L&V) 10:00–12:00 (M) 14:00-15:00"
+  location: "(L&M) Aula 10 (V) Aula 3"
   dates: "20 february, 2023 - 1 giugno 2023"
   github: "https://www.github.com/gragusa/elementidieconometria"
   url: "https://econometria.corsi.gragusa.org"

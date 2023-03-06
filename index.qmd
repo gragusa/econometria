@@ -40,9 +40,9 @@ resources: [Lecture13.pdf, Lecture13b.pdf, Lecture45.pdf, Lecture13b.pdf, Introd
 
 ::: {.g-col-12 .g-col-md-4 .contact-policy}
 ### Contatti
-Prima di inviare una E-mail: **1.** che le vostre domande non trovino risposta nel materiale pubblicato sul sito; **2.** di usare come soggetto del messaggio _[Elementi di Econometria]_; **3.** di utilizzare un tono, una sintassi e un'ortografia adeguati.
+Prima di inviare una E-mail assicuratevi **1.** che le vostre domande non trovino risposta nel materiale pubblicato sul sito; **2.** di usare come soggetto del messaggio _[Econometria]_; **3.** di utilizzare un tono, una sintassi e un'ortografia adeguati.
 
-E-mail che non soddisfano questi tre requisiti, non verranno prese in considerazione.
+Non verranno prese in considerazione E-mail che non soddisfano questi tre requisiti.
 :::
 
 :::
