@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.231">
+<meta name="generator" content="quarto-99.9.9">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -18,7 +18,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -111,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
       <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Materiale didattico</li></ol></nav>
-      <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
   </nav>
@@ -124,50 +124,75 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Introduzione</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Introduzione</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../Lecture13.pdf" class="sidebar-item-text sidebar-link">1: Introduzione all’econometria <i class="fa-brands fa-slideshare" aria-label="slideshare"></i></a>
+  <a href="./../Lecture13.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1: Introduzione all’econometria <i class="fa-brands fa-slideshare" aria-label="slideshare"></i></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../Lecture13b.pdf" class="sidebar-item-text sidebar-link">2: Richiami di probabilità e statistica <i class="fa-brands fa-slideshare" aria-label="slideshare"></i></a>
+  <a href="./../Lecture13b.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2: Richiami di probabilità e statistica <i class="fa-brands fa-slideshare" aria-label="slideshare"></i></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../IntroduzioneR.html" class="sidebar-item-text sidebar-link">3a: Introduzione ad R <iconify-icon inline="" icon="carbon:logo-r-script"></iconify-icon></a>
+  <a href="./../IntroduzioneR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3a: Introduzione ad R <iconify-icon inline="" icon="carbon:logo-r-script"></iconify-icon></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../IntroduzioneR.Rmd" class="sidebar-item-text sidebar-link">3b: Introduzione ad R <i class="fa-solid fa-laptop-code" aria-label="laptop-code"></i></a>
+  <a href="./../IntroduzioneR.Rmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3b: Introduzione ad R <i class="fa-solid fa-laptop-code" aria-label="laptop-code"></i></span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Modello Lineare Univariato</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Modello Lineare Univariato</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../Lecture45.pdf" class="sidebar-item-text sidebar-link">4: Formalizzazione e stima <i class="fa-brands fa-slideshare" aria-label="slideshare"></i></a>
+  <a href="./../Lecture45.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4: Interpretazione, stima e inferenza <i class="fa-brands fa-slideshare" aria-label="slideshare"></i></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Modello Lineare Multivariato</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./../Lecture67.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6: Stima <i class="fa-brands fa-slideshare" aria-label="slideshare"></i></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./../Lecture45b.pdf" class="sidebar-item-text sidebar-link">5: Predizioni e effetti causali <i class="fa-brands fa-slideshare" aria-label="slideshare"></i></a>
+  <a href="./../Lecture8.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8: Inferenza <i class="fa-brands fa-slideshare" aria-label="slideshare"></i></span></a>
   </div>
 </li>
       </ul>
@@ -244,9 +269,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {

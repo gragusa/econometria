@@ -1,8 +1,7 @@
 ---
 title: "R: Introduzione"
-author: "Giuseppe Ragusa"
 format: html
-
+lang: it
 ---
 
 ## Storia
@@ -24,7 +23,6 @@ L'acquisizione di Revolution Analytics da parte di Microsoft nel 2015 ha ulterio
 RStudio è stata fondata nel 2011 da JJ Allaire ed ha cambiato nome in [Posit](htpps://posit.com) nel 2022. RStudio ha creato un ambiente di sviluppo integrato (IDE) per R, chiamato appunto [RSudio](https://posit.co/products/open-source/rstudio/), che semplifica lo sviluppo di codice R, la gestione dei pacchetti e la creazione di grafici. [RSudio](https://posit.co/products/open-source/rstudio/) è diventato uno strumento fondamentale per molti utenti R, poiché semplifica notevolmente il processo di sviluppo e di debugging.
 
 RStudio ha inoltre creato e mantiene pacchetti importanti come `ggplot2()` e `dplyr()`, che hanno migliorato notevolmente la capacità di R per la visualizzazione dei dati e la manipolazione dei dati.
-
 
 R è oggi uno dei linguaggi di programmazione più popolari per l'analisi dei dati e la statistica negli ultimi anni. Ecco alcuni dati sull'adozione di R:
 
@@ -404,9 +402,3 @@ Il grafico mostra che:
 1. La stima di molte delle differenze è negativa
 2. Tutti gli intervalli di confidenza sono troppo ampi per poter concludere con l'appropriata confidenza che il valore della differenza nella popolazione è di uno specifico segno
 3. In tre casi non è possibile costruire l'intervallo di confidenza.
-
-
-
-
-
-
