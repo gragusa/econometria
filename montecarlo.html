@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-99.9.9">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Elementi di Econometria 2022/2023 - Giuseppe Ragusa - Sapienza">
+
+<title>Econometria - Simulazioni Monte Carlo</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href=".//files/icon-512.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/iconify-1.0.0-beta.2/iconify-icon.min.js"></script>
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Econometria</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./syllabus.html" rel="" target="">
+ <span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./programma.html" rel="" target="">
+ <span class="menu-text">Programma del corso</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./materiale.html" rel="" target="">
+ <span class="menu-text">Materiale didattico</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./risorse.qmd" rel="" target="">
+ <span class="menu-text">Risorse</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Simulazioni Monte Carlo</li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Introduzione</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./../Lecture13.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1: Introduzione all’econometria <i class="fa-brands fa-slideshare" aria-label="slideshare"></i></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./../Lecture13b.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2: Richiami di probabilità e statistica <i class="fa-brands fa-slideshare" aria-label="slideshare"></i></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./../IntroduzioneR.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3a: Introduzione ad R <iconify-icon inline="" icon="carbon:logo-r-script"></iconify-icon></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./../IntroduzioneR.Rmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3b: Introduzione ad R <i class="fa-solid fa-laptop-code" aria-label="laptop-code"></i></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Modello Lineare Univariato</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./../Lecture45.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4&amp;5: Formalizzazione e stima <i class="fa-brands fa-slideshare" aria-label="slideshare"></i></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Modello Lineare Multivariato</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./../Lecture67.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6&amp;7: Modello multivariato <i class="fa-brands fa-slideshare" aria-label="slideshare"></i></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./../Lecture8.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8: Inferenza <i class="fa-brands fa-slideshare" aria-label="slideshare"></i></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./../Lecture9.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9: Modelli non-lineari <i class="fa-brands fa-slideshare" aria-label="slideshare"></i></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Modelli per probabilià</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./../Lecture10.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">10: LPM, Logit, Probit <i class="fa-brands fa-slideshare" aria-label="slideshare"></i></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
+ <span class="menu-text">Panel data</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./../panel.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Panel data</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#esempio-media-campionaria" id="toc-esempio-media-campionaria" class="nav-link active" data-scroll-target="#esempio-media-campionaria">Esempio: media campionaria</a></li>
+  <li><a href="#simulazioni-monte-carlo-per-regressione." id="toc-simulazioni-monte-carlo-per-regressione." class="nav-link" data-scroll-target="#simulazioni-monte-carlo-per-regressione.">Simulazioni Monte Carlo per regressione.</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Simulazioni Monte Carlo</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Le simulazioni Monte Carlo sono un metodo numerico spesso utilizzato per verificare le proprietà statistiche di stimatori in modelli econometrici. L’idea di fondo è quella di generare diversi campioni tratti da una ipotizzata popolazione statistica e di calcolare le stime su questi campioni. Utilizzando queste stime è possibile poi verificare le proprietà frequentiste degli stimatori.</p>
+<section id="esempio-media-campionaria" class="level2">
+<h2 class="anchored" data-anchor-id="esempio-media-campionaria">Esempio: media campionaria</h2>
+<p>Iniziamo con un esempio molto semplice: la media campionaria. Sappiamo dalla teoria che se <span class="math inline">\(X_1, \dots, X_n\)</span> sono delle variabili casuali indipendentemente e identicamente distribuite con <span class="math inline">\(E(X_i)=\mu_X&lt;\infty\)</span> e <span class="math inline">\(var(X)=\sigma_X^2&lt;\infty\)</span>, allora</p>
+<ol type="1">
+<li><p><span class="math inline">\(E(\bar{X})=\mu_X\)</span></p></li>
+<li><p><span class="math inline">\(\sqrt{n}(\bar{X}-\mu)/\sigma_X\xrightarrow{d} N(0,1).\)</span> Inoltre, per <span class="math inline">\(s=\sqrt{\frac{1}{n-1}\sum_{i=1}^n (X_i-\mu_X)^2}\)</span>, avremo</p></li>
+<li><p><span class="math inline">\(\sqrt{n}(\bar{X}-\mu)/s \xrightarrow{d} N(0,1).\)</span></p></li>
+</ol>
+<p>Nel caso in cui <span class="math inline">\(X_i\sim N(\mu_X, \sigma^2_X)\)</span>, <span class="math inline">\(i=1,\ldots,n\)</span>,</p>
+<ol start="4" type="1">
+<li><p><span class="math inline">\(\sqrt{n}(\bar{X}-\mu)/\sigma_X \sim N(0,1),\)</span> e</p></li>
+<li><p><span class="math inline">\(\sqrt{n}(\bar{X}-\mu)/s \sim t(n-1),\)</span></p></li>
+</ol>
+<p>dove <span class="math inline">\(t(\nu)\)</span> denota la distribuzione di student con <span class="math inline">\(\nu\)</span> gradi di libertà. La differenza fra il caso in cui le osservazioni non hanno una distribuzione normale è che <span class="math inline">\(\bar{X}\)</span> avrà esattamente una distribuzione normale (non approssimativamente normale come nel case 2.) e <span class="math inline">\(\sqrt{n}(\bar{X}-\mu)/s\)</span> esattamente una distribuzione student-<em>t</em>.</p>
+<p>Come possiamo verificare che queste proprietà siano effettivamente soddisfatte? Possiamo generare ripetutamente campioni di <span class="math inline">\(n\)</span> osservazioni da altrettante variabili casuali e per ciascuno campione calcolare la media campionaria e la standard deviation. Ci aspettiamo che la media delle media, cioè la media degli <span class="math inline">\(\bar{X}\)</span> calcolati sui campioni, sia approssimativamente uguale a <span class="math inline">\(\mu_X\)</span> e che gli intervalli di confidenza “coprano” <span class="math inline">\(\mu_X\)</span> il <span class="math inline">\(1-\alpha\)</span>% delle volta. Nel caso in cui <span class="math inline">\(X_i\sim N(\mu_X, \sigma^2_X)\)</span>, <span class="math inline">\(i=1,\ldots,n\)</span>, la qualità della “copertura” non dipende dalla grandezza dei campioni, mentre quando dobbiamo fare use dell’approssimazione asintotica la “copertura” tenderà ad avvicinarsi a quella nominale al crescere del campione.</p>
+<p>Il seguente codice conduce l’esperimento di montecarlo, simulando le <span class="math inline">\(X_i\)</span> da una distribuzione <span class="math inline">\(\chi^2_{3}\)</span> centrata per avere una media e una varianza specifica.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">5647382</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Impostazione del numero di simulazioni</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>n_simulations <span class="ot">&lt;-</span> <span class="dv">1500</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Impostazione della dimensione del campione (cioè `n`)</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>sample_size <span class="ot">&lt;-</span> <span class="dv">30</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Inizializzazione dei vettori per memorizzare i risultati</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># cioè gli X_bar e le standard deviation per ciascun campione</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>x_bars <span class="ot">&lt;-</span> <span class="fu">numeric</span>(n_simulations)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>s <span class="ot">&lt;-</span> <span class="fu">numeric</span>(n_simulations)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Parametri veri del modello</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>mu_X    <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>sigma_X <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Esecuzione delle simulazioni</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (j <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n_simulations) {</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Generazione del campione</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  X <span class="ot">&lt;-</span> mu_X <span class="sc">+</span> sigma_X<span class="sc">*</span>(<span class="fu">rchisq</span>(sample_size, <span class="at">df=</span><span class="dv">3</span>) <span class="sc">-</span> <span class="dv">3</span>)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="dv">6</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  x_bars[j] <span class="ot">&lt;-</span> <span class="fu">mean</span>(X)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  s[j] <span class="ot">&lt;-</span> <span class="fu">sd</span>(X)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Verifichiamo la proprietà 1.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(x_bars) <span class="sc">-</span> mu_X</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -0.001650921</code></pre>
+</div>
+</div>
+<p>La differenza non è esattamente uguale a zero perché stiamo calcolando la media di 1500 medie. Se provassimo ad aumentare il numero di simulazioni, la differenza fra il vero valore <span class="math inline">\(\mu_X=1\)</span> e la media delle medie si ridurrebbe, e sarebbe eventualmente uguale a zero quando <code>n_simulations</code><span class="math inline">\(\to\infty\)</span>.</p>
+<p>Andiamo a verificare la distribuzione di <span class="math inline">\(\bar{X}\)</span>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Utilità per annotare il grafico</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(latex2exp)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Standardizzazione di X_bar</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>x_bars_std <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(sample_size)<span class="sc">*</span>(x_bars<span class="sc">-</span>mu_X)<span class="sc">/</span>s</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="do">## Histogramma di x_bars_std dovrebbe essere simile a quello di una t(n-1)</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(x_bars_std,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">border =</span> <span class="st">"lightgray"</span>, <span class="at">col=</span><span class="st">"slategray"</span>,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>     <span class="at">breaks =</span> <span class="dv">100</span>,</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>     <span class="at">prob=</span><span class="cn">TRUE</span>,</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="fu">TeX</span>(<span class="st">"</span><span class="sc">\\</span><span class="st">sqrt{n}(</span><span class="sc">\\</span><span class="st">bar{X}-</span><span class="sc">\\</span><span class="st">mu_X)/s"</span>))</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="do">## Aggiungiamo la densità di t(n-1)</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>rr <span class="ot">&lt;-</span> <span class="fu">range</span>(x_bars_std)<span class="sc">*</span><span class="fl">1.15</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>xx <span class="ot">&lt;-</span> <span class="fu">seq</span>(rr[<span class="dv">1</span>], rr[<span class="dv">2</span>], <span class="at">length.out=</span><span class="dv">1000</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>yy <span class="ot">&lt;-</span> <span class="fu">dt</span>(xx, <span class="at">df=</span>sample_size)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="at">x=</span>xx, <span class="at">y=</span>yy, <span class="at">col =</span> <span class="st">"darkred"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="montecarlo_files/figure-html/unnamed-chunk-3-1.png" class="quarto-discovered-preview-image img-fluid" width="672"></p>
+</div>
+</div>
+<p>Come si vede la distribuzione di density di una <span class="math inline">\(t(n-1)\)</span> (in rosso nel grafico) non approssima molto bene l’istogramma delle medie campionarie normalizzate. Per comprendere quanto sia problematico questo scostamento, possiamo calcolare gli intervalli di confidenza al 95% e vedere quanto spesso contengono <span class="math inline">\(\mu_X\)</span>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>ci_conf <span class="ot">&lt;-</span> <span class="fu">cbind</span>(</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  x_bars <span class="sc">-</span> <span class="fl">1.96</span><span class="sc">*</span>s<span class="sc">/</span><span class="fu">sqrt</span>(sample_size),</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  x_bars <span class="sc">+</span> <span class="fl">1.96</span><span class="sc">*</span>s<span class="sc">/</span><span class="fu">sqrt</span>(sample_size))</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcolo delle proprietà degli intervalli di confidenza</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>coverage <span class="ot">&lt;-</span> <span class="fu">mean</span>(ci_conf[, <span class="dv">1</span>] <span class="sc">&lt;=</span> mu_X <span class="sc">&amp;</span> mu_X<span class="sc">&lt;=</span>ci_conf[, <span class="dv">2</span>])</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"La copertura del'intervallo di confidenza al 95% per mu_X:"</span>, coverage, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>La copertura del'intervallo di confidenza al 95% per mu_X: 0.9213333 </code></pre>
+</div>
+</div>
+<p>Soltanto il 92.1333333% dei campioni restituisce degli intervalli di confidenza che contengono <span class="math inline">\(\mu_X\)</span>. La regione della discrepanza è dovuta al fatto che abbiamo considerato campioni di dimensioni “piccole”, <span class="math inline">\(n=30\)</span>, mentre la teoria è basata sull’assunto che i campioni siano grandi, cioè <span class="math inline">\(n\to\infty\)</span>.</p>
+<div id="exr-ci" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1 </strong></span>Come cambiano i risultati in termini di copertura dell’intervallo di confidenza quando la dimensione dei campioni è <span class="math inline">\(n=200\)</span>?</p>
+</div>
+<div id="exr-ci2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2 </strong></span>Modificare il codice affinché i dati siano simulati <span class="math inline">\(X_i\sim N(\mu_X, \sigma^2)\)</span>, <span class="math inline">\(i=1,\ldots, n\)</span>. Come cambia la copertura degli intervalli di confidenza? Come è possibile spiegare questa differenza rispetto al caso in cui le variabili casuali hanno una distribuzione <span class="math inline">\(\chi^2\)</span>?</p>
+</div>
+</section>
+<section id="simulazioni-monte-carlo-per-regressione." class="level2">
+<h2 class="anchored" data-anchor-id="simulazioni-monte-carlo-per-regressione.">Simulazioni Monte Carlo per regressione.</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pacchetto per calcolare errori standard</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sandwich)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Impostazione del numero di simulazioni</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>n_simulations <span class="ot">&lt;-</span> <span class="dv">5000</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Impostazione della dimensione del campione</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>sample_size <span class="ot">&lt;-</span> <span class="dv">150</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Inizializzazione dei vettori per memorizzare i risultati</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>betahat_0 <span class="ot">&lt;-</span> <span class="fu">numeric</span>(n_simulations)</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>betahat_1 <span class="ot">&lt;-</span> <span class="fu">numeric</span>(n_simulations)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Matrici contengono gli errori standard.</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="co"># La prima colonna contiene errore standard sotto</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co"># l'assunzione di omoschedasticità; la seconda colonna</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="co"># contiene l'errore standard robusto</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>se_0 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(, <span class="at">nrow =</span> n_simulations, <span class="at">ncol =</span> <span class="dv">2</span>)</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>se_1 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(, <span class="at">nrow =</span> n_simulations, <span class="at">ncol =</span> <span class="dv">2</span>)</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="co"># "Veri" coefficienti del modello</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>beta_0 <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>beta_1 <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Esecuzione delle simulazioni</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n_simulations) {</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Generazione dei dati</span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(sample_size)</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>  u <span class="ot">&lt;-</span> (<span class="fu">rchisq</span>(sample_size, <span class="at">df =</span> <span class="dv">3</span>)<span class="sc">-</span><span class="dv">3</span>)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="dv">2</span><span class="sc">*</span><span class="dv">3</span>)</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">&lt;-</span> beta_0 <span class="sc">+</span> beta_1 <span class="sc">*</span> x <span class="sc">+</span> u</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Stima del modello</span></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>  model <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x)</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Salvataggio delle stime dei parametri</span></span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a>  betahat_0[i] <span class="ot">&lt;-</span> <span class="fu">coef</span>(model)[<span class="dv">1</span>]</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>  betahat_1[i] <span class="ot">&lt;-</span> <span class="fu">coef</span>(model)[<span class="dv">2</span>]</span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Salvataggio degli errori standard</span></span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a>  se_homo <span class="ot">=</span> <span class="fu">sqrt</span>(<span class="fu">diag</span>(<span class="fu">vcov</span>(model)))</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>  se_hete <span class="ot">=</span> <span class="fu">sqrt</span>(<span class="fu">diag</span>(<span class="fu">vcovHC</span>(model, <span class="at">type=</span><span class="st">"HC1"</span>)))</span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>  se_0[i, <span class="dv">1</span>] <span class="ot">&lt;-</span> se_homo[<span class="dv">1</span>]</span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a>  se_1[i, <span class="dv">1</span>] <span class="ot">&lt;-</span> se_homo[<span class="dv">2</span>]</span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a>  se_0[i, <span class="dv">2</span>] <span class="ot">&lt;-</span> se_hete[<span class="dv">1</span>]</span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>  se_1[i, <span class="dv">2</span>] <span class="ot">&lt;-</span> se_hete[<span class="dv">2</span>]</span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Costruzione data.frame</span></span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a>mc1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">t_homo_0 =</span> (betahat_0<span class="sc">-</span>beta_0)<span class="sc">/</span>se_0[,<span class="dv">1</span>],</span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a>                  <span class="at">t_homo_1 =</span> (betahat_1<span class="sc">-</span>beta_1)<span class="sc">/</span>se_1[,<span class="dv">1</span>],</span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>                  <span class="at">t_hete_0 =</span> (betahat_0<span class="sc">-</span>beta_0)<span class="sc">/</span>se_0[,<span class="dv">2</span>],</span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>                  <span class="at">t_hete_1 =</span> (betahat_1<span class="sc">-</span>beta_1)<span class="sc">/</span>se_1[,<span class="dv">2</span>]</span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a>                  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>mcg <span class="ot">&lt;-</span> <span class="fu">gather</span>(mc1, <span class="at">key =</span> <span class="st">"coefficient"</span>, <span class="at">value =</span> <span class="st">"t"</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mcg, <span class="fu">aes</span>(<span class="at">x=</span>t)) <span class="sc">+</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y=</span>..density..),</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">col =</span> <span class="st">"pink"</span>, <span class="at">fill =</span> <span class="st">"slategray"</span>) <span class="sc">+</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_function</span>(<span class="at">fun =</span> dnorm,</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>                <span class="at">geom =</span> <span class="st">"polygon"</span>,</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>                <span class="at">col =</span> <span class="st">"darkblue"</span>,</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>                <span class="at">fill =</span> <span class="st">"lightblue"</span>,</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>                <span class="at">alpha=</span><span class="fl">0.65</span>) <span class="sc">+</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>coefficient)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-one" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="montecarlo_files/figure-html/fig-one-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: <strong>?(caption)</strong></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Tutte le distribuzioni delle statistiche sembrano abbastanza simili a quelle di una normale standard, cioè una normale cone media zero e varianza unitaria (nel <a href="#fig-one">Figure&nbsp;1</a> in blue). Un modo più preciso per esaminare la qualità dell’approssimazione normale consiste nel contare il numero di intervalli di confidenza che contengono i veri valori dei coefficienti. Usando le statistiche <span class="math inline">\(t\)</span>, ciò equivale a contare il numero di statistiche che sono minori in valore assoluto di <span class="math inline">\(1.64\)</span> e <span class="math inline">\(1.96\)</span>. Se l’approssimazione è soddisfacente, dovrebbero essere rispettivamente il 10% e il 5% del totale.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>mc1 <span class="sc">|&gt;</span> <span class="fu">summarise_all</span>(<span class="at">.funs =</span> <span class="cf">function</span>(x) <span class="fu">mean</span>(<span class="fu">abs</span>(x)<span class="sc">&lt;</span><span class="fl">1.64</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  t_homo_0 t_homo_1 t_hete_0 t_hete_1
+1   0.8888   0.9012   0.8902   0.8954</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>mc1 <span class="sc">|&gt;</span> <span class="fu">summarise_all</span>(<span class="at">.funs =</span> <span class="cf">function</span>(x) <span class="fu">mean</span>(<span class="fu">abs</span>(x)<span class="sc">&lt;</span><span class="fl">1.96</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  t_homo_0 t_homo_1 t_hete_0 t_hete_1
+1   0.9462    0.951   0.9464   0.9474</code></pre>
+</div>
+</div>
+<p>Le “coperture” degli intervalli di confidenza sono prossimi ai loro valori teorici.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>La percentuale dei campioni per il quale la statistica <span class="math inline">\(t\)</span> è <em>maggiore</em> in valore assoluto di <span class="math inline">\(1.96\)</span> (e <span class="math inline">\(1.64\)</span>) coincide con le dimensioni effettiva del test di significatività (quelle teoriche sono del <span class="math inline">\(5%\)</span> e del <span class="math inline">\(10\)</span>)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>mc1 <span class="sc">|&gt;</span> <span class="fu">summarise_all</span>(<span class="at">.funs =</span> <span class="cf">function</span>(x) <span class="fu">mean</span>(<span class="fu">abs</span>(x)<span class="sc">&gt;</span><span class="fl">1.64</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  t_homo_0 t_homo_1 t_hete_0 t_hete_1
+1   0.1112   0.0988   0.1098   0.1046</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>mc1 <span class="sc">|&gt;</span> <span class="fu">summarise_all</span>(<span class="at">.funs =</span> <span class="cf">function</span>(x) <span class="fu">mean</span>(<span class="fu">abs</span>(x)<span class="sc">&gt;</span><span class="fl">1.96</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  t_homo_0 t_homo_1 t_hete_0 t_hete_1
+1   0.0538    0.049   0.0536   0.0526</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p>Modifichiamo adesso il codice e generiamo il modello con errori eteroschedastici.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">373982</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Impostazione del numero di simulazioni</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>n_simulations <span class="ot">&lt;-</span> <span class="dv">5000</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Impostazione della dimensione del campione</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>sample_size <span class="ot">&lt;-</span> <span class="dv">150</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Inizializzazione dei vettori per memorizzare i risultati</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>betahat_0 <span class="ot">&lt;-</span> <span class="fu">numeric</span>(n_simulations)</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>betahat_1 <span class="ot">&lt;-</span> <span class="fu">numeric</span>(n_simulations)</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Matrici contengono gli errori standard.</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="co"># La prima colonna contiene errore standard sotto</span></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="co"># l'assunzione di omoschedasticità; la seconda colonna</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="co"># contiene l'errore standard robusto</span></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>se_0 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(, <span class="at">nrow =</span> n_simulations, <span class="at">ncol =</span> <span class="dv">2</span>)</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>se_1 <span class="ot">&lt;-</span> <span class="fu">matrix</span>(, <span class="at">nrow =</span> n_simulations, <span class="at">ncol =</span> <span class="dv">2</span>)</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a><span class="co"># "Veri" coefficienti del modello</span></span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>beta_0 <span class="ot">&lt;-</span> <span class="dv">2</span></span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>beta_1 <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Esecuzione delle simulazioni</span></span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>n_simulations) {</span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Generazione dei dati</span></span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>  x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(sample_size)</span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>  u <span class="ot">&lt;-</span> <span class="fu">sqrt</span>(x<span class="sc">^</span><span class="dv">2</span>)<span class="sc">*</span>(<span class="fu">rchisq</span>(sample_size, <span class="at">df =</span> <span class="dv">3</span>)<span class="sc">-</span><span class="dv">3</span>)<span class="sc">/</span><span class="fu">sqrt</span>(<span class="dv">2</span><span class="sc">*</span><span class="dv">3</span>)</span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Nota: Var(u|x) = E(u^2|x) = x^2</span></span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>  <span class="co">#       Var(u) = E(E(u^2|x)) = E(x^2) = 1</span></span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">&lt;-</span> beta_0 <span class="sc">+</span> beta_1 <span class="sc">*</span> x <span class="sc">+</span> u</span>
+<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-31"><a href="#cb17-31" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Stima del modello</span></span>
+<span id="cb17-32"><a href="#cb17-32" aria-hidden="true" tabindex="-1"></a>  model <span class="ot">&lt;-</span> <span class="fu">lm</span>(y <span class="sc">~</span> x)</span>
+<span id="cb17-33"><a href="#cb17-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-34"><a href="#cb17-34" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Salvataggio delle stime dei parametri</span></span>
+<span id="cb17-35"><a href="#cb17-35" aria-hidden="true" tabindex="-1"></a>  betahat_0[i] <span class="ot">&lt;-</span> <span class="fu">coef</span>(model)[<span class="dv">1</span>]</span>
+<span id="cb17-36"><a href="#cb17-36" aria-hidden="true" tabindex="-1"></a>  betahat_1[i] <span class="ot">&lt;-</span> <span class="fu">coef</span>(model)[<span class="dv">2</span>]</span>
+<span id="cb17-37"><a href="#cb17-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-38"><a href="#cb17-38" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Salvataggio degli errori standard</span></span>
+<span id="cb17-39"><a href="#cb17-39" aria-hidden="true" tabindex="-1"></a>  se_homo <span class="ot">=</span> <span class="fu">sqrt</span>(<span class="fu">diag</span>(<span class="fu">vcov</span>(model)))</span>
+<span id="cb17-40"><a href="#cb17-40" aria-hidden="true" tabindex="-1"></a>  se_hete <span class="ot">=</span> <span class="fu">sqrt</span>(<span class="fu">diag</span>(<span class="fu">vcovHC</span>(model, <span class="at">type=</span><span class="st">"HC1"</span>)))</span>
+<span id="cb17-41"><a href="#cb17-41" aria-hidden="true" tabindex="-1"></a>  se_0[i, <span class="dv">1</span>] <span class="ot">&lt;-</span> se_homo[<span class="dv">1</span>]</span>
+<span id="cb17-42"><a href="#cb17-42" aria-hidden="true" tabindex="-1"></a>  se_1[i, <span class="dv">1</span>] <span class="ot">&lt;-</span> se_homo[<span class="dv">2</span>]</span>
+<span id="cb17-43"><a href="#cb17-43" aria-hidden="true" tabindex="-1"></a>  se_0[i, <span class="dv">2</span>] <span class="ot">&lt;-</span> se_hete[<span class="dv">1</span>]</span>
+<span id="cb17-44"><a href="#cb17-44" aria-hidden="true" tabindex="-1"></a>  se_1[i, <span class="dv">2</span>] <span class="ot">&lt;-</span> se_hete[<span class="dv">2</span>]</span>
+<span id="cb17-45"><a href="#cb17-45" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb17-46"><a href="#cb17-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-47"><a href="#cb17-47" aria-hidden="true" tabindex="-1"></a><span class="co"># Costruzione data.frame</span></span>
+<span id="cb17-48"><a href="#cb17-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-49"><a href="#cb17-49" aria-hidden="true" tabindex="-1"></a>mc1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">t_homo_0 =</span> (betahat_0<span class="sc">-</span>beta_0)<span class="sc">/</span>se_0[,<span class="dv">1</span>],</span>
+<span id="cb17-50"><a href="#cb17-50" aria-hidden="true" tabindex="-1"></a>                  <span class="at">t_homo_1 =</span> (betahat_1<span class="sc">-</span>beta_1)<span class="sc">/</span>se_1[,<span class="dv">1</span>],</span>
+<span id="cb17-51"><a href="#cb17-51" aria-hidden="true" tabindex="-1"></a>                  <span class="at">t_hete_0 =</span> (betahat_0<span class="sc">-</span>beta_0)<span class="sc">/</span>se_0[,<span class="dv">2</span>],</span>
+<span id="cb17-52"><a href="#cb17-52" aria-hidden="true" tabindex="-1"></a>                  <span class="at">t_hete_1 =</span> (betahat_1<span class="sc">-</span>beta_1)<span class="sc">/</span>se_1[,<span class="dv">2</span>]</span>
+<span id="cb17-53"><a href="#cb17-53" aria-hidden="true" tabindex="-1"></a>                  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>mcg <span class="ot">&lt;-</span> <span class="fu">gather</span>(mc1, <span class="at">key =</span> <span class="st">"coefficient"</span>, <span class="at">value =</span> <span class="st">"t"</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mcg, <span class="fu">aes</span>(<span class="at">x=</span>t)) <span class="sc">+</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">y=</span>..density..),</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">col =</span> <span class="st">"pink"</span>, <span class="at">fill =</span> <span class="st">"slategray"</span>) <span class="sc">+</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stat_function</span>(<span class="at">fun =</span> dnorm,</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">geom =</span> <span class="st">"polygon"</span>,</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>                <span class="at">col =</span> <span class="st">"darkblue"</span>,</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>                <span class="at">fill =</span> <span class="st">"lightblue"</span>,</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>                <span class="at">alpha=</span><span class="fl">0.65</span>) <span class="sc">+</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>coefficient)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-two" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="montecarlo_files/figure-html/fig-two-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;2: <strong>?(caption)</strong></figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Dall’analisi del grafico in <a href="#fig-two">Figure&nbsp;2</a> ci accorgiamo che l’approssimazione normale “funziona” con gli errori standard validi per eteroschedasticità mentre è pessima sotto omoschedasticità.</p>
+<p>La verifica della copertura degli intervalli mostra chiaramente quanto sia problematico non utilizzare gli errori standard robusti.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>mc1 <span class="sc">|&gt;</span> <span class="fu">summarise_all</span>(<span class="at">.funs =</span> <span class="cf">function</span>(x) <span class="fu">mean</span>(<span class="fu">abs</span>(x)<span class="sc">&lt;</span><span class="fl">1.64</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  t_homo_0 t_homo_1 t_hete_0 t_hete_1
+1    0.901   0.6436    0.896   0.8742</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>mc1 <span class="sc">|&gt;</span> <span class="fu">summarise_all</span>(<span class="at">.funs =</span> <span class="cf">function</span>(x) <span class="fu">mean</span>(<span class="fu">abs</span>(x)<span class="sc">&lt;</span><span class="fl">1.96</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  t_homo_0 t_homo_1 t_hete_0 t_hete_1
+1   0.9492   0.7254    0.946   0.9366</code></pre>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
