@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="it" xml:lang="it"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-99.9.9">
+<meta name="generator" content="quarto-1.3.353">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -234,7 +234,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./../panel.pdf" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Panel data</span></a>
+ <span class="menu-text">12: Panel data</span></a>
   </div>
 </li>
       </ul>
@@ -268,7 +268,24 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./../interazioni.pdf" class="sidebar-item-text sidebar-link">
- <span class="menu-text">14: Interazioni</span></a>
+ <span class="menu-text">13: Interazioni</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true">
+ <span class="menu-text">13: Time Series <i class="fa-brands fa-slideshare" aria-label="slideshare"></i></span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true" aria-label="Attiva/disattiva sezione">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./../timeseries.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">14: Time Series</span></a>
   </div>
 </li>
       </ul>
@@ -287,7 +304,10 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#il-modello-vero" id="toc-il-modello-vero" class="nav-link" data-scroll-target="#il-modello-vero">Il modello vero</a></li>
   <li><a href="#il-modello-lineare" id="toc-il-modello-lineare" class="nav-link" data-scroll-target="#il-modello-lineare">Il modello lineare</a></li>
-  <li><a href="#lassunzione-chiave" id="toc-lassunzione-chiave" class="nav-link" data-scroll-target="#lassunzione-chiave">L’assunzione chiave</a></li>
+  <li><a href="#lassunzione-chiave" id="toc-lassunzione-chiave" class="nav-link" data-scroll-target="#lassunzione-chiave">L’assunzione chiave</a>
+  <ul class="collapse">
+  <li><a href="#ols1" id="toc-ols1" class="nav-link" data-scroll-target="#ols1">OLS1</a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -398,23 +418,26 @@ Y = \beta_0 + \beta_1 X_{1} + \beta_2 X_{2} + \ldots + \beta_k X_{k} + u
 <section id="lassunzione-chiave" class="level2">
 <h2 class="anchored" data-anchor-id="lassunzione-chiave">L’assunzione chiave</h2>
 <p>La assunzione chiave del modello lineare è la seguente:</p>
-<div id="ass-key" class="theorem assumption">
-<p><span class="theorem-title"><strong>Assunzione 1 (OLS1) </strong></span><span class="math inline">\(E(u|X) = 0\)</span></p>
+<div id="ass-key">
+<section id="ols1" class="level3">
+<h3 class="anchored" data-anchor-id="ols1">OLS1</h3>
+<p><span class="math inline">\(E(u|X) = 0\)</span></p>
+</section>
 </div>
 <p>Si ricordi che se <span class="math inline">\(E(u|X) = 0\)</span>, allora <span class="math inline">\(corr(u,X)=0\)</span>. Quindi, questa assunzione stipula che la variabile inclusa del modello, <span class="math inline">\(X\)</span>, e altre variabili che hanno una qualche relazione con <span class="math inline">\(Y\)</span> e contenute in <span class="math inline">\(u\)</span> non sono correlate.</p>
 <p>Questa è un’assunzione molto forte e, come vedremo, in molte applicazioni non potrà essere considerata valida. In ogni caso, inizieremo a studiare il modello lineare sotto questa assunzione per comprendere la sua logica. In seguito, ci chiederemo come sia possibile interpretare il modello quando l’assunzione non è soddisfatta.</p>
-<p>La fondamentale implicazione di <a href="#ass-key">ass.&nbsp;1</a> è che l’aspettativa condizionale di <span class="math inline">\(Y\)</span> dato <span class="math inline">\(X\)</span> è lineare in <span class="math inline">\(X\)</span>, cioè <span class="math display">\[
+<p>La fondamentale implicazione di <span class="citation" data-cites="ass-key">(<a href="#ref-ass-key" role="doc-biblioref"><strong>ass-key?</strong></a>)</span> è che l’aspettativa condizionale di <span class="math inline">\(Y\)</span> dato <span class="math inline">\(X\)</span> è lineare in <span class="math inline">\(X\)</span>, cioè <span class="math display">\[
 E(Y|X) = \beta_0 + \beta_1 X.
 \]</span> Usando questa linearità possiamo ottenere l’interpretazione del parametro <span class="math inline">\(\beta_1\)</span>: <span class="math display">\[
 E(Y|X=x+1) - E(Y|X=x) = \left[\beta_0 + \beta_1 (x+1)\right]  - \left[\beta_0 + \beta_1 x\right] = \beta_1,
 \]</span> <span class="math inline">\(\beta_1\)</span> ci dà la risposta di <span class="math inline">\(E(Y|X)\)</span> ad una variazione unitaria (da <span class="math inline">\(x\)</span> a <span class="math inline">\(x+1\)</span>) di <span class="math inline">\(X\)</span>.</p>
-<p>::: {.boxmore} Anche <span class="math inline">\(\beta_0\)</span> ha una interpretazione in termini del valore atteso condizionato di <span class="math inline">\(Y\)</span>: <span id="eq-intercetta"><span class="math display">\[\beta_0 = E(Y|X=0). \tag{8}\]</span></span> Sebbene formalmente corretta, l’interpretazione pratica dell’intercetta è resa problematica da due fatti: <em>(i)</em> in molte applicazione, la variabile <span class="math inline">\(X\)</span> non assume il valore <span class="math inline">\(0\)</span>. Se il modello lineare della dimensione delle aule e potrebbe non assumere il valore <span class="math inline">\(\beta_0\)</span> <em>assorbe</em> la media delle variabile omesse. Cosa succede se invece che uguale a zero, l’aspettativa di <span class="math inline">\(u\)</span> dato <span class="math inline">\(X\)</span> è uguale ad una costante, per esempio <span class="math inline">\(E(u|X)=5\)</span>, o <span class="math inline">\(E(u|X)=15\)</span>. In questo caso è normale pensare che <a href="#ass-key">ass.&nbsp;1</a> non sia valida e l’interpretazione di <span class="math inline">\(\beta_1\)</span> non sarà quella di quantificare l’effetto di una variazione unitaria sul valore atteso condizionato di <span class="math inline">\(Y\)</span>. In realtà le cose sono un tantino più complicate. Proviamo a capire perché. Se <span class="math inline">\(E(u|X)=\kappa_u\)</span> per qualche valore <span class="math inline">\(\kappa_u\)</span>, abbiamo che <span class="math display">\[
+<p>::: {.boxmore} Anche <span class="math inline">\(\beta_0\)</span> ha una interpretazione in termini del valore atteso condizionato di <span class="math inline">\(Y\)</span>: <span id="eq-intercetta"><span class="math display">\[\beta_0 = E(Y|X=0). \tag{8}\]</span></span> Sebbene formalmente corretta, l’interpretazione pratica dell’intercetta è resa problematica da due fatti: <em>(i)</em> in molte applicazione, la variabile <span class="math inline">\(X\)</span> non assume il valore <span class="math inline">\(0\)</span>. Se il modello lineare della dimensione delle aule e potrebbe non assumere il valore <span class="math inline">\(\beta_0\)</span> <em>assorbe</em> la media delle variabile omesse. Cosa succede se invece che uguale a zero, l’aspettativa di <span class="math inline">\(u\)</span> dato <span class="math inline">\(X\)</span> è uguale ad una costante, per esempio <span class="math inline">\(E(u|X)=5\)</span>, o <span class="math inline">\(E(u|X)=15\)</span>. In questo caso è normale pensare che <span class="citation" data-cites="ass-key">(<a href="#ref-ass-key" role="doc-biblioref"><strong>ass-key?</strong></a>)</span> non sia valida e l’interpretazione di <span class="math inline">\(\beta_1\)</span> non sarà quella di quantificare l’effetto di una variazione unitaria sul valore atteso condizionato di <span class="math inline">\(Y\)</span>. In realtà le cose sono un tantino più complicate. Proviamo a capire perché. Se <span class="math inline">\(E(u|X)=\kappa_u\)</span> per qualche valore <span class="math inline">\(\kappa_u\)</span>, abbiamo che <span class="math display">\[
 E(Y|X) = E(\beta_0 + \beta_1 X + \kappa_u|X) = \beta_0 + \beta_1 X + \kappa_u.
 \]</span> L’aspettativa condizionata è ancora lineare, ma con un intercetta uguale a <span class="math inline">\(\beta_0 + \kappa_u\)</span>. In ogni caso, l’interpretazione di <span class="math inline">\(\beta_1\)</span> è invariata rispetta al caso in cui <span class="math inline">\(\kappa_u=0\)</span> (cioè nel caso specificato dall’{#ass-key}), come si vede chiaramente da <span class="math display">\[
 E(Y|X=x+1) - E(Y|X=x) = \left[\beta_0 + \beta_1 (x+1) + \kappa_u\right]  - \left[\beta_0 + \beta_1 x + \kappa_u\right] = \beta_1.
 \]</span> A questo punto è lecito essere confusi. Abbiamo parlato più volte della centralità dell’assunzione <span class="math inline">\(E(u|X)=0\)</span>, ma adesso sembrerebbe che l’interpretazione di <span class="math inline">\(\beta_1\)</span> è sempre <span class="math inline">\(E(Y|X=x+1) - E(Y|X=x)\)</span> anche quando <span class="math inline">\(E(u|X)=\kappa_u \neq 0\)</span>. Ora consideriamo il modello lineare data da <span class="math display">\[
 Y = \beta_0 + \beta_1 X_i + \varepsilon_i,
-\]</span> dove <span class="math inline">\(\varepsilon_i=u_i-\kappa_u\)</span>. In questo modello l’errore è uguale all’errore originale, <span class="math inline">\(u_i\)</span>, a cui abbiamo sottratto <span class="math inline">\(\kappa_u\)</span>. Questo è un nuovo modello lineare che soddisfa <a href="#ass-key">ass.&nbsp;1</a> — <span class="math inline">\(E(\varepsilon_i|X)=E(u_i|X)-\kappa_u=\kappa_u - \kappa_u = 0\)</span> — e dove <span class="math inline">\(\beta_1=E(Y|X=x+1) - E(Y|X=x)\)</span>$ è</p>
+\]</span> dove <span class="math inline">\(\varepsilon_i=u_i-\kappa_u\)</span>. In questo modello l’errore è uguale all’errore originale, <span class="math inline">\(u_i\)</span>, a cui abbiamo sottratto <span class="math inline">\(\kappa_u\)</span>. Questo è un nuovo modello lineare che soddisfa <span class="citation" data-cites="ass-key">(<a href="#ref-ass-key" role="doc-biblioref"><strong>ass-key?</strong></a>)</span> — <span class="math inline">\(E(\varepsilon_i|X)=E(u_i|X)-\kappa_u=\kappa_u - \kappa_u = 0\)</span> — e dove <span class="math inline">\(\beta_1=E(Y|X=x+1) - E(Y|X=x)\)</span>$ è</p>
 <p>In realtà, l’assunzione necessaria per interpretare <span class="math inline">\(\beta_1\)</span> come la variazione di <span class="math inline">\(E(Y|X)\)</span> dovuta ad una variazione di <span class="math inline">\(X\)</span> è <span class="math display">\[
 E(u|X) = \text{constant}.
 \]</span> Sembrerebbe che L’assunzione è falsa non quando <span class="math inline">\(E(u|X)\neq 0\)</span>, ma quando il valore atteso di <span class="math inline">\(u\)</span> dato <span class="math inline">\(X\)</span> varia con <span class="math inline">\(X\)</span>. In altre parole, l’assunzione #ass-key non è soddisfatta se <span class="math display">\[
