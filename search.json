@@ -91,6 +91,55 @@
     "text": "La assunzione chiave del modello lineare è la seguente:\n\n\n\n\\(E(u|X) = 0\\)\n\n\nSi ricordi che se \\(E(u|X) = 0\\), allora \\(corr(u,X)=0\\). Quindi, questa assunzione stipula che la variabile inclusa del modello, \\(X\\), e altre variabili che hanno una qualche relazione con \\(Y\\) e contenute in \\(u\\) non sono correlate.\nQuesta è un’assunzione molto forte e, come vedremo, in molte applicazioni non potrà essere considerata valida. In ogni caso, inizieremo a studiare il modello lineare sotto questa assunzione per comprendere la sua logica. In seguito, ci chiederemo come sia possibile interpretare il modello quando l’assunzione non è soddisfatta.\nLa fondamentale implicazione di (ass-key?) è che l’aspettativa condizionale di \\(Y\\) dato \\(X\\) è lineare in \\(X\\), cioè \\[\nE(Y|X) = \\beta_0 + \\beta_1 X.\n\\] Usando questa linearità possiamo ottenere l’interpretazione del parametro \\(\\beta_1\\): \\[\nE(Y|X=x+1) - E(Y|X=x) = \\left[\\beta_0 + \\beta_1 (x+1)\\right]  - \\left[\\beta_0 + \\beta_1 x\\right] = \\beta_1,\n\\] \\(\\beta_1\\) ci dà la risposta di \\(E(Y|X)\\) ad una variazione unitaria (da \\(x\\) a \\(x+1\\)) di \\(X\\).\n::: {.boxmore} Anche \\(\\beta_0\\) ha una interpretazione in termini del valore atteso condizionato di \\(Y\\): \\[\\beta_0 = E(Y|X=0). \\tag{8}\\] Sebbene formalmente corretta, l’interpretazione pratica dell’intercetta è resa problematica da due fatti: (i) in molte applicazione, la variabile \\(X\\) non assume il valore \\(0\\). Se il modello lineare della dimensione delle aule e potrebbe non assumere il valore \\(\\beta_0\\) assorbe la media delle variabile omesse. Cosa succede se invece che uguale a zero, l’aspettativa di \\(u\\) dato \\(X\\) è uguale ad una costante, per esempio \\(E(u|X)=5\\), o \\(E(u|X)=15\\). In questo caso è normale pensare che (ass-key?) non sia valida e l’interpretazione di \\(\\beta_1\\) non sarà quella di quantificare l’effetto di una variazione unitaria sul valore atteso condizionato di \\(Y\\). In realtà le cose sono un tantino più complicate. Proviamo a capire perché. Se \\(E(u|X)=\\kappa_u\\) per qualche valore \\(\\kappa_u\\), abbiamo che \\[\nE(Y|X) = E(\\beta_0 + \\beta_1 X + \\kappa_u|X) = \\beta_0 + \\beta_1 X + \\kappa_u.\n\\] L’aspettativa condizionata è ancora lineare, ma con un intercetta uguale a \\(\\beta_0 + \\kappa_u\\). In ogni caso, l’interpretazione di \\(\\beta_1\\) è invariata rispetta al caso in cui \\(\\kappa_u=0\\) (cioè nel caso specificato dall’{#ass-key}), come si vede chiaramente da \\[\nE(Y|X=x+1) - E(Y|X=x) = \\left[\\beta_0 + \\beta_1 (x+1) + \\kappa_u\\right]  - \\left[\\beta_0 + \\beta_1 x + \\kappa_u\\right] = \\beta_1.\n\\] A questo punto è lecito essere confusi. Abbiamo parlato più volte della centralità dell’assunzione \\(E(u|X)=0\\), ma adesso sembrerebbe che l’interpretazione di \\(\\beta_1\\) è sempre \\(E(Y|X=x+1) - E(Y|X=x)\\) anche quando \\(E(u|X)=\\kappa_u \\neq 0\\). Ora consideriamo il modello lineare data da \\[\nY = \\beta_0 + \\beta_1 X_i + \\varepsilon_i,\n\\] dove \\(\\varepsilon_i=u_i-\\kappa_u\\). In questo modello l’errore è uguale all’errore originale, \\(u_i\\), a cui abbiamo sottratto \\(\\kappa_u\\). Questo è un nuovo modello lineare che soddisfa (ass-key?) — \\(E(\\varepsilon_i|X)=E(u_i|X)-\\kappa_u=\\kappa_u - \\kappa_u = 0\\) — e dove \\(\\beta_1=E(Y|X=x+1) - E(Y|X=x)\\)$ è\nIn realtà, l’assunzione necessaria per interpretare \\(\\beta_1\\) come la variazione di \\(E(Y|X)\\) dovuta ad una variazione di \\(X\\) è \\[\nE(u|X) = \\text{constant}.\n\\] Sembrerebbe che L’assunzione è falsa non quando \\(E(u|X)\\neq 0\\), ma quando il valore atteso di \\(u\\) dato \\(X\\) varia con \\(X\\). In altre parole, l’assunzione #ass-key non è soddisfatta se \\[\nE(u|X=x) = f(x),\n\\] dove \\(f(\\cdot)\\) è una funzione non constante, cioè una funzione tale per cui \\(f(x_1)\\neq f(x_2)\\) per almeno una coppia di valori \\(x_1\\), \\(x_2\\)."
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Prof. Giuseppe Ragusa\n   Viale del Castro Laurenziano, 9\n   giuseppe.ragusa@uniroma1.it\n   Schedule an appointment\n\n\n\n\n\n   Lunedì, Martedì e Venerdì\n   20 february, 2023 - 1 giugno 2023\n   (L&V) 10:00–12:00 (M) 14:00-15:00\n   (L&M) Aula 10 (V) Aula 3"
+  },
+  {
+    "objectID": "index.html#descrizione-del-corso",
+    "href": "index.html#descrizione-del-corso",
+    "title": "Syllabus",
+    "section": "Descrizione del corso",
+    "text": "Descrizione del corso\nL’obiettivo del corso è quello di introdurre gli studenti allo studio dell’econometria mediante un approccio prevalentemente applicato. Sebbene il corso si concentra sia sugli aspetti teorici sia su quelli pratici della disciplina, l’enfasi è sulla comprensione intuitiva dei concetti fondamentali della materia e sulla loro applicazione empirica su temi microeconomici, macroeconomici e finanziari."
+  },
+  {
+    "objectID": "index.html#obiettivi-del-corso",
+    "href": "index.html#obiettivi-del-corso",
+    "title": "Syllabus",
+    "section": "Obiettivi del corso",
+    "text": "Obiettivi del corso\nAl termine del corso lo studente dovrà essere in grado di svolgere autonomamente un’analisi empirica ed interpretarne i risultati, valutando l’adeguatezza delle assunzioni necessarie per la correttezza delle interpretazioni.\nIn particolare, lo studente sarà in grado di\n\nSpiegare la filosofia dei modelli introdotti e la loro capacità di catturare relazioni causali o di fornire predizioni di buona qualità;\nValutare l’adeguatezza delle assunzioni sottostanti i modelli econometrici;\nValutare la qualità delle predizioni mediante rigorose misure statistiche;\nUsare R per stimare e valutare i modelli econometrici su dati reali."
+  },
+  {
+    "objectID": "index.html#libro-di-testo",
+    "href": "index.html#libro-di-testo",
+    "title": "Syllabus",
+    "section": "Libro di testo",
+    "text": "Libro di testo\n\n\n\n\n\nIl libro di testo utilizzato in questo corso è:\nStock, J. H. e Watson, M.W: Introduzione all’econometria, Pearson Italia, 2005."
+  },
+  {
+    "objectID": "index.html#software",
+    "href": "index.html#software",
+    "title": "Syllabus",
+    "section": "Software",
+    "text": "Software\n\n\n\n\n\nIl corso prevede l’utilizzo di R, uno dei linguaggi di programmazione statistico/econometrico più diffusi e potenti.\nR ha una licenza open-source (GNU GPL), è compatibile con i maggiori sistemi operativi (GNU/Linux, macOS, Microsoft Windows)."
+  },
+  {
+    "objectID": "index.html#orari-di-ricevimento",
+    "href": "index.html#orari-di-ricevimento",
+    "title": "Syllabus",
+    "section": "Orari di ricevimento",
+    "text": "Orari di ricevimento\nGli orari di ricevimento sono:\n\n\n\nGiorno\nOrario\n\n\n\n\nLunedì\n15:00-16:00\n\n\nMercoledì\n12:00-13:00\n\n\n\nE’ obbligatorio prenotare un appuntamento utilizzando questo link:"
+  },
+  {
+    "objectID": "index.html#modalità-di-valutazione",
+    "href": "index.html#modalità-di-valutazione",
+    "title": "Syllabus",
+    "section": "Modalità di valutazione",
+    "text": "Modalità di valutazione\nLa modalità di esame consiste in una prova scritta e una verifica orale."
+  },
+  {
     "objectID": "materiale.html",
     "href": "materiale.html",
     "title": "Materiale didattico",
