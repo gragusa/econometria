@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Giuseppe Ragusa">
-<meta name="description" content="Elementi di Econometria 2022/2023 - Giuseppe Ragusa - Sapienza">
+<meta name="description" content="Econometria 2022/2023 - Giuseppe Ragusa - Sapienza">
 
 <title>Econometria - R: Introduzione</title>
 <style>
@@ -747,19 +747,19 @@ Note
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-19" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-lines="4" data-code-annotation="1" data-code-cell="annotated-cell-19">la funzione <code>cut</code> per dividere <code>str</code> in <code>25</code> intervalli;</span>
+<span data-code-cell="annotated-cell-19" data-code-annotation="1" data-code-lines="4">la funzione <code>cut</code> per dividere <code>str</code> in <code>25</code> intervalli;</span>
 </dd>
 <dt data-target-cell="annotated-cell-19" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-lines="5" data-code-annotation="2" data-code-cell="annotated-cell-19"><code>group_by</code> suddivide <code>Caschool</code> in gruppi specificati da <code>str_cat</code></span>
+<span data-code-cell="annotated-cell-19" data-code-annotation="2" data-code-lines="5"><code>group_by</code> suddivide <code>Caschool</code> in gruppi specificati da <code>str_cat</code></span>
 </dd>
 <dt data-target-cell="annotated-cell-19" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-lines="6" data-code-annotation="3" data-code-cell="annotated-cell-19"><code>summarize</code> calcola la media, la standard deviation e il numero di osservazioni per ciascun gruppo</span>
+<span data-code-cell="annotated-cell-19" data-code-annotation="3" data-code-lines="6"><code>summarize</code> calcola la media, la standard deviation e il numero di osservazioni per ciascun gruppo</span>
 </dd>
 <dt data-target-cell="annotated-cell-19" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-lines="8" data-code-annotation="4" data-code-cell="annotated-cell-19"><code>kabble</code> restituisce la tavole dei valori</span>
+<span data-code-cell="annotated-cell-19" data-code-annotation="4" data-code-lines="8"><code>kabble</code> restituisce la tavole dei valori</span>
 </dd>
 </dl>
 </div>
@@ -941,23 +941,23 @@ Note
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-20" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-lines="1" data-code-annotation="1" data-code-cell="annotated-cell-20">la variabile <code>Delta_str</code> è uguale alla differenza dei due intervalli ottenuta incollando <code>paste0</code> l’intervallo di ciascuna riga con quella precedente (la funzione <code>lag(m)</code> associa il valore di <code>m</code> della riga precedente). Questa variabile è utile per annotare l’asse delle ascisse del grafico che produrremo prodotto in seguito.</span>
+<span data-code-cell="annotated-cell-20" data-code-annotation="1" data-code-lines="1">la variabile <code>Delta_str</code> è uguale alla differenza dei due intervalli ottenuta incollando <code>paste0</code> l’intervallo di ciascuna riga con quella precedente (la funzione <code>lag(m)</code> associa il valore di <code>m</code> della riga precedente). Questa variabile è utile per annotare l’asse delle ascisse del grafico che produrremo prodotto in seguito.</span>
 </dd>
 <dt data-target-cell="annotated-cell-20" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-lines="2" data-code-annotation="2" data-code-cell="annotated-cell-20"><code>Delta_str</code> contiene la differenze delle medie campionari di due intervalli successivi. Queste differenze sono calcolate usando <code>m - lag(m)</code> e quindi <code>Delta_testscr</code> è uguale a <code>m</code>, la media per l’intervallo, meno il valore della media per l’intervallo che preceda la riga in considerazione (<code>lag(m)</code>)</span>
+<span data-code-cell="annotated-cell-20" data-code-annotation="2" data-code-lines="2"><code>Delta_str</code> contiene la differenze delle medie campionari di due intervalli successivi. Queste differenze sono calcolate usando <code>m - lag(m)</code> e quindi <code>Delta_testscr</code> è uguale a <code>m</code>, la media per l’intervallo, meno il valore della media per l’intervallo che preceda la riga in considerazione (<code>lag(m)</code>)</span>
 </dd>
 <dt data-target-cell="annotated-cell-20" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-lines="3" data-code-annotation="3" data-code-cell="annotated-cell-20"><code>stderr</code> è l’errore standard della differenza delle medie in ciascun intervallo che è uguale a</span>
+<span data-code-cell="annotated-cell-20" data-code-annotation="3" data-code-lines="3"><code>stderr</code> è l’errore standard della differenza delle medie in ciascun intervallo che è uguale a</span>
 </dd>
 <dt data-target-cell="annotated-cell-20" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-lines="4" data-code-annotation="4" data-code-cell="annotated-cell-20">selezioniamo le variabili che ci servono per il grafico mediante la funzione <code>select()</code></span>
+<span data-code-cell="annotated-cell-20" data-code-annotation="4" data-code-lines="4">selezioniamo le variabili che ci servono per il grafico mediante la funzione <code>select()</code></span>
 </dd>
 <dt data-target-cell="annotated-cell-20" data-target-annotation="5">5</dt>
 <dd>
-<span data-code-lines="6" data-code-annotation="5" data-code-cell="annotated-cell-20"><code>kable(df_3)</code> formatta il <code>data.frame</code> come una tavolo <code>html</code>. La funzione <code>kable</code> è contenuta nel pacchetto <code>knitr</code>.</span>
+<span data-code-cell="annotated-cell-20" data-code-annotation="5" data-code-lines="6"><code>kable(df_3)</code> formatta il <code>data.frame</code> come una tavolo <code>html</code>. La funzione <code>kable</code> è contenuta nel pacchetto <code>knitr</code>.</span>
 </dd>
 </dl>
 </div>
@@ -1123,11 +1123,11 @@ Note
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-22" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-lines="2" data-code-annotation="1" data-code-cell="annotated-cell-22">l’estremo sinistro dell’intervallo di confidenza;</span>
+<span data-code-cell="annotated-cell-22" data-code-annotation="1" data-code-lines="2">l’estremo sinistro dell’intervallo di confidenza;</span>
 </dd>
 <dt data-target-cell="annotated-cell-22" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-lines="3" data-code-annotation="2" data-code-cell="annotated-cell-22">l’estremo destro dell’intervallo di confidenza;</span>
+<span data-code-cell="annotated-cell-22" data-code-annotation="2" data-code-lines="3">l’estremo destro dell’intervallo di confidenza;</span>
 </dd>
 </dl>
 </div>
@@ -1342,19 +1342,19 @@ Note
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-23" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-lines="1" data-code-annotation="1" data-code-cell="annotated-cell-23">sull’ascissa abbiamo la differenza degli intervalli, sull’ordinata la differenza delle medie;</span>
+<span data-code-cell="annotated-cell-23" data-code-annotation="1" data-code-lines="1">sull’ascissa abbiamo la differenza degli intervalli, sull’ordinata la differenza delle medie;</span>
 </dd>
 <dt data-target-cell="annotated-cell-23" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-lines="2" data-code-annotation="2" data-code-cell="annotated-cell-23">la geometria utilizzata è <code>geom_pointrange</code>, che “plotta” la differenza delle medie (il punto) e l’intervallo di confidenza al 95% definito da (<code>(ci_sx, ci_dx)</code>) e rappresentato dalle linee che si estendono verticalmente.</span>
+<span data-code-cell="annotated-cell-23" data-code-annotation="2" data-code-lines="2">la geometria utilizzata è <code>geom_pointrange</code>, che “plotta” la differenza delle medie (il punto) e l’intervallo di confidenza al 95% definito da (<code>(ci_sx, ci_dx)</code>) e rappresentato dalle linee che si estendono verticalmente.</span>
 </dd>
 <dt data-target-cell="annotated-cell-23" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-lines="3" data-code-annotation="3" data-code-cell="annotated-cell-23"><code>geom_hline(yintercept=0, col = "darkred")</code> produce una riga orizzonate di colore rosso scuro</span>
+<span data-code-cell="annotated-cell-23" data-code-annotation="3" data-code-lines="3"><code>geom_hline(yintercept=0, col = "darkred")</code> produce una riga orizzonate di colore rosso scuro</span>
 </dd>
 <dt data-target-cell="annotated-cell-23" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-lines="6" data-code-annotation="4" data-code-cell="annotated-cell-23">le etichette dell’asse della x sono ruotate di 90 gradi per favorire la loro leggibilità.</span>
+<span data-code-cell="annotated-cell-23" data-code-annotation="4" data-code-lines="6">le etichette dell’asse della x sono ruotate di 90 gradi per favorire la loro leggibilità.</span>
 </dd>
 </dl>
 </div>
