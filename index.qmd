@@ -1,6 +1,8 @@
 ---
-title: "Econometria"
+title: "{{< var course.name >}} ({{< var course.number >}})"
+subtitle: "Canele M-Z"
 sidebar: false
+toc: false
 ---
 
 
@@ -10,8 +12,10 @@ sidebar: false
 ### Docente
 
 - {{< fa user >}} &nbsp; [{{< var instructor.name >}}]({{< var instructor.url >}})
+- {{< fa university >}} &nbsp; {{< var university.name >}}
+- {{< fa university >}} &nbsp; {{< var school.name >}}
 - {{< fa university >}} &nbsp; {{< var instructor.office >}}
-- {{< fa envelope >}} &nbsp; {{< var instructor.email >}}
+- {{< fa envelope >}} &nbsp; [{{< var instructor.email >}}](mailto:{{< var instructor.email >}})
 - {{< fa calendar-check >}} &nbsp; [Ricevimento]({{< var instructor.appointment_url >}})
 :::
 
@@ -29,79 +33,8 @@ sidebar: false
 
 ## Descrizione del corso
 
-Questo corso offre agli studenti un'introduzione pratica all'econometria, strumento fondamentale per comprendere e analizzare l’economia da un punto di vista empirico. Attraverso un approccio equilibrato tra teoria e pratica, gli studenti esploreranno i concetti fondamentali e gli strumenti empirici necessari per comprendere le sfide relative all’impiego di tecniche quantitative in microeconomia, macroeconomia e finanza. 
+[{{< var course.name >}} ({{< var course.number >}})]{.coursename} offre agli studenti un'introduzione pratica all'econometria, strumento fondamentale per comprendere e analizzare l’economia da un punto di vista empirico. Attraverso un approccio equilibrato tra teoria e pratica, gli studenti esploreranno i concetti fondamentali e gli strumenti empirici necessari per comprendere le sfide relative all’impiego di tecniche quantitative in microeconomia, macroeconomia e finanza. 
 
-Gli studenti avranno l'opportunità di immergersi nell'analisi dei dati e nella costruzione dei modelli in modo pratico e interattivo mediante l’utilizzando di R. R è uno dei software più diffusi e potenti nel campo dell'econometria e della statistica e offre una vasta gamma di funzionalità per la manipolazione dei dati, la visualizzazione grafica e l'implementazione di modelli econometrici.
-
-L'enfasi è sulla comprensione intuitiva e non sulle **formalità** matematiche  questo corso ti fornirà le competenze necessarie per affrontare sfide analitiche complesse con sicurezza e competenza.
-
-## Obiettivi del corso
-
-Alla conclusione del corso, gli studenti saranno in grado di condurre analisi empiriche in modo indipendente e interpretarne i risultati, valutando attentamente l'adeguatezza delle assunzioni necessarie per garantire la corretta interpretazione dei risultati.
-
-In particolare, gli studenti saranno in grado di:
-
-1. Comprendere la logica e la filosofia dei modelli econometrici presentati, valutando la loro capacità di cogliere relazioni causali o di fornire predizioni di qualità.
-2. Valutare criticamente le assunzioni fondamentali sottostanti ai modelli econometrici, analizzandone l'impatto sulla validità dei risultati.
-3. Utilizzare rigorose misure statistiche per valutare la qualità delle predizioni generate dai modelli econometrici.
-4. Applicare efficacemente il software [R](http://r-project.org) per manipolare dati, produrre visualizzazioni informative e stimare i parametri dei modelli econometrici utilizzando dati reali, sviluppando così competenze pratiche nel campo dell'analisi dei dati e della modellistica economica.
-
-## Libro di testo
-
-::: {.grid .libro}
-
-::: {.g-col-4}
-![](sw.png){width=75%}
-:::
-
-::: {.g-col-8}
-Il libro di testo utilizzato in questo corso è:
-
-
-Stock, J. H. e Watson, M.W: *Introduzione all'econometria*, Pearson Italia, 2020. _ISBN: 8891906190_.
-
-Durante il corso, gli studenti avranno accesso a slides didattiche che forniranno una guida dettagliata attraverso i concetti e gli argomenti trattati. Queste risorse supplementari saranno fondamentali per consolidare la comprensione dei materiali di studio e facilitare il processo di apprendimento.
-
-:::
-:::
-
-## Software
-
-::: {.grid .r}
-
-::: {.g-col-4}
-![](https://www.r-project.org/Rlogo.png)
-:::
-
-
-::: {.g-col-8}
-Come già accennato, il corso prevede l'utilizzo di [R](http://r-project.org), uno dei linguaggi di programmazione statistico/econometrico più diffusi e potenti.
-
-[R](http://r-project.org) ha una licenza open-source (GNU GPL), è compatibile con i maggiori sistemi operativi (GNU/Linux, macOS, Microsoft Windows).
-:::
-
-:::
-
-## Orari di ricevimento
-
-Gli orari di ricevimento sono:
-
-| Giorno    | Orario      |
-| --------- | ----------- |
-| Lunedì    | 9:00-10:00 |
-| Martedì   | 9:00-10:00 |
-
-E' obbligatorio prenotare un appuntamento utilizzando questo link:
-
-## Modalità di valutazione
-
-L'esame di Econometria comprende due fasi: una prova scritta e una prova orale, entrambe obbligatorie.
-
-La prova scritta valuterà la capacità degli studenti di comprendere e interpretare le stime dei modelli econometrici introdotti durante il corso e di applicarli in contesti specifici.
-
-La prova orale è volta ad accertare in maniera piu' articolata le conoscenza acquisite nel corso. 
-
-L'ammissione alla prova orale è garantita agli studenti che abbiano superato con sufficienza la prova scritta. 
 
 
 
