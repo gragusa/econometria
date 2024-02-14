@@ -100,6 +100,19 @@ div.sidebar-item-container .active, div.sidebar-item-container .show > .nav-link
   margin-top: 0;
 }
 
+.subtitle {
+  font-size: 1.7rem;
+  font-weight: 600;  
+}
+
+.coursename {
+  color: $indigo
+}
+
+.high {
+    color: $indigo
+  }
+
 .course-subtitle {
   font-size: 1.7rem;
 }

@@ -4,98 +4,63 @@
     "href": "syllabus.html",
     "title": "Syllabus",
     "section": "",
-    "text": "Prof. Giuseppe Ragusa\n   Viale del Castro Laurenziano, 9\n   &lt;a href=“mailto:giuseppe.ragusa@uniroma1.it”&gt;giuseppe.ragusa@uniroma1.it\n   Schedule an appointment\n\n\n\n\n\n   Lunedì (L) e Martedì (M)\n   19 february, 2024 - 1 giugno 2024\n   (L) 12:00–14:00 (M) 10:00-12:00\n   (L) Aula 10 (M) Aula 8b"
+    "text": "Prof. Giuseppe Ragusa\n   Sapienza, Università di Roma\n   Dipartimento di Economia e Diritto\n   Prof. Giuseppe Ragusa\n   giuseppe.ragusa@uniroma1.it\n   Ricevimento\n\n\n\n\n\n   Lunedì (L) e Martedì (M)\n   19 february, 2024 - 1 giugno 2024\n   (L) 12:00–14:00 (M) 10:00-12:00\n   (L) Aula 10 (M) Aula 8b"
   },
   {
     "objectID": "syllabus.html#descrizione-del-corso",
     "href": "syllabus.html#descrizione-del-corso",
     "title": "Syllabus",
     "section": "Descrizione del corso",
-    "text": "Descrizione del corso\nL’obiettivo del corso è quello di introdurre gli studenti allo studio dell’econometria mediante un approccio prevalentemente applicato. Sebbene il corso si concentra sia sugli aspetti teorici sia su quelli pratici della disciplina, l’enfasi è sulla comprensione intuitiva dei concetti fondamentali della materia e sulla loro applicazione empirica su temi microeconomici, macroeconomici e finanziari."
+    "text": "Descrizione del corso\nEconometria (1018133) offre agli studenti un’introduzione pratica all’econometria, strumento fondamentale per comprendere e analizzare l’economia da un punto di vista empirico. Attraverso un approccio equilibrato tra teoria e pratica, gli studenti esploreranno i concetti fondamentali e gli strumenti empirici necessari per comprendere le sfide relative all’impiego di tecniche quantitative in microeconomia, macroeconomia e finanza.\nL’enfasi è sulla comprensione intuitiva e non sulle formalità matematiche questo corso ti fornirà le competenze necessarie per affrontare sfide analitiche complesse con sicurezza e competenza."
   },
   {
     "objectID": "syllabus.html#obiettivi-del-corso",
     "href": "syllabus.html#obiettivi-del-corso",
     "title": "Syllabus",
     "section": "Obiettivi del corso",
-    "text": "Obiettivi del corso\nAl termine del corso lo studente dovrà essere in grado di svolgere autonomamente un’analisi empirica ed interpretarne i risultati, valutando l’adeguatezza delle assunzioni necessarie per la correttezza delle interpretazioni.\nIn particolare, lo studente sarà in grado di\n\nSpiegare la filosofia dei modelli introdotti e la loro capacità di catturare relazioni causali o di fornire predizioni di buona qualità;\nValutare l’adeguatezza delle assunzioni sottostanti i modelli econometrici;\nValutare la qualità delle predizioni mediante rigorose misure statistiche;\nUsare R per stimare e valutare i modelli econometrici su dati reali."
+    "text": "Obiettivi del corso\nAlla conclusione del corso, gli studenti saranno in grado di condurre analisi empiriche in modo indipendente e interpretarne i risultati, valutando attentamente l’adeguatezza delle assunzioni necessarie per garantire la corretta interpretazione dei risultati.\nIn particolare, gli studenti saranno in grado di:\n\nComprendere la logica e la filosofia dei modelli econometrici presentati, valutando la loro capacità di cogliere relazioni causali o di fornire predizioni di qualità.\nValutare criticamente le assunzioni fondamentali sottostanti ai modelli econometrici, analizzandone l’impatto sulla validità dei risultati.\nUtilizzare rigorose misure statistiche per valutare la qualità delle predizioni generate dai modelli econometrici.\nApplicare efficacemente il software R per manipolare dati, produrre visualizzazioni informative e stimare i parametri dei modelli econometrici utilizzando dati reali, sviluppando così competenze pratiche nel campo dell’analisi dei dati e della modellistica economica."
   },
   {
     "objectID": "syllabus.html#libro-di-testo",
     "href": "syllabus.html#libro-di-testo",
     "title": "Syllabus",
     "section": "Libro di testo",
-    "text": "Libro di testo\n\n\n\n\n\nIl libro di testo utilizzato in questo corso è:\nStock, J. H. e Watson, M.W: Introduzione all’econometria, Pearson Italia, 2005."
+    "text": "Libro di testo\n\n\n\n\n\nIl libro di testo utilizzato in questo corso è:\nStock, J. H. e Watson, M.W: Introduzione all’econometria, Pearson Italia, 2020. ISBN: 8891906190.\nDurante il corso, gli studenti avranno accesso a slides didattiche che forniranno una guida dettagliata attraverso i concetti e gli argomenti trattati. Queste risorse supplementari saranno fondamentali per consolidare la comprensione dei materiali di studio e facilitare il processo di apprendimento."
   },
   {
     "objectID": "syllabus.html#software",
     "href": "syllabus.html#software",
     "title": "Syllabus",
     "section": "Software",
-    "text": "Software\n\n\n\n\n\nIl corso prevede l’utilizzo di R, uno dei linguaggi di programmazione statistico/econometrico più diffusi e potenti.\nR ha una licenza open-source (GNU GPL), è compatibile con i maggiori sistemi operativi (GNU/Linux, macOS, Microsoft Windows)."
+    "text": "Software\n\n\n\n\n\nCome già accennato, il corso prevede l’utilizzo di R, uno dei linguaggi di programmazione statistico/econometrico più diffusi e potenti.\nR ha una licenza open-source (GNU GPL), è compatibile con i maggiori sistemi operativi (GNU/Linux, macOS, Microsoft Windows)."
   },
   {
     "objectID": "syllabus.html#orari-di-ricevimento",
     "href": "syllabus.html#orari-di-ricevimento",
     "title": "Syllabus",
     "section": "Orari di ricevimento",
-    "text": "Orari di ricevimento\nGli orari di ricevimento sono:\n\n\n\nGiorno\nOrario\n\n\n\n\nLunedì\n15:00-16:00\n\n\nMercoledì\n12:00-13:00\n\n\n\nE’ obbligatorio prenotare un appuntamento utilizzando questo link:"
+    "text": "Orari di ricevimento\nGli orari di ricevimento sono:\n\n\n\nGiorno\nOrario\n\n\n\n\nLunedì\n9:00-10:00\n\n\nMartedì\n9:00-10:00\n\n\n\nE’ obbligatorio prenotare un appuntamento utilizzando questo link:"
   },
   {
     "objectID": "syllabus.html#modalità-di-valutazione",
     "href": "syllabus.html#modalità-di-valutazione",
     "title": "Syllabus",
     "section": "Modalità di valutazione",
-    "text": "Modalità di valutazione\nLa modalità di esame consiste in una prova scritta e una verifica orale."
+    "text": "Modalità di valutazione\nL’esame di Econometria comprende due fasi: una prova scritta e una prova orale, entrambe obbligatorie.\nLa prova scritta valuterà la capacità degli studenti di comprendere e interpretare le stime dei modelli econometrici introdotti durante il corso e di applicarli in contesti specifici.\nLa prova orale è volta ad accertare in maniera piu’ articolata le conoscenza acquisite nel corso.\nL’ammissione alla prova orale è garantita agli studenti che abbiano superato con sufficienza la prova scritta."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Econometria",
+    "title": "Econometria (1018133)",
     "section": "",
-    "text": "Prof. Giuseppe Ragusa\n   Viale del Castro Laurenziano, 9\n   giuseppe.ragusa@uniroma1.it\n   Ricevimento\n\n\n\n\n\n   Lunedì (L) e Martedì (M)\n   19 february, 2024 - 1 giugno 2024\n   (L) 12:00–14:00 (M) 10:00-12:00\n   (L) Aula 10 (M) Aula 8b"
+    "text": "Prof. Giuseppe Ragusa\n   Sapienza, Università di Roma\n   Dipartimento di Economia e Diritto\n   Viale del Castro Laurenziano, 9\n   giuseppe.ragusa at uniroma1 dot it\n   Ricevimento\n\n\n\n\n\n   Lunedì (L) e Martedì (M)\n   19 february, 2024 - 1 giugno 2024\n   (L) 12:00–14:00 (M) 10:00-12:00\n   (L) Aula 10 (M) Aula 8b"
   },
   {
     "objectID": "index.html#descrizione-del-corso",
     "href": "index.html#descrizione-del-corso",
-    "title": "Econometria",
+    "title": "Econometria (1018133)",
     "section": "Descrizione del corso",
-    "text": "Descrizione del corso\nQuesto corso offre agli studenti un’introduzione pratica all’econometria, strumento fondamentale per comprendere e analizzare l’economia da un punto di vista empirico. Attraverso un approccio equilibrato tra teoria e pratica, gli studenti esploreranno i concetti fondamentali e gli strumenti empirici necessari per comprendere le sfide relative all’impiego di tecniche quantitative in microeconomia, macroeconomia e finanza.\nGli studenti avranno l’opportunità di immergersi nell’analisi dei dati e nella costruzione dei modelli in modo pratico e interattivo mediante l’utilizzando di R. R è uno dei software più diffusi e potenti nel campo dell’econometria e della statistica e offre una vasta gamma di funzionalità per la manipolazione dei dati, la visualizzazione grafica e l’implementazione di modelli econometrici.\nL’enfasi è sulla comprensione intuitiva e non sulle formalità matematiche questo corso ti fornirà le competenze necessarie per affrontare sfide analitiche complesse con sicurezza e competenza."
-  },
-  {
-    "objectID": "index.html#obiettivi-del-corso",
-    "href": "index.html#obiettivi-del-corso",
-    "title": "Econometria",
-    "section": "Obiettivi del corso",
-    "text": "Obiettivi del corso\nAlla conclusione del corso, gli studenti saranno in grado di condurre analisi empiriche in modo indipendente e interpretarne i risultati, valutando attentamente l’adeguatezza delle assunzioni necessarie per garantire la corretta interpretazione dei risultati.\nIn particolare, gli studenti saranno in grado di:\n\nComprendere la logica e la filosofia dei modelli econometrici presentati, valutando la loro capacità di cogliere relazioni causali o di fornire predizioni di qualità.\nValutare criticamente le assunzioni fondamentali sottostanti ai modelli econometrici, analizzandone l’impatto sulla validità dei risultati.\nUtilizzare rigorose misure statistiche per valutare la qualità delle predizioni generate dai modelli econometrici.\nApplicare efficacemente il software R per manipolare dati, produrre visualizzazioni informative e stimare i parametri dei modelli econometrici utilizzando dati reali, sviluppando così competenze pratiche nel campo dell’analisi dei dati e della modellistica economica."
-  },
-  {
-    "objectID": "index.html#libro-di-testo",
-    "href": "index.html#libro-di-testo",
-    "title": "Econometria",
-    "section": "Libro di testo",
-    "text": "Libro di testo\n\n\n\n\n\nIl libro di testo utilizzato in questo corso è:\nStock, J. H. e Watson, M.W: Introduzione all’econometria, Pearson Italia, 2020. ISBN: 8891906190.\nDurante il corso, gli studenti avranno accesso a slides didattiche che forniranno una guida dettagliata attraverso i concetti e gli argomenti trattati. Queste risorse supplementari saranno fondamentali per consolidare la comprensione dei materiali di studio e facilitare il processo di apprendimento."
-  },
-  {
-    "objectID": "index.html#software",
-    "href": "index.html#software",
-    "title": "Econometria",
-    "section": "Software",
-    "text": "Software\n\n\n\n\n\nCome già accennato, il corso prevede l’utilizzo di R, uno dei linguaggi di programmazione statistico/econometrico più diffusi e potenti.\nR ha una licenza open-source (GNU GPL), è compatibile con i maggiori sistemi operativi (GNU/Linux, macOS, Microsoft Windows)."
-  },
-  {
-    "objectID": "index.html#orari-di-ricevimento",
-    "href": "index.html#orari-di-ricevimento",
-    "title": "Econometria",
-    "section": "Orari di ricevimento",
-    "text": "Orari di ricevimento\nGli orari di ricevimento sono:\n\n\n\nGiorno\nOrario\n\n\n\n\nLunedì\n9:00-10:00\n\n\nMartedì\n9:00-10:00\n\n\n\nE’ obbligatorio prenotare un appuntamento utilizzando questo link:"
-  },
-  {
-    "objectID": "index.html#modalità-di-valutazione",
-    "href": "index.html#modalità-di-valutazione",
-    "title": "Econometria",
-    "section": "Modalità di valutazione",
-    "text": "Modalità di valutazione\nL’esame di Econometria comprende due fasi: una prova scritta e una prova orale, entrambe obbligatorie.\nLa prova scritta valuterà la capacità degli studenti di comprendere e interpretare le stime dei modelli econometrici introdotti durante il corso e di applicarli in contesti specifici.\nLa prova orale è volta ad accertare in maniera piu’ articolata le conoscenza acquisite nel corso.\nL’ammissione alla prova orale è garantita agli studenti che abbiano superato con sufficienza la prova scritta."
+    "text": "Descrizione del corso\nEconometria (1018133) offre agli studenti un’introduzione pratica all’econometria, strumento fondamentale per comprendere e analizzare l’economia da un punto di vista empirico. Attraverso un approccio equilibrato tra teoria e pratica, gli studenti esploreranno i concetti fondamentali e gli strumenti empirici necessari per comprendere le sfide relative all’impiego di tecniche quantitative in microeconomia, macroeconomia e finanza."
   },
   {
     "objectID": "IntroduzioneR.html",
