@@ -1,7 +1,8 @@
 {
-  "hash": "8185b447637e283fe07051fa76eaaee7",
+  "hash": "4803674a5848c01acc86c293e0755675",
   "result": {
-    "markdown": "---\ntitle: \"Materiale didattico\"\nresources: |\n  Lecture13.pdf, Lecture35.pdf, IntroduzioneR.Rmd\n---\n\n\n\n\n::: {.home}\n\n- Questa pagina contiene i collegamenti al materiale didattico del corso. (Nella sidebar qui a sinistra)\n\n- Il materiale didattico è organizzato per lezione e a ciscuna lezione è associato\n  1. [le slide]() ({{< fa brands slideshare >}})\n  2. [dispense `R`]() ({{< iconify carbon logo-r-script >}})\n  2. [il codice `R`]() in formato Rmd ({{< fa laptop-code >}})\n  3. [letture consigliate]() ({{< fa book-open-reader >}})\n\n- I collegamenti si attiveranno in sincrono con la progressione del corso.\n\n\n:::\n\n\n\n",
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Materiale didattico\"\nsidebar: true\nresources: IntroduzioneR.qmd\n---\n\n\n\n\n::: {.home}\n\n- Questa pagina contiene i collegamenti al materiale didattico del corso. (Nella sidebar qui a sinistra)\n\n- Il materiale didattico è organizzato per lezione e a ciscuna lezione è associato\n  1. [le slide]() {{< iconify bi file-earmark-slides >}}\n  2. [dispense `R` in formato html]() {{< iconify bi filetype-html >}}\n  3. [il codice `R` in formato Rmd]() in formato Rmd {{< iconify bi code-slash >}}\n  4. [letture consigliate]() {{< iconify bi book >}}\n\n- I collegamenti (a sinistra) si attiveranno in sincrono con la progressione del corso.\n\n\n:::\n\n\n\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"

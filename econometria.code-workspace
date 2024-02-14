@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+    ],
+    "settings": {
+        "grammarly.selectors": [
+            {
+                "language": "markdown",
+                "pattern": "**/*.md"
+            },
+            {
+                "language": "markdown",
+                "pattern": "**/*.qmd"
+            },
+            {
+                "language": "latex",
+                "pattern": "**/*.tex"
+            },
+            {
+                "language": "quarto",
+                "scheme": "untitled"
+            }
+        ],
+        "cSpell.language": "en,it,it-IT"
+    }
+}

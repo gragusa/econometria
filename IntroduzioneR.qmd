@@ -1,0 +1,502 @@
+---
+title: "R: Introduzione"
+format: html
+---
+
+
+## Storia
+
+`R` è un linguaggio di programmazione open source utilizzato per l'analisi e visualizzazione dei dati.
+
+`R` è la versione open source di `S`, software sviluppato da John Chambers, Rick Becker and Allan Wilks presso i Bell Laboratories di AT&T alla fine degli anni '70. Nell'idea del suoi creatori, `S` doveva essere un linguaggio di programmazione che fosse più semplice e più interattivo rispetto ai linguaggi utilizzati per l'analisi dei dati dell'epoca (FORTRAN e SAS). 
+
+`R` fu sviluppato inizialmente da Ross Ihaka e Robert Gentleman presso l'Università di Auckland, in Nuova Zelanda. La prima versione di `R` venne condivisa dai sui creatori nel 1993. Nel 1995 il software fu rilasciato sotto la licenza open source GNU GPL.
+
+La versione 1.0 è stata rilasciata il 29 febbraio 2000 e da quel momento la crescita della sua popolarità non si è arrestata.
+
+Negli ultimi dieci anni, due aziende hanno contribuito alla crescita di `R:` R Studio (oggi diventata Posit) e Revolution Analytics.
+
+[Revolution Analytics](https://blog.revolutionanalytics.com/2015/04/revolution-analytics-microsoft.html) fondata nel 2007, è stata una delle prime società ad offrire una versione commerciale di `R`. Revolution Analytics ha introdotto nuove funzionalità, come l'elaborazione parallela e distribuita, che hanno permesso di elaborare grandi quantità di dati in modo più efficiente. L'acquisizione di Revolution Analytics da parte di Microsoft nel 2015 ha ulteriormente rafforzato l'adozione di R, poiché Microsoft ha iniziato ad integrare R in molti dei suoi prodotti, come SQL Server e Power BI.
+
+
+RStudio, dal 2022 [Posit](htpps://posit.com), ha avuto un ruolo fondamentale nello sviluppo dell'ecosistema `R`. Fondata nel 2011 da JJ Allaire, l'azienda ha introdotto un ambiente di sviluppo integrato (IDE) per R, che ha rivoluzionato il modo in cui gli utenti interagiscono con il linguaggio. L'ambiente integrato, anch'esso chiamato RStudio, ha reso la programmazione in `R` più accessibile e intuitiva, facilitando la scrittura, il debug e la gestione dei pacchetti.
+
+Oltre al suo IDE, `RStudio` ha svolto un ruolo chiave nello sviluppo del "tidyverse", una collezione di pacchetti R per la scienza dei dati, guidata da Hadley Wickham, uno dei più influenti progammatori di R e Chief Scientist di [Posit](htpps://posit.com). Il [tidyverse](https://www.tidyverse.org/), introdotto intorno al 2014, comprende pacchetti come `ggplot2`, `dplyr` e `tidyr` usati per la visualizzazione, la manipolazione e la ristrutturazione dei dati. Questi strumenti hanno reso  più efficiente e meno soggette a errori l'analisi dei dati, promuovendo uno stile di programmazione coerente e leggibile.
+
+R è oggi uno dei linguaggi di programmazione più popolari per l'analisi dei dati e la statistica negli ultimi anni. Ecco alcuni dati sull'adozione di R:
+
+-   Numero di utenti: Secondo un sondaggio del 2022 condotto da [Stack Overflow](https://insights.stackoverflow.com/survey/2021) R è uno dei linguaggi di programmazione più popolare al mondo, utilizzato dal 4.7% degli sviluppatori. Nella lista è il primo software ad essere specificatamente pensato per applicazioni statistiche.
+
+-   Numero di pacchetti: Il Comprehensive R Archive Network ([CRAN](https://cran.r-project.org/)), il principale repository di pacchetti per R, contiene oltre 19.000 pacchetti. Questi pacchetti coprono una vasta gamma di applicazioni che vanno dalla statistica al machine learning, dalla visualizzazione e manipolazione dei dati alla stesura automatica di report, e altri task generici non necessariamente legati alle applicazioni di carattere statistico.
+
+-   Uso aziendale: L'adozione di R nell'ambiente aziendale è aumentata negli ultimi anni, con molte aziende che lo utilizzano per l'analisi dei dati e la statistica.
+
+In generale, `R` è diventato un linguaggio di programmazione popolare tra i data scientist, gli statistici e gli analisti dei dati grazie alla sua vasta gamma di pacchetti, alla sua flessibilità e alla sua potenza.
+
+## Installazione di `R` e `Rstudio`
+
+`R` può essere scaricato gratuitamente dal sito ufficiale ([www.r-project.org/](https://www.r-project.org/)) scegliendo la versione adatta al sistema operativo utilizzato.
+
+Per installare RStudio sul tuo computer bisogna visitare [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/), scaricare la versione di RStudio Desktop compatibile con il sistema operativo e seguire le istruzioni per completare l'installazione.
+
+::: {.callout-important}
+Una differenza chiave da comprendere capire è quella tra `R`, il linguaggio di programmazione mentre `RStudio` è un'interfaccia ad `R` che consente di lavorare maggiore facilità con `R`.
+:::
+
+
+
+## Calcoli di Base
+
+`R` come una semplice calcolatrice. 
+
+#### Addizione, Sottrazione, Moltiplicazione e Divisione {-}
+
+| Matematica | Codice `R` | Risultato |
+| :--------: | :--------: | :-------: |
+|  $3 + 2$   |  `3 + 2`   | `r 3 + 2` |
+|  $3 - 2$   |  `3 - 2`   | `r 3 - 2` |
+| $3 \cdot2$ |  `3 * 2`   | `r 3 * 2` |
+|  $3 / 2$   |  `3 / 2`   | `r 3 / 2` |
+
+#### Esponenti  {-}
+
+|  Matematica  |   Codice `R`    |     Risultato     |
+| :----------: | :-------------: | :---------------: |
+|    $3^2$     |     `3 ^ 2`     |     `r 3 ^ 2`     |
+|  $2^{(-3)}$  |   `2 ^ (-3)`    |   `r 2 ^ (-3)`    |
+| $100^{1/2}$  | `100 ^ (1 / 2)` | `r 100 ^ (1 / 2)` |
+| $\sqrt{100}$ |   `sqrt(100)`   |   `r sqrt(100)`   |
+
+
+#### Costanti Matematiche  {-}
+
+| Matematica | Codice `R` | Risultato  |
+| :--------: | :--------: | :--------: |
+|   $\pi$    |    `pi`    |   `r pi`   |
+|    $e$     |  `exp(1)`  | `r exp(1)` |
+
+#### Logaritmi  {-}
+
+Nota che useremo $\ln$ e $\log$ in modo interscambiabile per indicare il logaritmo naturale. Non c'è `ln()` in `R`, invece usa `log()` per indicare il logaritmo naturale.
+
+|    Matematica     |     Codice `R`      |       Risultato       |
+| :---------------: | :-----------------: | :-------------------: |
+|     $\log(e)$     |    `log(exp(1))`    |    `r log(exp(1))`    |
+| $\log_{10}(1000)$ |    `log10(1000)`    |    `r log10(1000)`    |
+|   $\log_{2}(8)$   |      `log2(8)`      |      `r log2(8)`      |
+|  $\log_{4}(16)$   | `log(16, base = 4)` | `r log(16, base = 4)` |
+
+#### Trigonometria  {-}
+
+|   Matematica    |  Codice `R`   |    Risultato    |
+| :-------------: | :-----------: | :-------------: |
+| $\sin(\pi / 2)$ | `sin(pi / 2)` | `r sin(pi / 2)` |
+|    $\cos(0)$    |   `cos(0)`    |   `r cos(0)`    |
+
+
+
+## I pacchetti di `R`
+
+I pacchetti in `R` sono collezioni di funzioni, dati e codice compilato che sono sviluppati da terzi per aumentare le funzionalità di R. Sono fondamentali poiché permettono agli utenti di eseguire una vasta gamma di analisi e processi senza dover scrivere tanto codice.  Ci sono migliaia di pacchetti disponibili su CRAN (Comprehensive R Archive Network), oltre a quelli disponibili su altre fonti come GitHub.
+
+Per installare un pacchetto in R, si utilizza la funzione `install.packages()`. Questa funzione scarica e installa il pacchetto desiderato dal repository CRAN. Una volta installato un pacchetto, è necessario caricarlo nella sessione di lavoro corrente usando la funzione `library()` per poter utilizzare le sue funzionalità.
+
+Ecco un esempio di come installare e caricare il pacchetto `ggplot2`:
+
+```{R}
+#| eval: false
+# Installa il pacchetto ggplot2
+install.packages("ggplot2")
+
+# Carica il pacchetto ggplot2
+library(ggplot2)
+```
+
+In questo esempio, il primo comando installa `ggplot2` e il secondo comando lo carica nella sessione di R attuale, rendendo disponibili tutte le sue funzioni e capacità.
+
+Per aggiornare un pacchetto, si può usare la funzione `update.packages()` e per rimuoverne uno, si usa `remove.packages()`.
+
+I pacchetti possono anche essere installati da `Rstudio`, dal menu Strumenti|Installa pacchetti. Similarmente, i pacchetti possono essere aggiornati usando la voce `Aggiorna pacchetti`. 
+
+Alcuni pacchetti di `R` includono dataset. Questi dataset sono particolarmente utili per apprendere tecniche di analisi dei dati, testare algoritmi, e per scopi didattici. Per esempio, [wooldridge](https://cran.r-project.org/package=wooldridge) e [Ecdat](https://cran.r-project.org/package=Ecdat) contengono vari dataset di carattere economico.
+
+Per accedere ai dataset inclusi nei pacchetti bisogna installarli e poi caricarli. 
+
+```{r}
+#| eval: false
+# Installa il pacchetto Ecdat
+install.packages("Ecdat")
+# Installa il pacchetto wooldridge
+install.packages("wooldridge")
+
+# Carichiamo i pacchetti
+library(Ecdat)
+library(wooldridge)
+
+# Carica un dataset specifico, ad esempio 'Accident'
+data(Accident)
+```
+
+Dopo aver installato e caricato `Ecdat` il comando `data()` consente di caricare uso specifico dataset in memoria pe ressere poi utilizzato nella nostra session
+
+
+I dataset inclusi nei pacchetti offrono diversi vantaggi:
+
+1. **Facilità di Accesso**: Gli utenti possono accedere rapidamente a un'ampia gamma di dati senza doverli cercare o scaricare da fonti esterne.
+2. **Validità e Affidabilità**: I dati forniti nei pacchetti R sono generalmente ben documentati e validati, il che li rende affidabili per analisi e apprendimento.
+3. **Scopi Didattici**: Sono ottimi per l'apprendimento e la pratica delle tecniche di analisi dei dati, offrendo casi di studio reali o simulati.
+
+In conclusione, i pacchetti in R arricchiscono notevolmente l'esperienza dell'utente non solo con strumenti analitici avanzati ma anche con dati pronti per l'analisi, rendendo R un ambiente ancora più potente per l'analisi dei dati.
+
+
+
+```{r}
+#| eval: false
+install.packages("Ecdat")
+```
+
+Alternativamente, i pacchetti possono essere installati direttamente da `RStudio` usando il menu _Tools_ (_Strumenti_).
+
+## Caricamento dei pacchetti
+
+L'installazione rende disponibili i pacchetti sul proprio computer. Perché `R` possa utilizzare le funzionalità del pacchetto è necessario caricare i pacchetti utilizzando il comando **`library()`**. Ad esempio, per caricare il pacchetto `Ecdat` bisogna eseguire il seguente comando nella console R:
+
+```{r}
+#| message: false
+#| warning: false
+library(Ecdat)
+```
+
+
+
+### I dataset di `Ecdat`
+
+Per avere un'idea dei dataset messi a disposizione da `Ecdat` possiamo utilizzare la funzione di `help`
+```{r}
+#| eval: false
+help(package="Ecdat")
+```
+
+I dataset possono essere caricati nella sessione di `R` mediante il comando **`data()`**. Per esempio, il seguente comando
+```{r}
+data(Caschool)
+```
+rende disponibile il dataset `Caschool`. Il data set può essere richiamato semplicemente digitando il suo nome
+```{r}
+summary(Caschool)
+```
+
+## Il sistema di help
+
+Il sistema di help di `R` è un'importante risorsa per gli utenti che utilizzano questo software. Consente di accedere a informazioni dettagliate su tutte le funzioni e i pacchetti di `R`, nonché di comprendere meglio il funzionamento del linguaggio di programmazione R.
+
+Ogni funzione in R ha la sua pagina di help alla quale si può accedere tramite la funzione `help()` o tramite il simbolo `?` seguito dal nome della funzione della quale si vogliono ottenee inforrmazioni. Per esempio
+```{r}
+#| eval: false
+help(mean)
+```
+apre la pagina di help relativa alla funzione `mean`.
+
+La pagina di help fornisce una descrizione della funzione, i suoi argomenti e tipologia dei valori che la funzione restituisce. La maggior parte delle funzioni in R hanno esempi di utilizzo nella loro pagina di help.
+
+Per ottenere aiuto sulle funzionalità di un pacchetto bisgna passare l'argomento `packages` seguito dal nome del pacchetto. Per esempio, il seguente comando mostra la pagina di `help` per il pacchetto `ggplot2`
+```{r}
+#| eval: false
+help(packages="ggplot2")
+```
+
+
+
+## Primi grafici con `ggplot2`
+
+I passi per ottenere un grafico con `ggplot2` sono:
+
+1. Installare e caricare il pacchetto `ggplot2` utilizzando il comando `install.packages("ggplot2")` seguito da `library(ggplot2)`.
+
+2. Caricare i dati che si desidera visualizzare in un data frame.
+
+3. Creare un oggetto `ggplot` utilizzando la funzione `ggplot()`. Gli argomenti di questa funzione sono il `data.frame` e la funzione `aes` mediante la quale possono essere specificate le variabili che si desidera utilizzare per l'asse x e l'asse y.
+
+4. Aggiungere i livelli e gli stili al grafico utilizzando una serie di geometrie come `geom_point()`, `geom_line()`, `geom_bar()`. Queste funzioni definiscono le modalità di rappresentazione dei dati nel grafico (ad esempio, con punti, linee, barre, ecc.).
+
+4. Aggiungere etichette, titoli e altre personalizzazioni utilizzando funzioni come `labs()`, `xlab()`, `ylab()`, `ggtitle()` e altre funzioni di personalizzazione.
+
+Ecco un esempio di codice di base per creare un grafico a dispersione utilizzando ggplot2:
+
+```{r}
+library(ggplot2)
+# Caricare i dati
+data(Caschool)
+# Creare l'oggetto ggplot
+scatterplot <- ggplot(Caschool, aes(x = str, y = testscr))
+# Aggiungere i punti al grafico
+scatterplot <- scatterplot + geom_point(col = "darkgreen")
+# Aggiungere etichette e titoli
+scatterplot <- scatterplot +
+  labs(title = "Grafico a dispersione - testscr/str",
+      x = "Rapporto studenti insegnanti", y = "Punteggi nei test")
+# Visualizzare il grafico
+scatterplot
+```
+Questo è solo un esempio molto semplice, ma `ggplot2` offre molte altre funzionalità per la creazione di grafici avanzati e personalizzati. Per esempio, possiamo cambiare il tema grafico usando `theme_bw()` che elimina i colori
+```{r}
+scatterplot <- scatterplot + theme_bw()
+scatterplot
+```
+
+Possiamo anche costruire grafici raggruppati per variabile. Per ottenere un grafico a dispersione per `str` e `testscr` per le due tipologie di scuole `grspan=="KK-06" e `grspan="KK-08"`:
+```{r}
+scatterplot <- scatterplot + facet_wrap(~grspan)
+scatterplot
+```
+
+::: {.callout-note}
+La funzione `facet_wrap()` in `ggplot2` è utilizzata per dividere i dati in sottoinsiemi basati su una variabile e creare una griglia di grafici separati, ognuno dei quali visualizza i dati per uno dei livelli della variabile.
+
+La sintassi di base di facet_wrap() è la seguente:
+
+```{r}
+#| eval: false
+facet_wrap(~variable, nrow = x, ncol = y)
+```
+Dove `variable` è la variabile che si vuole utilizzare per suddividere i dati in sottoinsiemi (nell precedente esempio abbiamo utilizzato `grspan`) e `nrow` e `ncol` specificano il numero di righe e colonne della griglia di grafici che si desidera creare.
+:::
+
+Possiamo anche aggiungere le rette di regression a ciascun grafico usando la geometria `geom_smooth`
+
+```{r}
+scatterplot + geom_smooth(method="lm", col = "darkred")
+```
+
+
+## Prime manipolazione di dati usando  `dplyr`
+
+```{r, results='hide'}
+#| results: 'hide'
+#| message: false
+#| warning: false
+library(dplyr)
+```
+
+Calcoliamo la media e la standard deviation di `testscr`
+
+```{r}
+Caschool |>
+  summarize(m = mean(testscr), s = sd(testscr))
+```
+
+Possiamo anche calcolare la media, la standard deviation e il numero di osservazioni per il gruppo di scuole che hanno un rapporto studenti insegnanti minore di 20, $str<20$ e il gruppo di scuole che hanno un rapporto maggiore o uguale a venti ($str>20$)  usando la funzione `group_by` seguita dall'indicazione del gruppo (nel nostro caso `str<20`):
+
+```{r}
+df_1 <- Caschool |>
+  group_by(str<20) |>
+  summarize(m = mean(testscr),
+            s = sd(testscr),
+            n = n())
+```
+
+Il risultato delle manipolazioni è un `tibble` --- un sorta di `data.frame` più flessibile definito nel pacchetto `dplyr`.
+
+`df_1` può essere a sua volta utilizzato per altri calcoli e si comporta in tutto e per tutto come un normale `data.frame`.
+
+```{r}
+df_1
+```
+
+::: {.callout-note}
+Le maggiori differenze fra i `tibble` e i `data.frame` sono:
+
+- Tipo di output: Il metodo di visualizzazione di un tibble è più compatto e leggibile rispetto a quello di un data.frame.
+
+- Comportamento dei nomi delle variabili: in un `tibble`, i nomi delle variabili sono sempre conservati e non vengono mai modificati (ad esempio, i nomi delle variabili non vengono convertiti in stringhe). In un `data.frame`, i nomi delle variabili possono essere modificati o convertiti in stringhe.
+
+- Comportamento di default dei dati mancanti: in un `tibble`, i dati mancanti vengono visualizzati in modo più chiaro rispetto a un `data.frame`.
+
+- Comportamento della subsetting: in un `tibble`, il subsetting (o l'estrazione di sottoinsiemi di dati) è più rigoroso rispetto a un `data.frame`, in quanto conserva sempre la classe del `tibble`, anche se viene restituito un singolo valore.
+
+- Funzioni dplyr: un `tibble` è progettato per essere compatibile con le funzioni del pacchetto dplyr, che sono utilizzate per manipolare i dati.
+
+ I `tibble` sono una versione leggermente migliorata dei tradizionali `data.frame`, progettata per semplificare l'analisi dei dati in `R`. Tuttavia, i `data.frame` sono ancora molto utilizzati e sono l'oggetto dati di base per molti pacchetti in R. Fortunatamente, molti dei comandi di `R` disegnati per i `data.frame` funzionano anche per i `tibble`.
+:::
+
+
+
+Abbiamo visto che una stima della differenza dei valori attesi fra i due gruppi
+$$
+\Delta = E(testscr|str<20) - E(testscr|str\geqslant20)
+$$
+può essere ottenuta calcolando la differenza delle medie campionarie dei due gruppi e può essere ottenuta usando le informazioni in `df_1`:
+```{r}
+## Differenza delle medie campionarie
+df_1$m[2]-df_1$m[1]
+```
+e, quindi,
+$$
+\hat{\Delta} = \overline{testscr}_{str<20} - \overline{testscr}_{str\geqslant20} = `r df_1$m[2]-df_1$m[1]`.
+$$
+
+Con le stesse informazioni è possibile calcolare l'intervallo di confidenza al 95% per $\Delta$ che è dato da
+$$
+\hat{\Delta}\pm1.96\times\sqrt{\frac{s_{str<20}^{2}}{n_{str<20}}+\frac{s_{str\geqslant20}^{2}}{n_{str\geqslant20}}}.
+$$
+Usando le informazioni contenute in `df_1` otteniamo:
+$$
+(`r df_1$m[2]-df_1$m[1] - 1.96*sqrt(df_1$s[1]^2/df_1$n[1]+df_1$s[2]^2/df_1$n[2])`, `r df_1$m[2]-df_1$m[1] + 1.96*sqrt(df_1$s[1]^2/df_1$n[1]+df_1$s[2]^2/df_1$n[2])`)
+$$
+
+## Qualcosa di più complicato
+
+Invece di stimare la variazione del valore atteso rispetto alle due macro-categorie ($str<20$ e $str\geqslant20$) possiamo provare a stimare il valore atteso condizionatamente a piccoli intervalli. Per esempio, possiamo voler stimare la seguente differenza
+$$
+E(testscr|20.1 < str \leqslant 20.6) - E(testscr|20.6 < str \leqslant 21.1)
+$$
+oppure
+$$
+E(testscr|21.6 < str \leqslant 22) - E(testscr|22 < str \leqslant 22.5).
+$$
+
+Per stimare queste quantità utilizzando i dati nel campion, è necessario calcolare la media campionaria per le scuole che hanno un $str$ che appartiene a ciascun intervallo. Per costruire questi intervalli, possiamo utilizzare la funzione `cut()`. La funzione `cut()` è utilizzata per suddividere un vettore numerico in più intervalli.
+
+::: {.callout-note}
+La sintassi della funzione `cut()` è la seguente:
+```{r}
+#| eval: false
+cut(x, breaks,
+       labels = NULL,
+       include.lowest = FALSE,
+       right = TRUE,
+       dig.lab = 3, ...)
+```
+
+dove:
+
+- `x` è il vettore numerico da suddividere in bin
+- `breaks` è un vettore contenente i valori di taglio, ovvero i punti di separazione tra i bin. Questo può essere specificato in diversi modi, ad esempio tramite un numero intero che specifica il numero di bin desiderati o un vettore numerico che specifica i limiti di ogni bin.
+- `labels` è un vettore di etichette per ogni bin. Se non specificato, gli intervalli saranno etichettati in base ai loro limiti.
+- `include.lowest` indica se includere o meno il valore più basso del vettore x nel primo bin. Il valore predefinito è FALSE.
+- `right` indica se i bin devono essere chiusi a destra o a sinistra. Il valore predefinito è TRUE, ovvero i bin sono chiusi a destra.
+- `dig.lab` è il numero di cifre decimali da utilizzare per le etichette, se specificato.
+- `...` sono altri argomenti opzionali.
+:::
+
+Ecco un esempio di utilizzo della funzione `cut()` per suddividere `str` in tre bin di uguale ampiezza:
+```{r}
+str_cat3 <- cut(Caschool$str, 3)
+summary(str_cat3)
+```
+In questo caso il comando `summary` produce una tavola di frequenza con il numero delle scuole in ciascuna delle tre categorie `r paste0(levels(str_cat3), collapse=", ")`.
+
+Possiamo anche specificare i `breaks` in modo esplicito
+```{r}
+str_cat3 <- cut(Caschool$str, c(13,20, 21, 26))
+summary(str_cat3)
+```
+
+In questo ultimo caso, gli intervalli sono `r paste0(levels(str_cat3), collapse=", ")`.
+
+::: {.callout-note}
+`str_cat3` e, in generale, l'output di `cut` è un oggetto di classe `factor`. Questo tipo di variabili sono utilizzate per rappresentare variabili categoriche o qualitative, ovvero variabili che possono assumere un numero limitato di categorie o livelli (come il numero di intervalli nel nostro questo caso). La funzione `summary()` restituisce una tavola di frequenza per questo tipo di variabili perchè non avrebbe senso calcolare media, mediana e le altre quantità che sono solitamente restituita da `summary` quando l'argomento è una variabile di tipo `numeric`.
+:::
+
+
+
+```{r}
+library(knitr)
+
+df_2 <- Caschool |>
+  mutate(str_cat = cut(str, 25)) |>                        # <1>
+  group_by(str_cat) |>                                     # <2>
+  summarize(m = mean(testscr), s = sd(testscr), n = n())   # <3>
+
+df_2 |> kable()                                            # <4>
+```
+
+1. la funzione `cut` per dividere `str` in `25` intervalli;
+2. `group_by` suddivide `Caschool` in gruppi specificati da `str_cat`
+3. `summarize` calcola la media, la standard deviation e il numero di osservazioni per ciascun gruppo
+4. `kabble` restituisce la tavole dei valori
+
+Alcuni degli errori standard sono uguali a `NA` perché in almeno uno dei gruppi il numero di osservazioni è inferiore a 2, il numero minimo per poter calcolare questa misura dispersione.
+
+Manipolando `df_2`, possiamo calcolare le differenze nelle media campionarie fra due intervalli adiacenti.
+```{r}
+#| warning: false
+df_3 <- df_2 |> mutate(Delta_str = paste0(str_cat, "-", lag(str_cat)),  # <1>
+               Delta_testscr = m - lag(m),                              # <2>
+               stderr = sqrt(s^2/n + lag(s^2/n))) |>                    # <3>
+               select(Delta_str, Delta_testscr, stderr)                 # <4>
+
+kable(df_3)                                                             # <5>
+```
+
+1. la variabile `Delta_str` è uguale alla differenza dei due intervalli ottenuta incollando `paste0` l'intervallo di ciascuna riga con quella precedente (la funzione `lag(m)` associa il valore di `m` della riga precedente). Questa variabile è utile per annotare l'asse delle ascisse del  grafico che produrremo prodotto in seguito.
+
+2. `Delta_str` contiene la differenze delle medie campionari di due intervalli successivi. Queste differenze sono calcolate usando `m - lag(m)` e quindi `Delta_testscr` è uguale a `m`, la media per l'intervallo, meno il valore della media per l'intervallo che preceda la riga in considerazione (`lag(m)`)
+
+3. `stderr` è l'errore standard della differenza delle medie in ciascun intervallo che è uguale a
+
+4. selezioniamo le variabili che ci servono per il grafico mediante la funzione `select()`
+
+5. `kable(df_3)` formatta il `data.frame` come una tavolo `html`. La funzione `kable` è contenuta nel pacchetto `knitr`.
+
+Si noti che per prima riga la differenza delle medie è `NA`. Il motivo è che non c'è un intervallo con valori più piccoli di `r levels(df_3$str_cat[1])` per poter calcolare la differenza. La seconda riga ci dice che
+$$
+\overline{testscr}_{str \in (14.5,14.9]} - \overline{testscr}_{str \in (14,14.5]}  = `r df_3$Delta_testscr[2]`,
+$$
+e che quindi scuole con classi con $(14.5,14.9]$ studenti per insegnante hanno punteggi più alti di circa `r df_3$Delta_testscr[2]` punti rispetto a quelle con $str\in (14,14.5]$. Questo valore positivo (classi più piccole hanno test score più bassi) e molto grande (quasi due volte la deviazione standard dei punteggi in tutto il campione) è dovuto al fatto che stiamo stimando la differenza dei valori attesi usando soltanto 4 scuole. Un numero troppo esigue per aspettarci che la stima sia in qualche modo "vicina" a quella che potremmo stimare se avessimo a disposizione i dati nel campione.
+
+La terza riga ci dice che
+$$
+\overline{testscr}_{str \in (14.9,15.4]} - \overline{testscr}_{str \in (14.5,14.9]}  = `r df_3$Delta_testscr[3]`,
+$$
+e che quindi scuole con $str\in (14.9,15.4]$ hanno punteggi più alti di circa `r df_3$Delta_testscr[3]` punti rispetto a quelle con $str\in (14.5,14.9]$. E così via per le altre righe.
+
+E' molto probabile che tutte le stime e non soltanto quelle della prima riga  siano particolarmente imprecise visto che sono tutte basate su un numero esiguo di osservazioni. Per quantificare la loro precisione, o la loro imprecisione, possiamo costruire l'intervallo di confidenza (al 95%) per ciascun valore dell'intervallo di $str$. L'intervallo  di confidenza al 95% è:
+```{r}
+#| eval: false
+c(df_3$Delta_testscr - 1.96 * df_3$stderr,
+  df_3$Delta_testscr + 1.96 * df_3$stderr)
+```
+dove `stderr` è l'errore standard della differenza delle media che è stato calcolato nel precdedente blocco di codice.
+
+Per aggiungere l'intervallo di confidenza a `df_3` possiamo usare `dplyr` e la funzione `mutate`:
+```{r}
+df_3 <- df_3 |>
+  mutate(ci_sx = Delta_testscr - 1.96 * stderr,    # <1>
+         ci_dx = Delta_testscr + 1.96 * stderr)    # <2>
+
+kable(df_3)
+```
+1. l'estremo sinistro dell'intervallo di confidenza;
+2. l'estremo destro dell'intervallo di confidenza;
+
+Come si vede chiaramente dall'analisi della tabella, tutti gli intervalli di confidenza sono molto ampi. Come preannunciato, i dati a nostra disposizione non sono abbastanza informativi per poter stimare tutte le differenze su intervalli così poco numerosi. Anche nel caso in cui considerassimo la differenza delle medie in scuole con  $str\in(18.7,19.2]$ (27 scuole) e scuole con $str\in (18.2,18.7]$ (47 scuole), l'intervallo di confidenza è molto ampio: $(`r df_3$ci_sx[11]`, `r df_3$ci_dx[11]`)$. Un intervallo di confidenza così ampio implica che non possiamo neanche quantificare con l'appropriata confidenza il segno della differenza che potrebbe essere -12 o 2.
+
+La rappresentazione grafica delle informazioni contenute in una tavole facilita spesso la comprensione dei risultati.
+
+```{r}
+ggplot(df_3, aes(x=Delta_str,y=Delta_testscr)) +               # <1>
+  geom_pointrange(aes(ymin=ci_sx, ymax=ci_dx)) +               # <2>
+  geom_hline(yintercept = 0, col = "darkred") +               # <3>
+  theme_bw() +
+  xlab("Intervalli str") + ylab("Delta Media testscr") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))   # <4>
+```
+
+
+1. sull'ascissa abbiamo la differenza degli intervalli, sull'ordinata la differenza delle medie;
+
+2. la geometria utilizzata è `geom_pointrange`, che "plotta" la differenza delle medie (il punto) e l'intervallo di confidenza al 95% definito da (`(ci_sx, ci_dx)`) e rappresentato dalle linee che si estendono verticalmente.
+
+3. `geom_hline(yintercept=0, col = "darkred")` produce una riga orizzonate di colore rosso scuro
+
+4. le etichette dell'asse della `x` sono ruotate di 90 gradi per favorire la loro leggibilità.
+
+Il grafico mostra che la stima di molte delle differenze è negativa e che gli intervalli di confidenza (eccettuati i tre casi in cui non è possibile costruire l'intervallo di confidenza) sono troppo ampi per poter concludere  che il valore della differenza nella popolazione sia negativa
+
+
+
+
+
+
+
