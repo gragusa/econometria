@@ -1,7 +1,7 @@
 ---
 title: "Materiale didattico"
-resources: |
-  Lecture13.pdf, Lecture35.pdf, IntroduzioneR.Rmd
+sidebar: true
+resources: IntroduzioneR.qmd
 ---
 
 
@@ -18,10 +18,10 @@ p_load(xlsx)
 - Questa pagina contiene i collegamenti al materiale didattico del corso. (Nella sidebar qui a sinistra)
 
 - Il materiale didattico è organizzato per lezione e a ciscuna lezione è associato
-  1. [le slide]() ({{< fa brands slideshare >}})
-  2. [dispense `R` in formato html]() ({{< iconify carbon logo-r-script >}})
-  2. [il codice `R` in formato Rmd]() in formato Rmd ({{< fa laptop-code >}})
-  3. [letture consigliate]() ({{< fa book-open-reader >}})
+  1. [le slide]() {{< iconify bi file-earmark-slides >}}
+  2. [dispense `R` in formato html]() {{< iconify bi filetype-html >}}
+  3. [il codice `R` in formato Rmd]() in formato Rmd {{< iconify bi code-slash >}}
+  4. [letture consigliate]() {{< iconify bi book >}}
 
 - I collegamenti (a sinistra) si attiveranno in sincrono con la progressione del corso.
 

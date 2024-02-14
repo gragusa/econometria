@@ -3,8 +3,10 @@ project:
   render:
     - "*.qmd"
     - "!slides/"
+    - "!ModelloLineare.qmd"
   resources:
     - "files/"
+    - "html/"
 
 # See https://quarto.org/docs/projects/code-execution.html#freeze
 execute:
@@ -12,48 +14,80 @@ execute:
 
 bibliography: files/bib/references.bib
 csl: files/bib/chicago-author-date.csl
-description-meta: "Elementi di Econometria 2022/2023 - Giuseppe Ragusa - Sapienza"
+description-meta: "Econometria 2023/2024 - Giuseppe Ragusa - Sapienza"
 
 website:
   title: "Econometria"
-  site-url: "https://econometria.corsi.gragusa.org"
-
+  site-url: "https://gragusa.org/econometria/"
+  site-path: "/econometria/"
   favicon: "/files/icon-512.png"
 
   navbar:
     pinned: true
     background: "#344454"
     right:
-      - syllabus.qmd
-      - programma.qmd
+      - syllabus.qmd      
       - text: "Materiale didattico"
         file: materiale.qmd
-      - text: "Risorse"
-        file: risorse.qmd
 
   sidebar:
-  - title: "materiale"
     style: "docked"
-    search: false
-    background: dark
+    search: true
     contents:
       - section: "Introduzione"
         contents:
-        - text: "1: Introduzione all'econometria {{< fa brands slideshare >}}"
-          file: ../Lecture13.pdf
-        - text: "2: Richiami di probabilità e statistica {{< fa brands slideshare >}}"
-          file: ../Lecture13b.pdf
-        - text: "3a: Introduzione ad R {{< iconify carbon logo-r-script >}}"
-          file: ../IntroduzioneR.html
-        - text: "3b: Introduzione ad R {{< fa laptop-code >}}"
-          file: ../IntroduzioneR.Rmd
-      - section: "Modello Lineare Univariato"
-        contents:
-        - text: "4: Formalizzazione e stima {{< fa brands slideshare >}}"
-          file: ../Lecture45.pdf
-        - text: "5: Predizioni e effetti causali {{< fa brands slideshare >}}"
-          file: ../Lecture45b.pdf
-
+          - text: "Introduzione a `R`" 
+            icon: filetype-html
+            href: IntroduzioneR.qmd
+      # - section: "Layout"
+      #   contents:
+      #     - layout.qmd
+      #     - layout-knitr.qmd
+      #     - layout-jupyter.qmd
+  
+    # contents:
+    #   - section: "Introduzione"
+    #     contents:
+    #     - text: "1: Introduzione a `R` {{< fa brands slideshare >}}"
+    #       file: IntroduzioneR.qmd
+    #     - text: "2: Richiami di probabilità e statistica {{< fa brands slideshare >}}"
+      #     file: Lecture13b.pdf
+      #   - text: "3a: Introduzione ad R {{< iconify carbon logo-r-script >}}"
+      #     file: IntroduzioneR.html
+      #   - text: "3b: Introduzione ad R {{< fa laptop-code >}}"
+      #     file: IntroduzioneR.Rmd
+      # - section: "Modello Lineare Univariato"
+      #   contents:
+      #   - text: "4&5: Formalizzazione e stima {{< fa brands slideshare >}}"
+      #     file: Lecture45.pdf
+      # - section: "Modello Lineare Multivariato"
+      #   contents:
+      #   - text: "6&7: Modello multivariato {{< fa brands slideshare >}}"
+      #     file: Lecture67.pdf
+      #   - text: "8: Inferenza {{< fa brands slideshare >}}"
+      #     file: Lecture8.pdf
+      #   - text: "9: Modelli non-lineari {{< fa brands slideshare >}}"
+      #     file: Lecture9.pdf
+      # - section: "Modelli per probabilià"
+      #   contents:
+      #   - text: "10: LPM, Logit, Probit {{< fa brands slideshare >}}"
+      #     file: Lecture10.pdf
+      # - section: "11: Panel data"
+      #   contents:
+      #   - text: "12: Panel data"
+      #     file: panel.pdf
+      # - section: "12: Variabili strumentali {{< fa brands slideshare >}}"
+      #   contents:
+      #   - text: "IV"
+      #     file: iv.pdf
+      # - section: "13: Interazioni {{< fa brands slideshare >}}"
+      #   contents:
+      #   - text: "13: Interazioni"
+      #     file: interazioni.pdf
+      # - section: "13: Time Series {{< fa brands slideshare >}}"
+      #   contents:
+      #   - text: "14: Time Series"
+      #     file: timeseries.pdf
   page-footer:
     left: |
     right: |
