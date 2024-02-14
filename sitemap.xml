@@ -1,31 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://gragusa.org/econometria/IntroduzioneR.html</loc>
-    <lastmod>2023-05-31T08:50:19.562Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gragusa.org/econometria/Modelli.html</loc>
-    <lastmod>2023-05-31T08:50:20.438Z</lastmod>
+    <loc>https://gragusa.org/econometria/syllabus.html</loc>
+    <lastmod>2023-02-19T11:23:34.000Z</lastmod>
   </url>
   <url>
     <loc>https://gragusa.org/econometria/index.html</loc>
-    <lastmod>2023-05-31T08:50:20.914Z</lastmod>
+    <lastmod>2024-02-14T14:34:26.005Z</lastmod>
+  </url>
+  <url>
+    <loc>https://gragusa.org/econometria/IntroduzioneR.html</loc>
+    <lastmod>2024-02-14T16:19:30.439Z</lastmod>
   </url>
   <url>
     <loc>https://gragusa.org/econometria/materiale.html</loc>
-    <lastmod>2023-05-31T08:50:21.238Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gragusa.org/econometria/montecarlo.html</loc>
-    <lastmod>2023-05-31T08:50:21.954Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gragusa.org/econometria/programma.html</loc>
-    <lastmod>2023-05-31T08:50:22.526Z</lastmod>
-  </url>
-  <url>
-    <loc>https://gragusa.org/econometria/syllabus.html</loc>
-    <lastmod>2023-05-31T08:50:22.942Z</lastmod>
+    <lastmod>2024-02-14T15:06:12.258Z</lastmod>
   </url>
 </urlset>

@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.353">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Econometria 2022/2023 - Giuseppe Ragusa - Sapienza">
+<meta name="description" content="Econometria 2023/2024 - Giuseppe Ragusa - Sapienza">
 
-<title>Econometria - Syllabus</title>
+<title>Econometria</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -42,14 +42,19 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<script src="site_libs/quarto-contrib/iconify-1.0.0-beta.2/iconify-icon.min.js"></script>
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -58,8 +63,10 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
-    "search-submit-button-title": "Submit"
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
   }
 }</script>
 
@@ -70,9 +77,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Econometria</span>
     </a>
@@ -84,25 +91,17 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./syllabus.html" rel="" target="">
- <span class="menu-text">Syllabus</span></a>
+    <a class="nav-link" href="./syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./programma.html" rel="" target="">
- <span class="menu-text">Programma del corso</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./materiale.html" rel="" target="">
- <span class="menu-text">Materiale didattico</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./risorse.qmd" rel="" target="">
- <span class="menu-text">Risorse</span></a>
+    <a class="nav-link" href="./materiale.html"> 
+<span class="menu-text">Materiale didattico</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -129,7 +128,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Syllabus</h1>
+<h1 class="title">Econometria</h1>
 </div>
 
 
@@ -142,7 +141,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <div class="grid course-details">
 <section id="docente" class="level3 g-col-6">
@@ -150,33 +151,35 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><i class="fa-solid fa-user" aria-label="user"></i> &nbsp; <a href="https://www.gragusa.org">Prof.&nbsp;Giuseppe Ragusa</a></li>
 <li><i class="fa-solid fa-university" aria-label="university"></i> &nbsp; Viale del Castro Laurenziano, 9</li>
-<li><i class="fa-solid fa-envelope" aria-label="envelope"></i> &nbsp; <a href="mailto:giuseppe.ragusa@uniroma1.it">giuseppe.ragusa@uniroma1.it</a></li>
-<li><i class="fa-solid fa-calendar-check" aria-label="calendar-check"></i> &nbsp; <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2fyaaAmgT-dFyJm_Ry8h7mnrxrY2O5s0-7GorrLVUdtJc4lDjN1oYBzNiV9_J06NYSnY2HJwxs">Schedule an appointment</a></li>
+<li><i class="fa-solid fa-envelope" aria-label="envelope"></i> &nbsp; giuseppe.ragusa@uniroma1.it</li>
+<li><i class="fa-solid fa-calendar-check" aria-label="calendar-check"></i> &nbsp; <a href="https://calendar.app.google/LhFH1fG8NzAzKsxs5">Ricevimento</a></li>
 </ul>
 </section>
-<section id="course-details" class="level3 g-col-6">
-<h3 class="anchored" data-anchor-id="course-details">Course details</h3>
+<section id="dettagli-del-corso" class="level3 g-col-6">
+<h3 class="anchored" data-anchor-id="dettagli-del-corso">Dettagli del corso</h3>
 <ul>
-<li><i class="fa-solid fa-calendar" aria-label="calendar"></i> &nbsp; Lunedì, Martedì e Venerdì</li>
-<li><i class="fa-solid fa-calendar-alt" aria-label="calendar-alt"></i> &nbsp; 20 february, 2023 - 1 giugno 2023</li>
-<li><i class="fa-solid fa-clock" aria-label="clock"></i> &nbsp; (L&amp;V) 10:00–12:00 (M) 14:00-15:00</li>
-<li><i class="fa-solid fa-location-dot" aria-label="location-dot"></i> &nbsp; (L&amp;M) Aula 10 (V) Aula 3</li>
+<li><i class="fa-solid fa-calendar" aria-label="calendar"></i> &nbsp; Lunedì e Martedì</li>
+<li><i class="fa-solid fa-calendar-alt" aria-label="calendar-alt"></i> &nbsp; 19 february, 2023 - 1 giugno 2023</li>
+<li><i class="fa-solid fa-clock" aria-label="clock"></i> &nbsp; (Lunedì) 12:00–14:00 (Martedì) 10:00-12:00</li>
+<li><i class="fa-solid fa-location-dot" aria-label="location-dot"></i> &nbsp; (Lunedì) Aula 10 (Lunedì) Aula 8b</li>
 </ul>
 </section>
 </div>
 <section id="descrizione-del-corso" class="level2">
 <h2 class="anchored" data-anchor-id="descrizione-del-corso">Descrizione del corso</h2>
-<p>L’obiettivo del corso è quello di introdurre gli studenti allo studio dell’econometria mediante un approccio prevalentemente applicato. Sebbene il corso si concentra sia sugli aspetti teorici sia su quelli pratici della disciplina, l’enfasi è sulla comprensione intuitiva dei concetti fondamentali della materia e sulla loro applicazione empirica su temi microeconomici, macroeconomici e finanziari.</p>
+<p>Questo corso offre agli studenti un’introduzione pratica all’econometria, strumento fondamentale per comprendere e analizzare l’economia da un punto di vista empirico. Attraverso un approccio equilibrato tra teoria e pratica, gli studenti esploreranno i concetti fondamentali e gli strumenti empirici necessari per comprendere le sfide relative all’impiego di tecniche quantitative in microeconomia, macroeconomia e finanza.</p>
+<p>Gli studenti avranno l’opportunità di immergersi nell’analisi dei dati e nella costruzione dei modelli in modo pratico e interattivo mediante l’utilizzando di R. R è uno dei software più diffusi e potenti nel campo dell’econometria e della statistica e offre una vasta gamma di funzionalità per la manipolazione dei dati, la visualizzazione grafica e l’implementazione di modelli econometrici.</p>
+<p>L’enfasi è sulla comprensione intuitiva e non sulle <strong>formalità</strong> matematiche questo corso ti fornirà le competenze necessarie per affrontare sfide analitiche complesse con sicurezza e competenza.</p>
 </section>
 <section id="obiettivi-del-corso" class="level2">
 <h2 class="anchored" data-anchor-id="obiettivi-del-corso">Obiettivi del corso</h2>
-<p>Al termine del corso lo studente dovrà essere in grado di svolgere autonomamente un’analisi empirica ed interpretarne i risultati, valutando l’adeguatezza delle assunzioni necessarie per la correttezza delle interpretazioni.</p>
-<p>In particolare, lo studente sarà in grado di</p>
+<p>Alla conclusione del corso, gli studenti saranno in grado di condurre analisi empiriche in modo indipendente e interpretarne i risultati, valutando attentamente l’adeguatezza delle assunzioni necessarie per garantire la corretta interpretazione dei risultati.</p>
+<p>In particolare, gli studenti saranno in grado di:</p>
 <ol type="1">
-<li>Spiegare la filosofia dei modelli introdotti e la loro capacità di catturare relazioni causali o di fornire predizioni di buona qualità;</li>
-<li>Valutare l’adeguatezza delle assunzioni sottostanti i modelli econometrici;</li>
-<li>Valutare la qualità delle predizioni mediante rigorose misure statistiche;</li>
-<li>Usare R per stimare e valutare i modelli econometrici su dati reali.</li>
+<li>Comprendere la logica e la filosofia dei modelli econometrici presentati, valutando la loro capacità di cogliere relazioni causali o di fornire predizioni di qualità.</li>
+<li>Valutare criticamente le assunzioni fondamentali sottostanti ai modelli econometrici, analizzandone l’impatto sulla validità dei risultati.</li>
+<li>Utilizzare rigorose misure statistiche per valutare la qualità delle predizioni generate dai modelli econometrici.</li>
+<li>Applicare efficacemente il software <a href="http://r-project.org">R</a> per manipolare dati, produrre visualizzazioni informative e stimare i parametri dei modelli econometrici utilizzando dati reali, sviluppando così competenze pratiche nel campo dell’analisi dei dati e della modellistica economica.</li>
 </ol>
 </section>
 <section id="libro-di-testo" class="level2">
@@ -187,7 +190,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="g-col-8">
 <p>Il libro di testo utilizzato in questo corso è:</p>
-<p>Stock, J. H. e Watson, M.W: <em>Introduzione all’econometria</em>, Pearson Italia, 2005.</p>
+<p>Stock, J. H. e Watson, M.W: <em>Introduzione all’econometria</em>, Pearson Italia, 2020. <em>ISBN: 8891906190</em>.</p>
+<p>Durante il corso, gli studenti avranno accesso a slides didattiche che forniranno una guida dettagliata attraverso i concetti e gli argomenti trattati. Queste risorse supplementari saranno fondamentali per consolidare la comprensione dei materiali di studio e facilitare il processo di apprendimento.</p>
 </div>
 </div>
 </section>
@@ -198,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="https://www.r-project.org/Rlogo.png" class="img-fluid"></p>
 </div>
 <div class="g-col-8">
-<p>Il corso prevede l’utilizzo di <a href="http://r-project.org">R</a>, uno dei linguaggi di programmazione statistico/econometrico più diffusi e potenti.</p>
+<p>Come già accennato, il corso prevede l’utilizzo di <a href="http://r-project.org">R</a>, uno dei linguaggi di programmazione statistico/econometrico più diffusi e potenti.</p>
 <p><a href="http://r-project.org">R</a> ha una licenza open-source (GNU GPL), è compatibile con i maggiori sistemi operativi (GNU/Linux, macOS, Microsoft Windows).</p>
 </div>
 </div>
@@ -216,11 +220,11 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Lunedì</td>
-<td>15:00-16:00</td>
+<td>9:00-10:00</td>
 </tr>
 <tr class="even">
-<td>Mercoledì</td>
-<td>12:00-13:00</td>
+<td>Martedì</td>
+<td>9:00-10:00</td>
 </tr>
 </tbody>
 </table>
@@ -228,7 +232,10 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="modalità-di-valutazione" class="level2">
 <h2 class="anchored" data-anchor-id="modalità-di-valutazione">Modalità di valutazione</h2>
-<p>La modalità di esame consiste in una prova scritta e una verifica orale.</p>
+<p>L’esame di Econometria comprende due fasi: una prova scritta e una prova orale, entrambe obbligatorie.</p>
+<p>La prova scritta valuterà la capacità degli studenti di comprendere e interpretare le stime dei modelli econometrici introdotti durante il corso e di applicarli in contesti specifici.</p>
+<p>La prova orale è volta ad accertare in maniera piu’ articolata le conoscenza acquisite nel corso.</p>
+<p>L’ammissione alla prova orale è garantita agli studenti che abbiano superato con sufficienza la prova scritta.</p>
 
 
 </section>
@@ -313,10 +320,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -326,8 +332,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -340,6 +355,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -383,6 +517,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -408,6 +543,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -468,6 +629,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
