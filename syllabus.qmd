@@ -1,6 +1,10 @@
 ---
 title: "Syllabus"
 sidebar: false
+language: 
+    toc-title-document: "Indice"
+    toc-title-website: ""
+
 ---
 
 ::: {.grid .course-details}
