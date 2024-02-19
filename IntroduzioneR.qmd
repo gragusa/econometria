@@ -16,7 +16,7 @@ La versione 1.0 è stata rilasciata il 29 febbraio 2000 e da quel momento la cre
 
 Negli ultimi dieci anni, due aziende hanno contribuito alla crescita di `R:` R Studio (oggi diventata Posit) e Revolution Analytics.
 
-[Revolution Analytics](https://blog.revolutionanalytics.com/2015/04/revolution-analytics-microsoft.html) fondata nel 2007, è stata una delle prime società ad offrire una versione commerciale di `R`. Revolution Analytics ha introdotto nuove funzionalità, come l'elaborazione parallela e distribuita, che hanno permesso di elaborare grandi quantità di dati in modo più efficiente. L'acquisizione di Revolution Analytics da parte di Microsoft nel 2015 ha ulteriormente rafforzato l'adozione di R, poiché Microsoft ha iniziato ad integrare R in molti dei suoi prodotti, come SQL Server e Power BI.
+[Revolution Analytics](https://blog.revolutionanalytics.com/2015/04/revolution-analytics-microsoft.html) fondata nel 2007, è stata una delle prime società a offrire una versione commerciale di `R`. Revolution Analytics ha introdotto nuove funzionalità, come l'elaborazione parallela e distribuita, che hanno permesso di elaborare grandi quantità di dati in modo più efficiente. L'acquisizione di Revolution Analytics da parte di Microsoft nel 2015 ha ulteriormente rafforzato l'adozione di R, poiché Microsoft ha iniziato a integrare R in molti dei suoi prodotti, come SQL Server e Power BI.
 
 
 RStudio, dal 2022 [Posit](htpps://posit.com), ha avuto un ruolo fondamentale nello sviluppo dell'ecosistema `R`. Fondata nel 2011 da JJ Allaire, l'azienda ha introdotto un ambiente di sviluppo integrato (IDE) per R, che ha rivoluzionato il modo in cui gli utenti interagiscono con il linguaggio. L'ambiente integrato, anch'esso chiamato RStudio, ha reso la programmazione in `R` più accessibile e intuitiva, facilitando la scrittura, il debug e la gestione dei pacchetti.
@@ -32,6 +32,10 @@ R è oggi uno dei linguaggi di programmazione più popolari per l'analisi dei da
 -   Uso aziendale: L'adozione di R nell'ambiente aziendale è aumentata negli ultimi anni, con molte aziende che lo utilizzano per l'analisi dei dati e la statistica.
 
 In generale, `R` è diventato un linguaggio di programmazione popolare tra i data scientist, gli statistici e gli analisti dei dati grazie alla sua vasta gamma di pacchetti, alla sua flessibilità e alla sua potenza.
+
+Quore. 
+
+
 
 ## Installazione di `R` e `Rstudio`
 
@@ -137,7 +141,7 @@ library(wooldridge)
 data(Accident)
 ```
 
-Dopo aver installato e caricato `Ecdat` il comando `data()` consente di caricare uso specifico dataset in memoria pe ressere poi utilizzato nella nostra session
+Dopo aver installato e caricato `Ecdat` il comando `data()` consente di caricare uso specifico dataset in memoria per essere poi utilizzato nella nostra sessione.
 
 
 I dataset inclusi nei pacchetti offrono diversi vantaggi:
@@ -199,7 +203,7 @@ apre la pagina di help relativa alla funzione `mean`.
 
 La pagina di help fornisce una descrizione della funzione, i suoi argomenti e tipologia dei valori che la funzione restituisce. La maggior parte delle funzioni in R hanno esempi di utilizzo nella loro pagina di help.
 
-Per ottenere aiuto sulle funzionalità di un pacchetto bisgna passare l'argomento `packages` seguito dal nome del pacchetto. Per esempio, il seguente comando mostra la pagina di `help` per il pacchetto `ggplot2`
+Per ottenere aiuto sulle funzionalità di un pacchetto bisogna passare l'argomento `packages` seguito dal nome del pacchetto. Per esempio, il seguente comando mostra la pagina di `help` per il pacchetto `ggplot2`
 ```{r}
 #| eval: false
 help(packages="ggplot2")
@@ -285,7 +289,7 @@ Caschool |>
   summarize(m = mean(testscr), s = sd(testscr))
 ```
 
-Possiamo anche calcolare la media, la standard deviation e il numero di osservazioni per il gruppo di scuole che hanno un rapporto studenti insegnanti minore di 20, $str<20$ e il gruppo di scuole che hanno un rapporto maggiore o uguale a venti ($str>20$)  usando la funzione `group_by` seguita dall'indicazione del gruppo (nel nostro caso `str<20`):
+Possiamo anche calcolare la media, la deviazione standard e il numero di osservazioni per il gruppo di scuole che hanno un rapporto studenti insegnanti minore di 20, $str<20$ e il gruppo di scuole che hanno un rapporto maggiore o uguale a venti ($str>20$)  usando la funzione `group_by` seguita dall'indicazione del gruppo (nel nostro caso `str<20`):
 
 ```{r}
 df_1 <- Caschool |>
@@ -306,7 +310,7 @@ df_1
 ::: {.callout-note}
 Le maggiori differenze fra i `tibble` e i `data.frame` sono:
 
-- Tipo di output: Il metodo di visualizzazione di un tibble è più compatto e leggibile rispetto a quello di un data.frame.
+- Tipo di output: Il metodo di visualizzazione di un `tibble` è più compatto e leggibile rispetto a quello di un data.frame.
 
 - Comportamento dei nomi delle variabili: in un `tibble`, i nomi delle variabili sono sempre conservati e non vengono mai modificati (ad esempio, i nomi delle variabili non vengono convertiti in stringhe). In un `data.frame`, i nomi delle variabili possono essere modificati o convertiti in stringhe.
 

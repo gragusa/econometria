@@ -262,7 +262,7 @@ window.Quarto = {
 <p><code>R</code> fu sviluppato inizialmente da Ross Ihaka e Robert Gentleman presso l’Università di Auckland, in Nuova Zelanda. La prima versione di <code>R</code> venne condivisa dai sui creatori nel 1993. Nel 1995 il software fu rilasciato sotto la licenza open source GNU GPL.</p>
 <p>La versione 1.0 è stata rilasciata il 29 febbraio 2000 e da quel momento la crescita della sua popolarità non si è arrestata.</p>
 <p>Negli ultimi dieci anni, due aziende hanno contribuito alla crescita di <code>R:</code> R Studio (oggi diventata Posit) e Revolution Analytics.</p>
-<p><a href="https://blog.revolutionanalytics.com/2015/04/revolution-analytics-microsoft.html">Revolution Analytics</a> fondata nel 2007, è stata una delle prime società ad offrire una versione commerciale di <code>R</code>. Revolution Analytics ha introdotto nuove funzionalità, come l’elaborazione parallela e distribuita, che hanno permesso di elaborare grandi quantità di dati in modo più efficiente. L’acquisizione di Revolution Analytics da parte di Microsoft nel 2015 ha ulteriormente rafforzato l’adozione di R, poiché Microsoft ha iniziato ad integrare R in molti dei suoi prodotti, come SQL Server e Power BI.</p>
+<p><a href="https://blog.revolutionanalytics.com/2015/04/revolution-analytics-microsoft.html">Revolution Analytics</a> fondata nel 2007, è stata una delle prime società a offrire una versione commerciale di <code>R</code>. Revolution Analytics ha introdotto nuove funzionalità, come l’elaborazione parallela e distribuita, che hanno permesso di elaborare grandi quantità di dati in modo più efficiente. L’acquisizione di Revolution Analytics da parte di Microsoft nel 2015 ha ulteriormente rafforzato l’adozione di R, poiché Microsoft ha iniziato a integrare R in molti dei suoi prodotti, come SQL Server e Power BI.</p>
 <p>RStudio, dal 2022 <a href="htpps://posit.com">Posit</a>, ha avuto un ruolo fondamentale nello sviluppo dell’ecosistema <code>R</code>. Fondata nel 2011 da JJ Allaire, l’azienda ha introdotto un ambiente di sviluppo integrato (IDE) per R, che ha rivoluzionato il modo in cui gli utenti interagiscono con il linguaggio. L’ambiente integrato, anch’esso chiamato RStudio, ha reso la programmazione in <code>R</code> più accessibile e intuitiva, facilitando la scrittura, il debug e la gestione dei pacchetti.</p>
 <p>Oltre al suo IDE, <code>RStudio</code> ha svolto un ruolo chiave nello sviluppo del “tidyverse”, una collezione di pacchetti R per la scienza dei dati, guidata da Hadley Wickham, uno dei più influenti progammatori di R e Chief Scientist di <a href="htpps://posit.com">Posit</a>. Il <a href="https://www.tidyverse.org/">tidyverse</a>, introdotto intorno al 2014, comprende pacchetti come <code>ggplot2</code>, <code>dplyr</code> e <code>tidyr</code> usati per la visualizzazione, la manipolazione e la ristrutturazione dei dati. Questi strumenti hanno reso più efficiente e meno soggette a errori l’analisi dei dati, promuovendo uno stile di programmazione coerente e leggibile.</p>
 <p>R è oggi uno dei linguaggi di programmazione più popolari per l’analisi dei dati e la statistica negli ultimi anni. Ecco alcuni dati sull’adozione di R:</p>
@@ -272,6 +272,7 @@ window.Quarto = {
 <li><p>Uso aziendale: L’adozione di R nell’ambiente aziendale è aumentata negli ultimi anni, con molte aziende che lo utilizzano per l’analisi dei dati e la statistica.</p></li>
 </ul>
 <p>In generale, <code>R</code> è diventato un linguaggio di programmazione popolare tra i data scientist, gli statistici e gli analisti dei dati grazie alla sua vasta gamma di pacchetti, alla sua flessibilità e alla sua potenza.</p>
+<p>Quore.</p>
 </section>
 <section id="installazione-di-r-e-rstudio" class="level2">
 <h2 class="anchored" data-anchor-id="installazione-di-r-e-rstudio">Installazione di <code>R</code> e <code>Rstudio</code></h2>
@@ -476,7 +477,7 @@ Important
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Carica un dataset specifico, ad esempio 'Accident'</span></span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(Accident)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Dopo aver installato e caricato <code>Ecdat</code> il comando <code>data()</code> consente di caricare uso specifico dataset in memoria pe ressere poi utilizzato nella nostra session</p>
+<p>Dopo aver installato e caricato <code>Ecdat</code> il comando <code>data()</code> consente di caricare uso specifico dataset in memoria per essere poi utilizzato nella nostra sessione.</p>
 <p>I dataset inclusi nei pacchetti offrono diversi vantaggi:</p>
 <ol type="1">
 <li><strong>Facilità di Accesso</strong>: Gli utenti possono accedere rapidamente a un’ampia gamma di dati senza doverli cercare o scaricare da fonti esterne.</li>
@@ -562,7 +563,7 @@ Important
 </div>
 <p>apre la pagina di help relativa alla funzione <code>mean</code>.</p>
 <p>La pagina di help fornisce una descrizione della funzione, i suoi argomenti e tipologia dei valori che la funzione restituisce. La maggior parte delle funzioni in R hanno esempi di utilizzo nella loro pagina di help.</p>
-<p>Per ottenere aiuto sulle funzionalità di un pacchetto bisgna passare l’argomento <code>packages</code> seguito dal nome del pacchetto. Per esempio, il seguente comando mostra la pagina di <code>help</code> per il pacchetto <code>ggplot2</code></p>
+<p>Per ottenere aiuto sulle funzionalità di un pacchetto bisogna passare l’argomento <code>packages</code> seguito dal nome del pacchetto. Per esempio, il seguente comando mostra la pagina di <code>help</code> per il pacchetto <code>ggplot2</code></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="at">packages=</span><span class="st">"ggplot2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -671,7 +672,7 @@ Note
 1 654.1565 19.05335</code></pre>
 </div>
 </div>
-<p>Possiamo anche calcolare la media, la standard deviation e il numero di osservazioni per il gruppo di scuole che hanno un rapporto studenti insegnanti minore di 20, <span class="math inline">\(str&lt;20\)</span> e il gruppo di scuole che hanno un rapporto maggiore o uguale a venti (<span class="math inline">\(str&gt;20\)</span>) usando la funzione <code>group_by</code> seguita dall’indicazione del gruppo (nel nostro caso <code>str&lt;20</code>):</p>
+<p>Possiamo anche calcolare la media, la deviazione standard e il numero di osservazioni per il gruppo di scuole che hanno un rapporto studenti insegnanti minore di 20, <span class="math inline">\(str&lt;20\)</span> e il gruppo di scuole che hanno un rapporto maggiore o uguale a venti (<span class="math inline">\(str&gt;20\)</span>) usando la funzione <code>group_by</code> seguita dall’indicazione del gruppo (nel nostro caso <code>str&lt;20</code>):</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>df_1 <span class="ot">&lt;-</span> Caschool <span class="sc">|&gt;</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(str<span class="sc">&lt;</span><span class="dv">20</span>) <span class="sc">|&gt;</span></span>
@@ -703,7 +704,7 @@ Note
 <div class="callout-body-container callout-body">
 <p>Le maggiori differenze fra i <code>tibble</code> e i <code>data.frame</code> sono:</p>
 <ul>
-<li><p>Tipo di output: Il metodo di visualizzazione di un tibble è più compatto e leggibile rispetto a quello di un data.frame.</p></li>
+<li><p>Tipo di output: Il metodo di visualizzazione di un <code>tibble</code> è più compatto e leggibile rispetto a quello di un data.frame.</p></li>
 <li><p>Comportamento dei nomi delle variabili: in un <code>tibble</code>, i nomi delle variabili sono sempre conservati e non vengono mai modificati (ad esempio, i nomi delle variabili non vengono convertiti in stringhe). In un <code>data.frame</code>, i nomi delle variabili possono essere modificati o convertiti in stringhe.</p></li>
 <li><p>Comportamento di default dei dati mancanti: in un <code>tibble</code>, i dati mancanti vengono visualizzati in modo più chiaro rispetto a un <code>data.frame</code>.</p></li>
 <li><p>Comportamento della subsetting: in un <code>tibble</code>, il subsetting (o l’estrazione di sottoinsiemi di dati) è più rigoroso rispetto a un <code>data.frame</code>, in quanto conserva sempre la classe del <code>tibble</code>, anche se viene restituito un singolo valore.</p></li>
