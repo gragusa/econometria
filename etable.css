@@ -1,3 +1,4 @@
 .etable img {
     width: -moz-available;
+    max-width: 75%;
 }

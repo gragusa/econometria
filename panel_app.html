@@ -441,7 +441,7 @@ Figure&nbsp;1
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>pd2 <span class="ot">&lt;-</span> <span class="fu">feols</span>(mrall<span class="sc">~</span>beertax<span class="sc">|</span>state, <span class="at">data=</span>Fatality, <span class="at">cluster =</span> <span class="sc">~</span>state)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="etable">
-<img src="./images/etable//etable_tex_2024-04-28_4914471505.png">
+<img src="./images/etable/etable_tex_2024-05-03_4914471505.png">
 </div>
 <p>Il coefficiente di <code>BeerTax</code>, <span class="math inline">\(\hat{\beta}_1\)</span>, è negativo e statisticamente significativo. L’interpretazione è che la riduzione stimata delle fatalità stradali dovuta a un aumento di $1 nella tassa sulla birra è di 0,66 per 10000 persone o, di 66 persone ogni milione di abitanti.</p>
 <p>Sebbene l’inclusione degli effetti fissi statali elimini il rischio di una distorsione dovuta a fattori omessi che variano tra gli stati ma non nel tempo, è possibile che ci siano altre variabili omesse che variano nel tempo ma non fra stati. Possiamo tenere conto di queste variabili aggiungendo gli effetti temporali.</p>
