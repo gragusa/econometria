@@ -2,3 +2,8 @@
     width: -moz-available;
     max-width: 75%;
 }
+
+.fborder {
+    border: 1px solid #000;
+    background-color: azure;
+}

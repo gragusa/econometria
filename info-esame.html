@@ -8,7 +8,7 @@
 
 <meta name="description" content="Econometria 2023/2024 - Giuseppe Ragusa - Sapienza">
 
-<title>Econometria - Panel data</title>
+<title>Econometria - Informazioni sull’Esame</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -102,37 +68,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="etable.css">
+<link rel="stylesheet" href="exam.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -171,7 +108,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./IntroduzioneR.html">R</a></li><li class="breadcrumb-item"><a href="./panel_app.html">Panel data</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Informazioni sull’Esame</li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -297,7 +234,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./panel_app.html" class="sidebar-item-text sidebar-link active"><i class="bi bi-filetype-html" role="img">
+  <a href="./panel_app.html" class="sidebar-item-text sidebar-link"><i class="bi bi-filetype-html" role="img">
 </i> 
  <span class="menu-text">Panel data</span></a>
   </div>
@@ -349,22 +286,14 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#dati-panel" id="toc-dati-panel" class="nav-link active" data-scroll-target="#dati-panel">Dati Panel</a></li>
-  <li><a href="#modello-senza-effetti-fissi-temporali" id="toc-modello-senza-effetti-fissi-temporali" class="nav-link" data-scroll-target="#modello-senza-effetti-fissi-temporali">Modello senza effetti fissi temporali</a></li>
-  <li><a href="#aggiungere-effetti-fissi-temporali" id="toc-aggiungere-effetti-fissi-temporali" class="nav-link" data-scroll-target="#aggiungere-effetti-fissi-temporali">Aggiungere effetti fissi temporali</a></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./IntroduzioneR.html">R</a></li><li class="breadcrumb-item"><a href="./panel_app.html">Panel data</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Panel data</h1>
+<h1 class="title">Informazioni sull’Esame</h1>
 </div>
 
 
@@ -381,250 +310,199 @@ window.Quarto = {
 </header>
 
 
-<section id="dati-panel" class="level2">
-<h2 class="anchored" data-anchor-id="dati-panel">Dati Panel</h2>
-<p>Il modello <span class="math display">\[
-y_{it} = \alpha_i + \lambda_t + \beta_1X_{1it} + \dots + \beta_k X_{kit} + u_{it},
-\]</span> può essere stimato tramite il metodo dei minimi quadrati ordinari (OLS), includendo le dummy per ciascuno stato e per ciascun periodo. Alternativamente, possiamo stimare il modello tramite OLS dopo che le variabili sono state trasformate mediante la trasformazione <em>within</em>.</p>
-<p>Per ottenere le stime dei coefficienti in entrambi gli approcci, che ricordiamo essere numericamente equivalenti, è possibile utilizzare il pacchetto <code>fixest</code>.</p>
-<p>Utilizziamo i dati nel dataset <code>Fatility</code>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Ecdat)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">"Fatality"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Ecco la traduzione in italiano del testo fornito:</p>
-<p><code>Fatality</code> consiste di 336 osservazioni su 10 variabili. Queste variabili riguardano la mortalità stradale, le tasse sull’alcol, e le leggi sulla guida in stato di ebbrezza in 48 stati degli Stati Uniti dal 1982 al 1988. Si noti che <code>state</code> è una variabile che prende 48 valori distinti (uno per ciascuno dei 48 stati contigui federali degli USA). Anche <code>year</code> prende 7 valori distinti che identificando il periodo temporale in cui è stata fatta l’osservazione. Questo ci dà un totale di 7×48=336 osservazioni. Poiché tutte le variabili sono osservate per tutte le entità e in tutti i periodi di tempo, il pannello è bilanciato. Se ci fossero dati mancanti per almeno un’entità in almeno un periodo di tempo, chiameremmo il pannello non bilanciato.</p>
-<p>Le variabili contenute nel dataset <code>Fatality</code> sono:</p>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Variabile</th>
-<th>Descrizione</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>state</code></td>
-<td>Codice identificativo dello stato</td>
-</tr>
-<tr class="even">
-<td><code>year</code></td>
-<td>Anno</td>
-</tr>
-<tr class="odd">
-<td><code>mrall</code></td>
-<td>Tasso di mortalità stradale (morti per 10.000)</td>
-</tr>
-<tr class="even">
-<td><code>beertax</code></td>
-<td>Tassa su una cassa di birra</td>
-</tr>
-<tr class="odd">
-<td><code>mlda</code></td>
-<td>Età minima legale per il consumo di alcol</td>
-</tr>
-<tr class="even">
-<td><code>jaild</code></td>
-<td>Presenza di pene detentive obbligatorie?</td>
-</tr>
-<tr class="odd">
-<td><code>comserd</code></td>
-<td>Obbligatorietà del servizio comunitario?</td>
-</tr>
-<tr class="even">
-<td><code>vmiles</code></td>
-<td>Miglia medie percorse per conducente</td>
-</tr>
-<tr class="odd">
-<td><code>unrate</code></td>
-<td>Tasso di disoccupazione</td>
-</tr>
-<tr class="even">
-<td><code>perinc</code></td>
-<td>Reddito personale per capita</td>
-</tr>
-</tbody>
-</table>
+<section id="date-dellesame" class="level4">
+<h4 class="anchored" data-anchor-id="date-dellesame">Date dell’Esame</h4>
+<p>L’esame si terrà nelle seguenti date:</p>
+<ul>
+<li><strong>20 Giugno 2024</strong> (Primo appello)</li>
+<li><strong>10 Luglio 2024</strong> (Secondo appello)</li>
+</ul>
 </section>
-<section id="modello-senza-effetti-fissi-temporali" class="level2">
-<h2 class="anchored" data-anchor-id="modello-senza-effetti-fissi-temporali">Modello senza effetti fissi temporali</h2>
-<p>Il primo modello che consideriamo è <span class="math display">\[
-mrall_{it} = \alpha_i + \beta_1beertax_{it} + u_{it}
-\]</span></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(Fatality, <span class="fu">aes</span>(<span class="at">y=</span>mrall, <span class="at">x =</span> beertax)) <span class="sc">+</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">col=</span><span class="fu">factor</span>(state))) <span class="sc">+</span> </span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">'lm'</span>, <span class="at">col =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">col=</span><span class="fu">factor</span>(state)), <span class="at">method=</span><span class="st">'lm'</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> </span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">'none'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div id="fig-multistate" class="quarto-figure quarto-figure-center quarto-float anchored" width="672">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-multistate-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="panel_app_files/figure-html/fig-multistate-1.png" id="fig-multistate" class="img-fluid figure-img" width="672">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-multistate-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p><a href="#fig-multistate" class="quarto-xref">Figure&nbsp;1</a> esplora la relazione tra la tassa sulla birra (<code>beertax</code>) e il tasso di mortalità stradale (<code>mrall</code>), con un’attenzione particolare alle differenze tra stati. Nel grafico sono mostrate le rette di regressione per ciascuno stato (colori distinti per i punti e per le rette di regressione indicano uno stato). Come si vede, molte delle rette hanno un’inclinazione negativa. Comunque, se considerassimo un’unica regressione otterremo un coefficiente positivo come indicato dalla retta di regressione di colore nero. Tenere conto degli effetti fissi, cioè di <span class="math inline">\(\alpha_i\)</span>, permetteremo alle singolo rette di regressione di avere intercette distinte.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fixest)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>pd0 <span class="ot">&lt;-</span> <span class="fu">feols</span>(mrall<span class="sc">~</span>beertax, <span class="at">data=</span>Fatality, <span class="at">vcov =</span> <span class="st">"hetero"</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>pd1 <span class="ot">&lt;-</span> <span class="fu">feols</span>(mrall<span class="sc">~</span>beertax<span class="sc">|</span>state, <span class="at">data=</span>Fatality, <span class="at">vcov =</span> <span class="st">"hetero"</span>)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>pd2 <span class="ot">&lt;-</span> <span class="fu">feols</span>(mrall<span class="sc">~</span>beertax<span class="sc">|</span>state, <span class="at">data=</span>Fatality, <span class="at">cluster =</span> <span class="sc">~</span>state)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="etable">
-<img src="./images/etable/etable_tex_2024-05-03_4914471505.png">
-</div>
-<p>Il coefficiente di <code>BeerTax</code>, <span class="math inline">\(\hat{\beta}_1\)</span>, è negativo e statisticamente significativo. L’interpretazione è che la riduzione stimata delle fatalità stradali dovuta a un aumento di $1 nella tassa sulla birra è di 0,66 per 10000 persone o, di 66 persone ogni milione di abitanti.</p>
-<p>Sebbene l’inclusione degli effetti fissi statali elimini il rischio di una distorsione dovuta a fattori omessi che variano tra gli stati ma non nel tempo, è possibile che ci siano altre variabili omesse che variano nel tempo ma non fra stati. Possiamo tenere conto di queste variabili aggiungendo gli effetti temporali.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(fixest)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>pd3 <span class="ot">&lt;-</span> <span class="fu">feols</span>(mrall<span class="sc">~</span>beertax<span class="sc">|</span>state<span class="sc">+</span>year, <span class="at">data=</span>Fatality, <span class="at">vcov =</span> <span class="st">"hetero"</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>pd4 <span class="ot">&lt;-</span> <span class="fu">feols</span>(mrall<span class="sc">~</span>beertax<span class="sc">|</span>state<span class="sc">+</span>year, <span class="at">data=</span>Fatality, <span class="at">cluster =</span> <span class="sc">~</span>state)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="etable">
-<img src="./images/etable/etable_tex_2024-04-28_1551069314.png">
-</div>
-<p>Il coefficiente stimato in un modello con gli effetti fissi per anno è -0.66. È molto simile al coefficiente stimato per il modello di regressione che include solo gli effetti fissi dell’entità, ma adesso è stimato con minore precisione ed è statisticamente significativo al 10% quando usiamo gli errori standard che tengono conto di potenziale correlazione temporale nei residui (<code>cluster(year)</code>).</p>
-<p>Possiamo concludere che la relazione stimata tra le fatalità stradali e la tassa sulla birra non è influenzata da variabili omesse a causa di fattori che sono costanti nel tempo o tra gli stati.</p>
-<p>Ma ci sono ancora due fonti di distorsione dovuta a variabili omesse che non sono state considerate da tutti i modelli usati: le condizioni economiche e le leggi sulla guida. I dati a nostra disposizione includono informazioni specifiche per stato sull’età legale per bere (<code>mlda</code>), le pene (<code>jaild</code>, <code>comserd</code>) e vari indicatori economici come il tasso di disoccupazione (<code>unrate</code>) e il reddito pro capite (<code>perinc</code>). Possiamo utilizzare queste covariate per estendere l’analisi precedente.</p>
-<p>Il modello che consideriamo adesso è</p>
-<p><span id="eq-one"><span class="math display">\[
-\begin{aligned}
-mrall_{it} = \alpha_i &amp;+ \beta_1 beertax_{it} + \beta_2 unrate_{it} + \beta_3 \log(perinc_{it}) + \beta_4 mlda_{it} \\
-&amp;+ \beta_5 comserd_{it} + \beta_6 jaild_{it} + u_{it}
-\end{aligned}
-\tag{1}\]</span></span></p>
-<p>Stimiamo il modello <a href="#eq-one" class="quarto-xref">Equation&nbsp;1</a> includendo una variabile dummy per ciascuno stato (tranne uno per evitare multicollinearità), utilizzando <code>feols</code> e aggiungendo <code>factor(state)</code> alla formula:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>lm1_dummy <span class="ot">&lt;-</span> <span class="fu">feols</span>(mrall <span class="sc">~</span> beertax <span class="sc">+</span> unrate <span class="sc">+</span> <span class="fu">log</span>(perinc) <span class="sc">+</span> mlda <span class="sc">+</span> comserd <span class="sc">+</span> jaild </span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>                   <span class="sc">+</span> <span class="fu">factor</span>(state), <span class="at">data=</span>Fatality, <span class="at">vcov =</span> <span class="st">"hetero"</span>)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>lm1_dummy</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>OLS estimation, Dep. Var.: mrall
-Observations: 336 
-Standard-errors: Heteroskedasticity-robust 
-                Estimate Std. Error   t value Pr(&gt;|t|)    
-(Intercept)    -2.239669   3.732728 -0.600009 0.548982    
-beertax        -0.359256   0.221616 -1.621075 0.106119    
-unrate         -0.019057   0.009784 -1.947822 0.052428 .  
-log(perinc)     0.662102   0.385591  1.717111 0.087057 .  
-mlda           -0.037538   0.019161 -1.959105 0.051086 .  
-comserdyes     -0.019369   0.118064 -0.164052 0.869808    
-jaildyes       -0.019841   0.032254 -0.615143 0.538956    
-factor(state)4 -0.309122   0.349763 -0.883802 0.377556    
-... 46 coefficients remaining (display them with summary() or use argument n)
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-RMSE: 0.167474   Adj. R2: 0.897213</code></pre>
-</div>
-</div>
-<p>Alternativamente, possiamo applicare la trasformazione <em>within</em>, ovvero eseguire la regressione sulle variabili trasformate in deviazione dalla media temporale di ciascuna variabile, aggiungendo <code>|state</code> alla fine della formula:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>lm_fe <span class="ot">&lt;-</span> <span class="fu">feols</span>(mrall <span class="sc">~</span> beertax <span class="sc">+</span> unrate <span class="sc">+</span> <span class="fu">log</span>(perinc) <span class="sc">+</span> mlda <span class="sc">+</span> comserd </span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>               <span class="sc">+</span> jaild <span class="sc">|</span> state, <span class="at">data=</span>Fatality)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>lm_fe</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>OLS estimation, Dep. Var.: mrall
-Observations: 336 
-Fixed-effects: state: 48
-Standard-errors: Clustered (state) 
-             Estimate Std. Error   t value Pr(&gt;|t|)    
-beertax     -0.359256   0.294458 -1.220058 0.228530    
-unrate      -0.019057   0.012734 -1.496547 0.141197    
-log(perinc)  0.662102   0.547510  1.209296 0.232597    
-mlda        -0.037538   0.025577 -1.467660 0.148857    
-comserdyes  -0.019369   0.123518 -0.156807 0.876068    
-jaildyes    -0.019841   0.007608 -2.607756 0.012178 *  
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-RMSE: 0.167474     Adj. R2: 0.897213
-                 Within R2: 0.126181</code></pre>
-</div>
-</div>
-<p>I coefficienti stimati in <code>lm_dummy</code> sono identici a quelli in <code>lm_fe</code>, tuttavia gli errori standard differiscono. In <code>lm_fe</code>, <code>feols</code> utilizza automaticamente errori standard clusterizzati per stato.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>lm_dummy_cluster <span class="ot">&lt;-</span> <span class="fu">feols</span>(mrall <span class="sc">~</span> beertax <span class="sc">+</span> unrate <span class="sc">+</span> <span class="fu">log</span>(perinc) <span class="sc">+</span> mlda <span class="sc">+</span> comserd </span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>                          <span class="sc">+</span> jaild <span class="sc">+</span> <span class="fu">factor</span>(state), <span class="at">data=</span>Fatality, <span class="at">cluster=</span><span class="st">"state"</span>)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>lm_dummy_cluster</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>OLS estimation, Dep. Var.: mrall
-Observations: 336 
-Standard-errors: Clustered (state) 
-                Estimate Std. Error   t value Pr(&gt;|t|)    
-(Intercept)    -2.239669   5.727427 -0.391043 0.697533    
-beertax        -0.359256   0.318051 -1.129554 0.264396    
-unrate         -0.019057   0.013754 -1.385533 0.172430    
-log(perinc)     0.662102   0.591379  1.119591 0.268577    
-mlda           -0.037538   0.027626 -1.358789 0.180699    
-comserdyes     -0.019369   0.133415 -0.145175 0.885193    
-jaildyes       -0.019841   0.008218 -2.414313 0.019712 *  
-factor(state)4 -0.309122   0.466877 -0.662105 0.511138    
-... 46 coefficients remaining (display them with summary() or use argument n)
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-RMSE: 0.167474   Adj. R2: 0.897213</code></pre>
-</div>
-</div>
-<p>Gli errori standard in <code>lm_dummy_cluster</code> e <code>lm_fe</code> presentano lievi differenze dovute alla gestione diversa dei gradi di libertà nei due metodi.</p>
+<section id="struttura-dellesame" class="level4">
+<h4 class="anchored" data-anchor-id="struttura-dellesame">Struttura dell’Esame</h4>
+<p>L’esame sarà composto da due prove:</p>
+<ol type="1">
+<li><p><strong>Prova scritta</strong> su piattaforma Moodle.</p>
+<p><em>Una simulazione della prova scritta è disponibile sulla piattaforma <a href="https://elearning.uniroma1.it/mod/quiz/view.php?id=610929">Moodle</a>.</em> Altre domande (non in formato moodle ma utili per eserciatarsi sono disponili <a href="./materiale.html">qua</a>)</p></li>
+<li><p><strong>Prova orale</strong></p></li>
+</ol>
+<p>Per poter accedere alla prova orale, è necessario ottenere almeno 18/30 nella prova scritta. Il voto finale sarà determinato dalla combinazione dei risultati delle due prove.</p>
 </section>
-<section id="aggiungere-effetti-fissi-temporali" class="level2">
-<h2 class="anchored" data-anchor-id="aggiungere-effetti-fissi-temporali">Aggiungere effetti fissi temporali</h2>
-<p>È possibile includere effetti temporali aggiungendo <code>year</code> alla specificazione di <code>feols</code>:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>lm_fe <span class="ot">&lt;-</span> <span class="fu">feols</span>(mrall <span class="sc">~</span> beertax <span class="sc">+</span> unrate <span class="sc">+</span> <span class="fu">log</span>(perinc) <span class="sc">+</span> mlda <span class="sc">+</span> comserd </span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>               <span class="sc">+</span> jaild <span class="sc">|</span> state <span class="sc">+</span> year, <span class="at">data=</span>Fatality)</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>lm_fe</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>OLS estimation, Dep. Var.: mrall
-Observations: 336 
-Fixed-effects: state: 48,  year: 7
-Standard-errors: Clustered (state) 
-             Estimate Std. Error   t value   Pr(&gt;|t|)    
-beertax     -0.476567   0.303670 -1.569357 1.2327e-01    
-unrate      -0.062880   0.013034 -4.824134 1.5206e-05 ***
-log(perinc)  1.796308   0.642674  2.795052 7.4898e-03 ** 
-mlda        -0.001890   0.021519 -0.087826 9.3039e-01    
-comserdyes   0.034492   0.132229  0.260853 7.9535e-01    
-jaildyes     0.014597   0.016246  0.898519 3.7349e-01    
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-RMSE: 0.140612     Adj. R2: 0.925966
-                 Within R2: 0.354415</code></pre>
+<section id="programma-desame" class="level4">
+<h4 class="anchored" data-anchor-id="programma-desame">Programma d’Esame</h4>
+<p>Il programma d’esame per il corso 2023/2024 copre i seguenti argomenti (corrispondenti ai primi 10 capitoli del libro di testo):</p>
+<div class="fborder" style="border: 1pt solid; background: lightgray; padding: 10pt">
+<section id="introduzione-alleconometria" class="level5">
+<h5 class="anchored" data-anchor-id="introduzione-alleconometria">Introduzione all’Econometria</h5>
+<ul>
+<li><span class="topic">Introduzione e richiami</span> <span class="capitolo">(Capitolo 1)</span>
+<ul>
+<li>Domande economiche e dati economici</li>
+<li>Effetti causali ed esperimenti ideali</li>
+<li>Tipi e fonti dei dati economici</li>
+</ul></li>
+</ul>
+</section>
+<section id="richiami-di-probabilità" class="level5">
+<h5 class="anchored" data-anchor-id="richiami-di-probabilità">Richiami di Probabilità</h5>
+<ul>
+<li><span class="topic">Richiami di probabilità</span> <span class="capitolo">(Capitolo 2)</span>
+<ul>
+<li>Variabili casuali e distribuzioni di probabilità</li>
+<li>Valore atteso, media e varianza</li>
+<li>Variabili casuali doppie e distribuzioni congiunte</li>
+<li>Distribuzioni normale, chi-quadrato, F e t di Student</li>
+<li>Campionamento casuale e distribuzione della media campionaria</li>
+</ul></li>
+</ul>
+</section>
+<section id="richiami-di-statistica" class="level5">
+<h5 class="anchored" data-anchor-id="richiami-di-statistica">Richiami di Statistica</h5>
+<ul>
+<li><span class="topic">Richiami di statistica</span> <span class="capitolo">(Capitolo 3)</span>
+<ul>
+<li>Stima della media di una popolazione</li>
+<li>Verifica di ipotesi circa la media della popolazione</li>
+<li>Intervalli di confidenza</li>
+<li>Confronto tra medie di popolazioni diverse</li>
+<li>Diagrammi a nuvola di punti, covarianza e correlazione campionaria</li>
+</ul></li>
+</ul>
+</section>
+<section id="regressione-lineare-semplice" class="level5">
+<h5 class="anchored" data-anchor-id="regressione-lineare-semplice">Regressione Lineare Semplice</h5>
+<ul>
+<li><span class="topic">Elementi fondamentali della regressione</span> <span class="capitolo">(Capitolo 4)</span>
+<ul>
+<li>Il modello di regressione lineare</li>
+<li>Stima dei coefficienti del modello di regressione lineare</li>
+<li>Le assunzioni dei minimi quadrati ordinari (OLS)</li>
+<li>Distribuzione campionaria degli stimatori OLS</li>
+<li>Verifica di ipotesi e intervalli di confidenza per un singolo coefficiente di regressione</li>
+</ul></li>
+</ul>
+</section>
+<section id="regressione-lineare-multipla" class="level5">
+<h5 class="anchored" data-anchor-id="regressione-lineare-multipla">Regressione Lineare Multipla</h5>
+<ul>
+<li><span class="topic">Regressione lineare con regressori multipli</span> <span class="capitolo">(Capitolo 5)</span>
+<ul>
+<li>Distorsione da variabile omessa</li>
+<li>Il modello di regressione multipla</li>
+<li>Stima e assunzioni dei minimi quadrati</li>
+<li>Distribuzione campionaria degli stimatori OLS nella regressione multipla</li>
+<li>Verifica di ipotesi e intervalli di confidenza per più coefficienti</li>
+<li>Statistiche di regressione e altre misure di bontà di adattamento</li>
+</ul></li>
+</ul>
+</section>
+<section id="regressioni-non-lineari" class="level5">
+<h5 class="anchored" data-anchor-id="regressioni-non-lineari">Regressioni Non Lineari</h5>
+<ul>
+<li><span class="topic">Funzioni di regressione non lineari</span> <span class="capitolo">(Capitolo 6)</span>
+<ul>
+<li>Modellare funzioni di regressione non lineari</li>
+<li>Funzioni non lineari di una singola variabile indipendente</li>
+<li>Interazioni tra variabili indipendenti</li>
+</ul></li>
+</ul>
+</section>
+<section id="valutazione-di-studi-basati-sulla-regressione" class="level5">
+<h5 class="anchored" data-anchor-id="valutazione-di-studi-basati-sulla-regressione">Valutazione di Studi Basati sulla Regressione</h5>
+<ul>
+<li><span class="topic">Valutazione di studi basati sulla regressione multipla</span> <span class="capitolo">(Capitolo 7)</span>
+<ul>
+<li>Validità interna ed esterna</li>
+<li>Minacce alla validità interna ed esterna</li>
+</ul></li>
+</ul>
+</section>
+<section id="regressione-con-dati-panel" class="level5">
+<h5 class="anchored" data-anchor-id="regressione-con-dati-panel">Regressione con Dati Panel</h5>
+<ul>
+<li><span class="topic">Regressione con dati panel</span> <span class="capitolo">(Capitolo 8)</span>
+<ul>
+<li>Introduzione ai dati panel</li>
+<li>Modelli di regressione con effetti fissi e temporali</li>
+</ul></li>
+</ul>
+</section>
+<section id="regressione-con-variabile-dipendente-binaria" class="level5">
+<h5 class="anchored" data-anchor-id="regressione-con-variabile-dipendente-binaria">Regressione con Variabile Dipendente Binaria</h5>
+<ul>
+<li><span class="topic">Regressione con variabile dipendente binaria</span> <span class="capitolo">(Capitolo 9)</span>
+<ul>
+<li>Modello lineare di probabilità</li>
+<li>Regressioni probit e logit</li>
+<li>Stima e inferenza nei modelli logit e probit</li>
+</ul></li>
+</ul>
+</section>
+<section id="regressione-con-variabili-strumentali" class="level5">
+<h5 class="anchored" data-anchor-id="regressione-con-variabili-strumentali">Regressione con Variabili Strumentali</h5>
+<ul>
+<li><span class="topic">Regressione con variabili strumentali</span> <span class="capitolo">(Capitolo 10)</span>
+<ul>
+<li>Il modello IV e le sue ipotesi</li>
+<li>Lo stimatore dei minimi quadrati a due stadi (TSLS)</li>
+<li>Validità degli strumenti</li>
+<li>Test di esogeneità</li>
+<li>Strumenti deboli</li>
+</ul></li>
+</ul>
+</section>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
 </div>
 </div>
-<p>Oppure, possiamo aggiungere variabili dummy per <code>year</code> nel modello:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>lm_dummy_year_cluster <span class="ot">&lt;-</span> <span class="fu">feols</span>(mrall <span class="sc">~</span> beertax <span class="sc">+</span> unrate <span class="sc">+</span> <span class="fu">log</span>(perinc) <span class="sc">+</span> mlda <span class="sc">+</span> comserd </span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>                               <span class="sc">+</span> jaild <span class="sc">+</span> <span class="fu">factor</span>(state) <span class="sc">+</span> <span class="fu">factor</span>(year), <span class="at">data=</span>Fatality, <span class="at">cluster=</span><span class="st">"state"</span>)</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>lm_dummy_year_cluster</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>OLS estimation, Dep. Var.: mrall
-Observations: 336 
-Standard-errors: Clustered (state) 
-                 Estimate Std. Error   t value   Pr(&gt;|t|)    
-(Intercept)    -12.603660   6.784529 -1.857706 6.9482e-02 .  
-beertax         -0.476567   0.328510 -1.450691 1.5351e-01    
-unrate          -0.062880   0.014101 -4.459361 5.0929e-05 ***
-log(perinc)      1.796308   0.695244  2.583707 1.2944e-02 *  
-mlda            -0.001890   0.023279 -0.081185 9.3564e-01    
-comserdyes       0.034492   0.143045  0.241129 8.1050e-01    
-jaildyes         0.014597   0.017574  0.830578 4.1041e-01    
-factor(state)4  -0.898339   0.481419 -1.866024 6.8285e-02 .  
-... 52 coefficients remaining (display them with summary() or use argument n)
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-RMSE: 0.140612   Adj. R2: 0.925966</code></pre>
+<div class="callout-body-container callout-body">
+<p>Per gli studenti degli anni precedenti (corso da 9 crediti), il programma include i seguenti argomenti:</p>
+<div class="fborder" style="border: 1pt solid; background: lightgray; padding: 10pt">
+<section id="regressioni-per-serie-temporali-di-tipo-economico" class="level5">
+<h5 class="anchored" data-anchor-id="regressioni-per-serie-temporali-di-tipo-economico">Regressioni per Serie Temporali di Tipo Economico</h5>
+<ul>
+<li><span class="topic">Introduzione a regressioni temporali e previsioni</span> <span class="capitolo">(Capitolo 12)</span>
+<ul>
+<li>L’uso dei modelli di regressione per la previsione</li>
+<li>Introduzione alle serie temporali e alla correlazione seriale</li>
+<li>Autoregressioni e modelli autoregressivi misti</li>
+<li>Scelta della lunghezza dei ritardi utilizzando i criteri d’informazione</li>
+<li>Non stazionarietà: trend e rotture strutturali</li>
+</ul></li>
+</ul>
+</section>
+<section id="stima-degli-effetti-causali-dinamici" class="level5">
+<h5 class="anchored" data-anchor-id="stima-degli-effetti-causali-dinamici">Stima degli Effetti Causali Dinamici</h5>
+<ul>
+<li><span class="topic">Stima degli effetti causali dinamici</span> <span class="capitolo">(Capitolo 13)</span>
+<ul>
+<li>Effetti causali e dati temporali</li>
+<li>Stima degli effetti causali dinamici con regressori esogeni e strettamente esogeni</li>
+<li>Errori standard consistenti in presenza di autocorrelazione ed eteroschedasticità</li>
+</ul></li>
+</ul>
+</section>
+<section id="ulteriori-sviluppi-nelle-regressioni-temporali" class="level4">
+<h4 class="anchored" data-anchor-id="ulteriori-sviluppi-nelle-regressioni-temporali">Ulteriori Sviluppi nelle Regressioni Temporali</h4>
+<ul>
+<li><span class="topic">Ulteriori sviluppi nelle regressioni temporali</span> <span class="capitolo">(Capitolo 14)</span>
+<ul>
+<li>Autoregressioni vettoriali (VAR)</li>
+<li>Previsioni multiperiodali</li>
+<li>Cointegrazione</li>
+<li>Eteroschedasticità condizionata</li>
+</ul></li>
+</ul>
+</section>
 </div>
 </div>
-<p>In entrambi i casi, gli errori standard considerano la correlazione temporale all’interno degli stati, ma differiscono leggermente a causa di come i gradi di libertà sono gestiti nei due approcci.</p>
+</div>
 
 
 </section>
