@@ -7,23 +7,23 @@ instructor:
   url: "https://www.gragusa.org"
   github: gragusa
   office: "Viale del Castro Laurenziano, 9"
-  appointment_url: https://calendar.app.google/LhFH1fG8NzAzKsxs5
+  appointment_url: https://calendar.app.google/GqJnp3LKxM5ZQ3h37
 
 course:
-  name: "Econometria"
+  name: "Econometria
   number: "1018133"
-  semester: "2023-2024"
-  days: "Lunedì (L) e Martedì (M)"
-  time: "(L) 10:00–12:00 (M) 14:00-16:00"
-  location: "(L) Aula 10 (M) Aula 8b"
-  dates: "19 febbraio, 2024 - 1 giugno 2024"
+  semester: "2024-2025"
+  days: "Martedì (L) e Mercoledì (M)"
+  time: "(L) 14:00–16:00 (M) 16:00-18:00"
+  location: "Aula 10"
+  dates: "17 febbraio, 2025 - 31 maggio 2025"
   github: "https://www.github.com/gragusa/econometria"
   url: "https://gragusa.org/econometria"
-  copyright_year: "2023-2024"
+  copyright_year: "2023, 2024, 2025"
 
 university:
   name: Sapienza, Università di Roma
-  url: "https://www.sapienza.it"
+  url: "https://www.uniroma1.it"
 
 school:
   name: Dipartimento di Economia e Diritto
