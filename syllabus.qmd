@@ -91,17 +91,17 @@ Gli orari di ricevimento sono:
 
 | Giorno    | Orario      |
 | --------- | ----------- |
-| Lunedì    | 9:00-10:00 |
-| Martedì   | 9:00-10:00 |
+| Martedì   | 16:00-17:00 |
+| Venerdì   | 10:00-12:00 |
 
-E' obbligatorio prenotare un appuntamento a [questo link](https://calendar.app.google/LhFH1fG8NzAzKsxs5).
+E' obbligatorio prenotare un appuntamento a [questo link]({{< var instructor.appointment_url >}}).
 
 ## Modalità di valutazione
 
-L'esame di Econometria comprende due fasi: una prova scritta e una prova orale, entrambe obbligatorie.
+L'esame di Econometria si compone di una prova scritta e una prova orale, entrambe obbligatorie.
 
 La prova scritta valuterà la capacità degli studenti di comprendere e interpretare le stime dei modelli econometrici introdotti durante il corso e di applicarli in contesti specifici.
 
-La prova orale è volta ad accertare in maniera piu' articolata le conoscenza acquisite nel corso. 
+La prova orale è volta ad accertare in maniera più articolata le conoscenza acquisite nel corso. 
 
-L'ammissione alla prova orale è garantita agli studenti che abbiano superato con sufficienza la prova scritta. 
+L'ammissione alla prova orale è consentita agli studenti che abbiano superato con sufficienza la prova scritta. 

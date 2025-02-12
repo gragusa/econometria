@@ -122,17 +122,17 @@ Per accedere ai dataset inclusi nei pacchetti bisogna installarli e poi caricarl
 
 ```{r}
 #| eval: false
-# Installa il pacchetto Ecdat
-install.packages("Ecdat")
+# Installa il pacchetto AER
+install.packages("AER")
 # Installa il pacchetto wooldridge
 install.packages("wooldridge")
 
 # Carichiamo i pacchetti
-library(Ecdat)
+library(AER)
 library(wooldridge)
 
 # Carica un dataset specifico, ad esempio 'Accident'
-data(Accident)
+data(Fatalities)
 ```
 
 Alternativamente, i pacchetti possono essere installati direttamente da `RStudio` usando il menu _Tools_ (_Strumenti_).
@@ -153,7 +153,7 @@ L'installazione rende disponibili i pacchetti sul proprio computer. Perché `R` 
 ```{r}
 #| message: false
 #| warning: false
-library(Ecdat)
+library(AER)
 ```
 
 
@@ -163,16 +163,16 @@ library(Ecdat)
 Per avere un'idea dei dataset messi a disposizione da `Ecdat` possiamo utilizzare la funzione di `help`
 ```{r}
 #| eval: false
-help(package="Ecdat")
+help(package="AER")
 ```
 
 I dataset possono essere caricati nella sessione di `R` mediante il comando **`data()`**. Per esempio, il seguente comando
 ```{r}
-data(Caschool)
+data(CASchools)
 ```
 rende disponibile il dataset `Caschool`. Il data set può essere richiamato semplicemente digitando il suo nome
 ```{r}
-summary(Caschool)
+summary(CASchools)
 ```
 
 ## Il sistema di help
@@ -215,9 +215,13 @@ Ecco un esempio di codice di base per creare un grafico a dispersione utilizzand
 ```{r}
 library(ggplot2)
 # Caricare i dati
-data(Caschool)
+data(CASchools)
+## Creiamo le variabili
+library(dplyr)
+CASchools <- CASchools |> mutate(str=students/teachers, testscr=(read+math)/2)
+
 # Creare l'oggetto ggplot
-scatterplot <- ggplot(Caschool, aes(x = str, y = testscr))
+scatterplot <- ggplot(CASchools, aes(x = str, y = testscr))
 # Aggiungere i punti al grafico
 scatterplot <- scatterplot + geom_point(col = "darkgreen")
 # Aggiungere etichette e titoli
@@ -233,9 +237,9 @@ scatterplot <- scatterplot + theme_bw()
 scatterplot
 ```
 
-Possiamo anche costruire grafici raggruppati per variabile. Per ottenere un grafico a dispersione per `str` e `testscr` per le due tipologie di scuole `grspan=="KK-06" e `grspan="KK-08"`:
+Possiamo anche costruire grafici raggruppati per variabile. Per ottenere un grafico a dispersione per `str` e `testscr` per le due tipologie di scuole `grades=="KK-06" e `grades="KK-08"`:
 ```{r}
-scatterplot <- scatterplot + facet_wrap(~grspan)
+scatterplot <- scatterplot + facet_wrap(~grades)
 scatterplot
 ```
 
@@ -270,14 +274,14 @@ library(dplyr)
 Calcoliamo la media e la standard deviation di `testscr`
 
 ```{r}
-Caschool |>
+CASchools |>
   summarize(m = mean(testscr), s = sd(testscr))
 ```
 
 Possiamo anche calcolare la media, la deviazione standard e il numero di osservazioni per il gruppo di scuole che hanno un rapporto studenti insegnanti minore di 20, $str<20$ e il gruppo di scuole che hanno un rapporto maggiore o uguale a venti ($str>20$)  usando la funzione `group_by` seguita dall'indicazione del gruppo (nel nostro caso `str<20`):
 
 ```{r}
-df_1 <- Caschool |>
+df_1 <- CASchools |>
   group_by(str<20) |>
   summarize(m = mean(testscr),
             s = sd(testscr),
@@ -369,14 +373,14 @@ dove:
 
 Ecco un esempio di utilizzo della funzione `cut()` per suddividere `str` in tre bin di uguale ampiezza:
 ```{r}
-str_cat3 <- cut(Caschool$str, 3)
+str_cat3 <- cut(CASchools$str, 3)
 summary(str_cat3)
 ```
 In questo caso il comando `summary` produce una tavola di frequenza con il numero delle scuole in ciascuna delle tre categorie `r paste0(levels(str_cat3), collapse=", ")`.
 
 Possiamo anche specificare i `breaks` in modo esplicito
 ```{r}
-str_cat3 <- cut(Caschool$str, c(13,20, 21, 26))
+str_cat3 <- cut(CASchools$str, c(13,20, 21, 26))
 summary(str_cat3)
 ```
 
@@ -391,7 +395,7 @@ In questo ultimo caso, gli intervalli sono `r paste0(levels(str_cat3), collapse=
 ```{r}
 library(knitr)
 
-df_2 <- Caschool |>
+df_2 <- CASchools |>
   mutate(str_cat = cut(str, 25)) |>                        # <1>
   group_by(str_cat) |>                                     # <2>
   summarize(m = mean(testscr), s = sd(testscr), n = n())   # <3>

@@ -3,7 +3,6 @@ title: "Materiale didattico"
 sidebar: true
 resources: 
   - IntroduzioneR.qmd
-  - Lecture12.pdf
 ---
 
 
