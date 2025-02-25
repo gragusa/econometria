@@ -19,13 +19,14 @@ p_load(xlsx)
 - Questa pagina contiene i collegamenti al materiale didattico del corso. (Nella sidebar qui a sinistra)
 
 - Il materiale didattico è organizzato per lezione e a ciscuna lezione è associato
-  1. [le slide]{.high} {{< iconify bi file-earmark-slides >}}
+  1. [le slide]{.high} {{< iconify bi filetype-pdf >}}
   2. [dispense `R` in formato html]{.high} {{< iconify bi filetype-html >}}
   3. [il codice `R` in formato Rmd]{.high} in formato Rmd {{< iconify bi code-slash >}}
   4. [letture consigliate]{.high} {{< iconify bi book >}}
 
 - I collegamenti (a sinistra) si attiveranno in sincrono con la progressione del corso.
 
+- Per scaricare le slides bisogna essersi registrati al [sito moodle del corso](https://elearning.uniroma1.it/course/view.php?id=16325) 
 
 :::
 

@@ -35,11 +35,18 @@ website:
     style: "docked"
     search: true
     contents:
-      - section: "Introduzione"
-        contents:
-          - text: "Introduzione a `R`" 
-            icon: filetype-html
-            href: IntroduzioneR.qmd
+        - text: "Introduzione a `R`" 
+          icon: filetype-html
+          href: IntroduzioneR.qmd
+        - text: "Slide Lezione 1"
+          icon: filetype-pdf
+          href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione1.pdf?forcedownload=1
+        - text: "Slide Lezione 2"
+          icon: filetype-pdf
+          href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione2.pdf?forcedownload=1
+        - text: "Slide Lezione 3"
+          icon: filetype-pdf
+          href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione3.pdf?forcedownload=1
       # - section: "Layout"
       #   contents:
       #     - layout.qmd
