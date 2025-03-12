@@ -53,6 +53,12 @@ website:
         - text: "Slide Lezione 5"
           icon: filetype-pdf
           href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione5.pdf?forcedownload=1
+        - text: "Slide Lezione 6"
+          icon: filetype-pdf
+          href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione6.pdf?forcedownload=1
+        - text: "Slide Lezione 7"
+          icon: filetype-pdf
+          href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione7.pdf?forcedownload=1
 
       # - section: "Layout"
       #   contents:
