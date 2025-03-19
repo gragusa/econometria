@@ -177,6 +177,6 @@
     "href": "materiale.html",
     "title": "Materiale didattico",
     "section": "",
-    "text": "Questa pagina contiene i collegamenti al materiale didattico del corso. (Nella sidebar qui a sinistra)\nIl materiale didattico è organizzato per lezione e a ciscuna lezione è associato\n\nle slide \ndispense R in formato html \nil codice R in formato Rmd in formato Rmd \nletture consigliate \n\nI collegamenti (a sinistra) si attiveranno in sincrono con la progressione del corso.\nPer scaricare le slides bisogna essersi registrati al sito moodle del corso"
+    "text": "Questa pagina contiene i collegamenti al materiale didattico del corso. (Nella sidebar qui a sinistra)\nIl materiale didattico è organizzato per lezione e a ciscuna lezione è associato\n\nle slide \ndispense R in formato html \nil codice R in formato qmd in formato Rmd \nletture consigliate \n\nI collegamenti (a sinistra) si attiveranno in sincrono con la progressione del corso.\nPer scaricare le slides bisogna essersi registrati al sito moodle del corso"
   }
 ]
