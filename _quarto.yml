@@ -63,6 +63,9 @@ website:
       - text: "qmd Lezione 8"
         icon: { { < iconify bi filetype-html > } }
         href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione8.html?forcedownload=1
+      - text: "qmd Lezione 8"
+        icon: { { < iconify bi filetype-html > } }
+        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione9-10.pdf?forcedownload=1
 
       # - section: "Layout"
       #   contents:
