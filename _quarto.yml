@@ -8,7 +8,6 @@ project:
     - "files/"
     - "html/"
 
-# See https://quarto.org/docs/projects/code-execution.html#freeze
 execute:
   freeze: auto # Re-render only when source changes
 
@@ -72,62 +71,15 @@ website:
       - text: "Lezione 12 (qmd)"
         icon: filetype-html
         href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione12.qmd?forcedownload=1
-      - text: "Lezione 12 (html)
+      - text: "Lezione 12 (html)"
         icon: filetype-slash
         href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione12.html?forcedownload=1
       - text: "Lezione 13"
         icon: filetype-pdf
         href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione13.pdf?forcedownload=1
-
-      # - section: "Layout"
-      #   contents:
-      #     - layout.qmd
-      #     - layout-knitr.qmd
-      #     - layout-jupyter.qmd
-
-    # contents:
-    #   - section: "Introduzione"
-    #     contents:
-    #     - text: "1: Introduzione a `R` {{< fa brands slideshare >}}"
-    #       file: IntroduzioneR.qmd
-    #     - text: "2: Richiami di probabilità e statistica {{< fa brands slideshare >}}"
-    #     file: Lecture13b.pdf
-    #   - text: "3a: Introduzione ad R {{< iconify carbon logo-r-script >}}"
-    #     file: IntroduzioneR.html
-    #   - text: "3b: Introduzione ad R {{< fa laptop-code >}}"
-    #     file: IntroduzioneR.Rmd
-    # - section: "Modello Lineare Univariato"
-    #   contents:
-    #   - text: "4&5: Formalizzazione e stima {{< fa brands slideshare >}}"
-    #     file: Lecture45.pdf
-    # - section: "Modello Lineare Multivariato"
-    #   contents:
-    #   - text: "6&7: Modello multivariato {{< fa brands slideshare >}}"
-    #     file: Lecture67.pdf
-    #   - text: "8: Inferenza {{< fa brands slideshare >}}"
-    #     file: Lecture8.pdf
-    #   - text: "9: Modelli non-lineari {{< fa brands slideshare >}}"
-    #     file: Lecture9.pdf
-    # - section: "Modelli per probabilià"
-    #   contents:
-    #   - text: "10: LPM, Logit, Probit {{< fa brands slideshare >}}"
-    #     file: Lecture10.pdf
-    # - section: "11: Panel data"
-    #   contents:
-    #   - text: "12: Panel data"
-    #     file: panel.pdf
-    # - section: "12: Variabili strumentali {{< fa brands slideshare >}}"
-    #   contents:
-    #   - text: "IV"
-    #     file: iv.pdf
-    # - section: "13: Interazioni {{< fa brands slideshare >}}"
-    #   contents:
-    #   - text: "13: Interazioni"
-    #     file: interazioni.pdf
-    # - section: "13: Time Series {{< fa brands slideshare >}}"
-    #   contents:
-    #   - text: "14: Time Series"
-    #     file: timeseries.pdf
+      - text: "Lezione 14"
+        icon: filetype-pdf
+        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione14.pdf?forcedownload=1
   page-footer:
     left: |
     right: |
