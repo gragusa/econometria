@@ -69,10 +69,10 @@ website:
         icon: filetype-pdf
         href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione11.pdf?forcedownload=1
       - text: "Lezione 12 (qmd)"
-        icon: filetype-html
+        icon: filetype-slash
         href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione12.qmd?forcedownload=1
       - text: "Lezione 12 (html)"
-        icon: filetype-slash
+        icon: filetype-html
         href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione12.html?forcedownload=1
       - text: "Lezione 13"
         icon: filetype-pdf
@@ -80,6 +80,16 @@ website:
       - text: "Lezione 14"
         icon: filetype-pdf
         href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione14.pdf?forcedownload=1
+      - text: "Lezione 15 & 16"
+        icon: filetype-pdf
+        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione15-16.pdf?forcedownload=1
+      - text: "Lezione 15 & 16 HMDA(qmd)"
+        icon: filetype-slash
+        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione15-16_hmda.qmd?forcedownload=1
+      - text: "Lezione 15 & 16 HMDA (html)"
+        icon: filetype-html
+        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione15-16_hmda.html?forcedownload=1
+
   page-footer:
     left: |
     right: |
