@@ -89,7 +89,7 @@ website:
       - text: "Lezione 15 & 16 HMDA (html)"
         icon: filetype-html
         href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione15-16_hmda.html?forcedownload=1
-      - text: "Lezione 7"
+      - text: "Lezione 17"
         icon: filetype-pdf
         href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione17.pdf?forcedownload=1
       - text: "Efficienza dei Marcati (html)"
@@ -98,6 +98,12 @@ website:
       - text: "Efficienza dei Marcati (qmd)"
         icon: code-slash
         href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/EfficienzaDeiMercati.qmd?forcedownload=1
+      - text: "Lezione 18"
+        icon: filetype-pdf
+        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione18.pdf?forcedownload=1
+      - text: "Lezione 19"
+        icon: filetype-pdf
+        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione19.pdf?forcedownload=1
 
   page-footer:
     left: |
