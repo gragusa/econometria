@@ -91,8 +91,8 @@ Gli orari di ricevimento sono:
 
 | Giorno    | Orario      |
 | --------- | ----------- |
-| Martedì   | 16:00-17:00 |
-| Venerdì   | 10:00-12:00 |
+| Martedì   | 15:00-16:00 |
+| Giovedì   | 15:00-17:00 |
 
 E' obbligatorio prenotare un appuntamento a [questo link]({{< var instructor.appointment_url >}}).
 
@@ -105,3 +105,44 @@ La prova scritta valuterà la capacità degli studenti di comprendere e interpre
 La prova orale è volta ad accertare in maniera più articolata le conoscenza acquisite nel corso. 
 
 L'ammissione alla prova orale è consentita agli studenti che abbiano superato con sufficienza la prova scritta. 
+
+## Programma per gli Studenti dell'Ordinamento Attuale (6 cfu)
+
+### Parte I: Elementi Fondamentali
+
+
+Capitolo 1.  **Domande economiche e dati economici**: Introduzione ai   quesiti economici, effetti causali, esperimenti ideali e tipologie di dati (sezionali, serie temporali, panel).
+
+Capitolo 2.  **Richiami di probabilità**: Variabili casuali, distribuzioni, valore atteso, varianza, covarianza e principali distribuzioni campionarie 
+
+Capitolo 3.  **Richiami di statistica**: Stima, verifica di ipotesi, intervalli di confidenza per medie di popolazioni e confronto tra medie.
+
+### Parte II: Analisi di Regressione
+
+Capitolo 4.  **Regressione lineare con un singolo regressore**: Il modello OLS, assunzioni dei minimi quadrati, distribuzione campionaria, verifica di ipotesi e intervalli di confidenza.
+
+Capitolo 5.  **Regressione lineare con regressori multipli**: Distorsione da variabile omessa, modello di regressione multipla, collinearità, verifica di ipotesi congiunte (statistica F) e misure di bontà dell'adattamento ($R^2$ e $R^2$ corretto).
+
+Capitolo 6.  **Funzioni di regressione non lineari**: Modellazione di relazioni non lineari tramite polinomi, logaritmi e interazioni tra variabili.
+
+Capitolo 7.  **Valutazione di studi basati sulla regressione multipla**: Validità interna ed esterna, minacce comuni (variabili omesse, errori di misurazione, causalità simultanea).
+
+### Parte III: Ulteriori Sviluppi dell'Analisi di Regressione
+
+Capitolo 8.  **Regressione con dati panel**: Utilizzo di dati panel per controllare fattori non osservati tramite modelli a effetti fissi ed effetti temporali.
+
+Capitolo 9.  **Regressione con variabile dipendente binaria**: Modello lineare di probabilità e introduzione ai modelli Probit e Logit.
+
+Capitolo 10. **Regressione con variabili strumentali (IV)**: Logica della stima IV, lo stimatore dei minimi quadrati a due stadi (TSLS) e le condizioni di validità degli strumenti (rilevanza ed esogeneità).
+
+
+## Programma per Studenti con Esame da 9 CFU 
+
+Gli studenti che devono sostenere l'esame da 9 crediti, sono tenuti a portare **tutto il programma sopra elencato**, con l'**aggiunta** dei seguenti capitoli relativi alle serie temporali:
+
+### Parte IV: Regressioni per Serie Temporali di Tipo Economico
+
+Capitolo  12. **Introduzione a regressioni temporali e previsioni**: Modelli autoregressivi (AR), stazionarietà, trend, rotture strutturali e criteri di informazione per la scelta della lunghezza dei ritardi.
+
+Capitolo 13. **Stima degli effetti causali dinamici**: Modelli a ritardi distribuiti (ADL), esogeneità e stima con errori autocorrelati (errori standard HAC).
+
