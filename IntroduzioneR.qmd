@@ -216,8 +216,7 @@ Ecco un esempio di codice di base per creare un grafico a dispersione utilizzand
 
 ```{r}
 library(ggplot2)
-# Caricare i dati
-data(CASchools)
+# I dati CASchools sono già stati caricati in precedenza
 ## Creiamo le variabili
 library(dplyr)
 CASchools <- CASchools |> mutate(str=students/teachers, testscr=(read+math)/2)
