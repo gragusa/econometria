@@ -2,11 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="Econometria 2023/2024 - Giuseppe Ragusa - Sapienza">
+<meta name="description" content="Econometria 2025/2026 - Giuseppe Ragusa - Sapienza">
 
 <title>R: Introduzione – Econometria</title>
 <style>
@@ -68,14 +68,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href=".//files/icon-512.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e4b8024a137a066106f64e849fce2999.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-1b3db88def35042d172274863c1cdcf0.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-696aa5f192ee7865d57f22031b8f2c4a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-163ab6c4fd5ea56ca67fb43378b542f8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -118,7 +119,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -199,167 +200,6 @@ window.Quarto = {
  <span class="menu-text">Introduzione a <code>R</code></span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione1.pdf?forcedownload=1" class="sidebar-item-text sidebar-link"><i class="bi bi-filetype-pdf" role="img">
-</i> 
- <span class="menu-text">Slide Lezione 1</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione2.pdf?forcedownload=1" class="sidebar-item-text sidebar-link"><i class="bi bi-filetype-pdf" role="img">
-</i> 
- <span class="menu-text">Slide Lezione 2</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione3.pdf?forcedownload=1" class="sidebar-item-text sidebar-link"><i class="bi bi-filetype-pdf" role="img">
-</i> 
- <span class="menu-text">Slide Lezione 3</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione4.pdf?forcedownload=1" class="sidebar-item-text sidebar-link"><i class="bi bi-filetype-pdf" role="img">
-</i> 
- <span class="menu-text">Slide Lezione 4</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione5.pdf?forcedownload=1" class="sidebar-item-text sidebar-link"><i class="bi bi-filetype-pdf" role="img">
-</i> 
- <span class="menu-text">Slide Lezione 5</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione6.pdf?forcedownload=1" class="sidebar-item-text sidebar-link"><i class="bi bi-filetype-pdf" role="img">
-</i> 
- <span class="menu-text">Slide Lezione 6</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione7.pdf?forcedownload=1" class="sidebar-item-text sidebar-link"><i class="bi bi-filetype-pdf" role="img">
-</i> 
- <span class="menu-text">Slide Lezione 7</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione8.qmd?forcedownload=1" class="sidebar-item-text sidebar-link"><i class="bi bi-code-slash" role="img">
-</i> 
- <span class="menu-text">Lezione 8 (qmd)</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione8.html?forcedownload=1" class="sidebar-item-text sidebar-link"><i class="bi bi-filetype-html" role="img">
-</i> 
- <span class="menu-text">Lezione 8 (html)</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione9-10.pdf?forcedownload=1" class="sidebar-item-text sidebar-link"><i class="bi bi-filetype-pdf" role="img">
-</i> 
- <span class="menu-text">Lezione 9-10</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione11.pdf?forcedownload=1" class="sidebar-item-text sidebar-link"><i class="bi bi-filetype-pdf" role="img">
-</i> 
- <span class="menu-text">Lezione 11</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione12.qmd?forcedownload=1" class="sidebar-item-text sidebar-link"><i class="bi bi-code-slash" role="img">
-</i> 
- <span class="menu-text">Lezione 12 (qmd)</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione12.html?forcedownload=1" class="sidebar-item-text sidebar-link"><i class="bi bi-filetype-html" role="img">
-</i> 
- <span class="menu-text">Lezione 12 (html)</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione13.pdf?forcedownload=1" class="sidebar-item-text sidebar-link"><i class="bi bi-filetype-pdf" role="img">
-</i> 
- <span class="menu-text">Lezione 13</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione14.pdf?forcedownload=1" class="sidebar-item-text sidebar-link"><i class="bi bi-filetype-pdf" role="img">
-</i> 
- <span class="menu-text">Lezione 14</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione15-16.pdf?forcedownload=1" class="sidebar-item-text sidebar-link"><i class="bi bi-filetype-pdf" role="img">
-</i> 
- <span class="menu-text">Lezione 15 &amp; 16</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione15-16_hmda.qmd?forcedownload=1" class="sidebar-item-text sidebar-link"><i class="bi bi-code-slash" role="img">
-</i> 
- <span class="menu-text">Lezione 15 &amp; 16 HMDA (qmd)</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione15-16_hmda.html?forcedownload=1" class="sidebar-item-text sidebar-link"><i class="bi bi-filetype-html" role="img">
-</i> 
- <span class="menu-text">Lezione 15 &amp; 16 HMDA (html)</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione17.pdf?forcedownload=1" class="sidebar-item-text sidebar-link"><i class="bi bi-filetype-pdf" role="img">
-</i> 
- <span class="menu-text">Lezione 17</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/EfficienzaDeiMercati.html?forcedownload=1" class="sidebar-item-text sidebar-link"><i class="bi bi-filetype-html" role="img">
-</i> 
- <span class="menu-text">Efficienza dei Marcati (html)</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/EfficienzaDeiMercati.qmd?forcedownload=1" class="sidebar-item-text sidebar-link"><i class="bi bi-code-slash" role="img">
-</i> 
- <span class="menu-text">Efficienza dei Marcati (qmd)</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione18.pdf?forcedownload=1" class="sidebar-item-text sidebar-link"><i class="bi bi-filetype-pdf" role="img">
-</i> 
- <span class="menu-text">Lezione 18</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione19.pdf?forcedownload=1" class="sidebar-item-text sidebar-link"><i class="bi bi-filetype-pdf" role="img">
-</i> 
- <span class="menu-text">Lezione 19</span></a>
-  </div>
-</li>
     </ul>
     </div>
 </nav>
@@ -376,7 +216,7 @@ window.Quarto = {
   <li><a href="#i-pacchetti-di-r" id="toc-i-pacchetti-di-r" class="nav-link" data-scroll-target="#i-pacchetti-di-r">I pacchetti di <code>R</code></a></li>
   <li><a href="#caricamento-dei-pacchetti" id="toc-caricamento-dei-pacchetti" class="nav-link" data-scroll-target="#caricamento-dei-pacchetti">Caricamento dei pacchetti</a>
   <ul class="collapse">
-  <li><a href="#i-dataset-di-ecdat" id="toc-i-dataset-di-ecdat" class="nav-link" data-scroll-target="#i-dataset-di-ecdat">I dataset di <code>Ecdat</code></a></li>
+  <li><a href="#il-dataset-caschools" id="toc-il-dataset-caschools" class="nav-link" data-scroll-target="#il-dataset-caschools">Il dataset <code>CASchools</code></a></li>
   </ul></li>
   <li><a href="#il-sistema-di-help" id="toc-il-sistema-di-help" class="nav-link" data-scroll-target="#il-sistema-di-help">Il sistema di help</a></li>
   <li><a href="#primi-grafici-con-ggplot2" id="toc-primi-grafici-con-ggplot2" class="nav-link" data-scroll-target="#primi-grafici-con-ggplot2">Primi grafici con <code>ggplot2</code></a></li>
@@ -603,18 +443,18 @@ Important
 <p>Per installare un pacchetto in R, si utilizza la funzione <code>install.packages()</code>. Questa funzione scarica e installa il pacchetto desiderato dal repository CRAN. Una volta installato un pacchetto, è necessario caricarlo nella sessione di lavoro corrente usando la funzione <code>library()</code> per poter utilizzare le sue funzionalità.</p>
 <p>Ecco un esempio di come installare e caricare il pacchetto <code>ggplot2</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Installa il pacchetto ggplot2</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Installa il pacchetto ggplot2</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Carica il pacchetto ggplot2</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>In questo esempio, il primo comando installa <code>ggplot2</code> e il secondo comando lo carica nella sessione di R attuale, rendendo disponibili tutte le sue funzioni e capacità.</p>
 <p>I pacchetti possono anche essere installati da <code>Rstudio</code>, dal menu Strumenti|Installa pacchetti. Similarmente, i pacchetti possono essere aggiornati usando la voce <code>Aggiorna pacchetti</code>.</p>
 <p>Alcuni pacchetti di <code>R</code> includono raccolte di dati (<em>dataset</em>). Questi dataset sono particolarmente utili. Per esempio, <a href="https://cran.r-project.org/package=wooldridge">wooldridge</a>, <a href="https://cran.r-project.org/package=Ecdat">Ecdat</a> e <a href="https://cran.r-project.org/web/packages/AER/index.html">AER</a> contengono vari dataset di carattere economico.</p>
 <p>Per accedere ai dataset inclusi nei pacchetti bisogna installarli e poi caricarli.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Installa il pacchetto AER</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Installa il pacchetto AER</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"AER"</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Installa il pacchetto wooldridge</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"wooldridge"</span>)</span>
@@ -624,7 +464,7 @@ Important
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(wooldridge)</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Carica un dataset specifico, ad esempio 'Accident'</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(Fatalities)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(Fatalities)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Alternativamente, i pacchetti possono essere installati direttamente da <code>RStudio</code> usando il menu <em>Tools</em> (<em>Strumenti</em>).</p>
 <p>Dopo aver installato e caricato <code>Ecdat</code> il comando <code>data()</code> consente di caricare uso specifico dataset in memoria per essere poi utilizzato nella nostra sessione.</p>
@@ -638,30 +478,29 @@ Important
 <h2 class="anchored" data-anchor-id="caricamento-dei-pacchetti">Caricamento dei pacchetti</h2>
 <p>L’installazione rende disponibili i pacchetti sul proprio computer. Perché <code>R</code> possa utilizzare le funzionalità del pacchetto è necessario caricare i pacchetti utilizzando il comando <strong><code>library()</code></strong>. Ad esempio, per caricare il pacchetto <code>Ecdat</code> bisogna eseguire il seguente comando nella console R:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(AER)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(AER)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<section id="i-dataset-di-ecdat" class="level3">
-<h3 class="anchored" data-anchor-id="i-dataset-di-ecdat">I dataset di <code>Ecdat</code></h3>
-<p>Per avere un’idea dei dataset messi a disposizione da <code>Ecdat</code> possiamo utilizzare la funzione di <code>help</code></p>
+<section id="il-dataset-caschools" class="level3">
+<h3 class="anchored" data-anchor-id="il-dataset-caschools">Il dataset <code>CASchools</code></h3>
+<p>Per avere un’idea dei dataset messi a disposizione da <code>AER</code> possiamo utilizzare la funzione di <code>help</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="at">package=</span><span class="st">"AER"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="at">package=</span><span class="st">"AER"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>I dataset possono essere caricati nella sessione di <code>R</code> mediante il comando <strong><code>data()</code></strong>. Per esempio, il seguente comando</p>
+<p>In questo corso utilizzeremo il dataset <code>CASchools</code> che proviene dal pacchetto <code>AER</code>. Il dataset è stato salvato in formato CSV nella cartella <code>data/</code> e può essere caricato direttamente:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(CASchools)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>CASchools <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/CASchools.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>rende disponibile il dataset <code>Caschool</code>. Il data set può essere richiamato semplicemente digitando il suo nome</p>
+<p>Il data set può essere esplorato utilizzando la funzione <code>summary()</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(CASchools)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(CASchools)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>   district            school                  county      grades   
- Length:420         Length:420         Sonoma     : 29   KK-06: 61  
- Class :character   Class :character   Kern       : 27   KK-08:359  
- Mode  :character   Mode  :character   Los Angeles: 27              
-                                       Tulare     : 24              
-                                       San Diego  : 21              
-                                       Santa Clara: 20              
-                                       (Other)    :272              
+<pre><code>    district        school             county             grades         
+ Min.   :61382   Length:420         Length:420         Length:420        
+ 1st Qu.:64308   Class :character   Class :character   Class :character  
+ Median :67760   Mode  :character   Mode  :character   Mode  :character  
+ Mean   :67473                                                           
+ 3rd Qu.:70419                                                           
+ Max.   :75440                                                           
     students          teachers          calworks          lunch       
  Min.   :   81.0   Min.   :   4.85   Min.   : 0.000   Min.   :  0.00  
  1st Qu.:  379.0   1st Qu.:  19.66   1st Qu.: 4.395   1st Qu.: 23.28  
@@ -669,7 +508,6 @@ Important
  Mean   : 2628.8   Mean   : 129.07   Mean   :13.246   Mean   : 44.71  
  3rd Qu.: 3008.0   3rd Qu.: 146.35   3rd Qu.:18.981   3rd Qu.: 66.86  
  Max.   :27176.0   Max.   :1429.00   Max.   :78.994   Max.   :100.00  
-                                                                      
     computer       expenditure       income          english      
  Min.   :   0.0   Min.   :3926   Min.   : 5.335   Min.   : 0.000  
  1st Qu.:  46.0   1st Qu.:4906   1st Qu.:10.639   1st Qu.: 1.941  
@@ -677,15 +515,13 @@ Important
  Mean   : 303.4   Mean   :5312   Mean   :15.317   Mean   :15.768  
  3rd Qu.: 375.2   3rd Qu.:5601   3rd Qu.:17.629   3rd Qu.:22.970  
  Max.   :3324.0   Max.   :7712   Max.   :55.328   Max.   :85.540  
-                                                                  
       read            math      
  Min.   :604.5   Min.   :605.4  
  1st Qu.:640.4   1st Qu.:639.4  
- Median :655.8   Median :652.5  
+ Median :655.8   Median :652.4  
  Mean   :655.0   Mean   :653.3  
- 3rd Qu.:668.7   3rd Qu.:665.9  
- Max.   :704.0   Max.   :709.5  
-                                </code></pre>
+ 3rd Qu.:668.7   3rd Qu.:665.8  
+ Max.   :704.0   Max.   :709.5  </code></pre>
 </div>
 </div>
 </section>
@@ -695,13 +531,13 @@ Important
 <p>Il sistema di help di <code>R</code> è un’importante risorsa per gli utenti che utilizzano questo software. Consente di accedere a informazioni dettagliate su tutte le funzioni e i pacchetti di <code>R</code>, nonché di comprendere meglio il funzionamento del linguaggio di programmazione R.</p>
 <p>Ogni funzione in R ha la sua pagina di help alla quale si può accedere tramite la funzione <code>help()</code> o tramite il simbolo <code>?</code> seguito dal nome della funzione della quale si vogliono ottenee inforrmazioni. Per esempio</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(mean)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>apre la pagina di help relativa alla funzione <code>mean</code>.</p>
 <p>La pagina di help fornisce una descrizione della funzione, i suoi argomenti e tipologia dei valori che la funzione restituisce. La maggior parte delle funzioni in R hanno esempi di utilizzo nella loro pagina di help.</p>
 <p>Per ottenere aiuto sulle funzionalità di un pacchetto bisogna passare l’argomento <code>packages</code> seguito dal nome del pacchetto. Per esempio, il seguente comando mostra la pagina di <code>help</code> per il pacchetto <code>ggplot2</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="at">packages=</span><span class="st">"ggplot2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="at">packages=</span><span class="st">"ggplot2"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="primi-grafici-con-ggplot2" class="level2">
@@ -716,19 +552,13 @@ Important
 </ol>
 <p>Ecco un esempio di codice di base per creare un grafico a dispersione utilizzando ggplot2:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Caricare i dati</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(CASchools)</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Creiamo le variabili</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># I dati CASchools sono già stati caricati in precedenza</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="do">## Creiamo le variabili</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>
 Attaching package: 'dplyr'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following object is masked from 'package:car':
-
-    recode</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>The following objects are masked from 'package:stats':
@@ -740,18 +570,18 @@ Attaching package: 'dplyr'</code></pre>
 
     intersect, setdiff, setequal, union</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>CASchools <span class="ot">&lt;-</span> CASchools <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">str=</span>students<span class="sc">/</span>teachers, <span class="at">testscr=</span>(read<span class="sc">+</span>math)<span class="sc">/</span><span class="dv">2</span>)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Creare l'oggetto ggplot</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>scatterplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(CASchools, <span class="fu">aes</span>(<span class="at">x =</span> str, <span class="at">y =</span> testscr))</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Aggiungere i punti al grafico</span></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>scatterplot <span class="ot">&lt;-</span> scatterplot <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">col =</span> <span class="st">"darkgreen"</span>)</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Aggiungere etichette e titoli</span></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>scatterplot <span class="ot">&lt;-</span> scatterplot <span class="sc">+</span></span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Grafico a dispersione - testscr/str"</span>,</span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> <span class="st">"Rapporto studenti insegnanti"</span>, <span class="at">y =</span> <span class="st">"Punteggi nei test"</span>)</span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualizzare il grafico</span></span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>scatterplot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>CASchools <span class="ot">&lt;-</span> CASchools <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">str=</span>students<span class="sc">/</span>teachers, <span class="at">testscr=</span>(read<span class="sc">+</span>math)<span class="sc">/</span><span class="dv">2</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Creare l'oggetto ggplot</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>scatterplot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(CASchools, <span class="fu">aes</span>(<span class="at">x =</span> str, <span class="at">y =</span> testscr))</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Aggiungere i punti al grafico</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>scatterplot <span class="ot">&lt;-</span> scatterplot <span class="sc">+</span> <span class="fu">geom_point</span>(<span class="at">col =</span> <span class="st">"darkgreen"</span>)</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Aggiungere etichette e titoli</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>scatterplot <span class="ot">&lt;-</span> scatterplot <span class="sc">+</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Grafico a dispersione - testscr/str"</span>,</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>      <span class="at">x =</span> <span class="st">"Rapporto studenti insegnanti"</span>, <span class="at">y =</span> <span class="st">"Punteggi nei test"</span>)</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualizzare il grafico</span></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>scatterplot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -762,8 +592,8 @@ Attaching package: 'dplyr'</code></pre>
 </div>
 <p>Questo è solo un esempio molto semplice, ma <code>ggplot2</code> offre molte altre funzionalità per la creazione di grafici avanzati e personalizzati. Per esempio, possiamo cambiare il tema grafico usando <code>theme_bw()</code> che elimina i colori</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>scatterplot <span class="ot">&lt;-</span> scatterplot <span class="sc">+</span> <span class="fu">theme_bw</span>()</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>scatterplot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>scatterplot <span class="ot">&lt;-</span> scatterplot <span class="sc">+</span> <span class="fu">theme_bw</span>()</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>scatterplot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -774,8 +604,8 @@ Attaching package: 'dplyr'</code></pre>
 </div>
 <p>Possiamo anche costruire grafici raggruppati per variabile. Per ottenere un grafico a dispersione per <code>str</code> e <code>testscr</code> per le due tipologie di scuole <code>grades=="KK-06" e</code>grades=“KK-08”`:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>scatterplot <span class="ot">&lt;-</span> scatterplot <span class="sc">+</span> <span class="fu">facet_wrap</span>(<span class="sc">~</span>grades)</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>scatterplot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>scatterplot <span class="ot">&lt;-</span> scatterplot <span class="sc">+</span> <span class="fu">facet_wrap</span>(<span class="sc">~</span>grades)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>scatterplot</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -797,14 +627,14 @@ Note
 <p>La funzione <code>facet_wrap()</code> in <code>ggplot2</code> è utilizzata per dividere i dati in sottoinsiemi basati su una variabile e creare una griglia di grafici separati, ognuno dei quali visualizza i dati per uno dei livelli della variabile.</p>
 <p>La sintassi di base di facet_wrap() è la seguente:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">facet_wrap</span>(<span class="sc">~</span>variable, <span class="at">nrow =</span> x, <span class="at">ncol =</span> y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">facet_wrap</span>(<span class="sc">~</span>variable, <span class="at">nrow =</span> x, <span class="at">ncol =</span> y)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Dove <code>variable</code> è la variabile che si vuole utilizzare per suddividere i dati in sottoinsiemi (nell precedente esempio abbiamo utilizzato <code>grspan</code>) e <code>nrow</code> e <code>ncol</code> specificano il numero di righe e colonne della griglia di grafici che si desidera creare.</p>
 </div>
 </div>
 <p>Possiamo anche aggiungere le rette di regression a ciascun grafico usando la geometria <code>geom_smooth</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>scatterplot <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">"lm"</span>, <span class="at">col =</span> <span class="st">"darkred"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>scatterplot <span class="sc">+</span> <span class="fu">geom_smooth</span>(<span class="at">method=</span><span class="st">"lm"</span>, <span class="at">col =</span> <span class="st">"darkred"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
 </div>
@@ -820,12 +650,12 @@ Note
 <section id="prime-manipolazione-di-dati-usando-dplyr" class="level2">
 <h2 class="anchored" data-anchor-id="prime-manipolazione-di-dati-usando-dplyr">Prime manipolazione di dati usando <code>dplyr</code></h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Calcoliamo la media e la standard deviation di <code>testscr</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>CASchools <span class="sc">|&gt;</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">m =</span> <span class="fu">mean</span>(testscr), <span class="at">s =</span> <span class="fu">sd</span>(testscr))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>CASchools <span class="sc">|&gt;</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">m =</span> <span class="fu">mean</span>(testscr), <span class="at">s =</span> <span class="fu">sd</span>(testscr))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>         m        s
 1 654.1565 19.05335</code></pre>
@@ -833,16 +663,16 @@ Note
 </div>
 <p>Possiamo anche calcolare la media, la deviazione standard e il numero di osservazioni per il gruppo di scuole che hanno un rapporto studenti insegnanti minore di 20, <span class="math inline">\(str&lt;20\)</span> e il gruppo di scuole che hanno un rapporto maggiore o uguale a venti (<span class="math inline">\(str&gt;20\)</span>) usando la funzione <code>group_by</code> seguita dall’indicazione del gruppo (nel nostro caso <code>str&lt;20</code>):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>df_1 <span class="ot">&lt;-</span> CASchools <span class="sc">|&gt;</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(str<span class="sc">&lt;</span><span class="dv">20</span>) <span class="sc">|&gt;</span></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">m =</span> <span class="fu">mean</span>(testscr),</span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">s =</span> <span class="fu">sd</span>(testscr),</span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">n =</span> <span class="fu">n</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>df_1 <span class="ot">&lt;-</span> CASchools <span class="sc">|&gt;</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(str<span class="sc">&lt;</span><span class="dv">20</span>) <span class="sc">|&gt;</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">m =</span> <span class="fu">mean</span>(testscr),</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">s =</span> <span class="fu">sd</span>(testscr),</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>            <span class="at">n =</span> <span class="fu">n</span>())</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Il risultato delle manipolazioni è un <code>tibble</code> — un sorta di <code>data.frame</code> più flessibile definito nel pacchetto <code>dplyr</code>.</p>
 <p><code>df_1</code> può essere a sua volta utilizzato per altri calcoli e si comporta in tutto e per tutto come un normale <code>data.frame</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>df_1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>df_1</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 4
   `str &lt; 20`     m     s     n
@@ -876,8 +706,8 @@ Note
 \Delta = E(testscr|str&lt;20) - E(testscr|str\geqslant20)
 \]</span> può essere ottenuta calcolando la differenza delle medie campionarie dei due gruppi e può essere ottenuta usando le informazioni in <code>df_1</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Differenza delle medie campionarie</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>df_1<span class="sc">$</span>m[<span class="dv">2</span>]<span class="sc">-</span>df_1<span class="sc">$</span>m[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Differenza delle medie campionarie</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>df_1<span class="sc">$</span>m[<span class="dv">2</span>]<span class="sc">-</span>df_1<span class="sc">$</span>m[<span class="dv">1</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 7.169435</code></pre>
 </div>
@@ -911,11 +741,11 @@ Note
 <div class="callout-body-container callout-body">
 <p>La sintassi della funzione <code>cut()</code> è la seguente:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cut</span>(x, breaks,</span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">labels =</span> <span class="cn">NULL</span>,</span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">include.lowest =</span> <span class="cn">FALSE</span>,</span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">right =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">dig.lab =</span> <span class="dv">3</span>, ...)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cut</span>(x, breaks,</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>       <span class="at">labels =</span> <span class="cn">NULL</span>,</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">include.lowest =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">right =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">dig.lab =</span> <span class="dv">3</span>, ...)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>dove:</p>
 <ul>
@@ -931,8 +761,8 @@ Note
 </div>
 <p>Ecco un esempio di utilizzo della funzione <code>cut()</code> per suddividere <code>str</code> in tre bin di uguale ampiezza:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>str_cat3 <span class="ot">&lt;-</span> <span class="fu">cut</span>(CASchools<span class="sc">$</span>str, <span class="dv">3</span>)</span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(str_cat3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>str_cat3 <span class="ot">&lt;-</span> <span class="fu">cut</span>(CASchools<span class="sc">$</span>str, <span class="dv">3</span>)</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(str_cat3)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  (14,17.9] (17.9,21.9] (21.9,25.8] 
          73         305          42 </code></pre>
@@ -941,8 +771,8 @@ Note
 <p>In questo caso il comando <code>summary</code> produce una tavola di frequenza con il numero delle scuole in ciascuna delle tre categorie (14,17.9], (17.9,21.9], (21.9,25.8].</p>
 <p>Possiamo anche specificare i <code>breaks</code> in modo esplicito</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>str_cat3 <span class="ot">&lt;-</span> <span class="fu">cut</span>(CASchools<span class="sc">$</span>str, <span class="fu">c</span>(<span class="dv">13</span>,<span class="dv">20</span>, <span class="dv">21</span>, <span class="dv">26</span>))</span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(str_cat3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>str_cat3 <span class="ot">&lt;-</span> <span class="fu">cut</span>(CASchools<span class="sc">$</span>str, <span class="fu">c</span>(<span class="dv">13</span>,<span class="dv">20</span>, <span class="dv">21</span>, <span class="dv">26</span>))</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(str_cat3)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>(13,20] (20,21] (21,26] 
     243      86      91 </code></pre>
@@ -963,14 +793,14 @@ Note
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="annotated-cell-21"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-21-1"><a href="#annotated-cell-21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-21"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-21-1"><a href="#annotated-cell-21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
 <span id="annotated-cell-21-2"><a href="#annotated-cell-21-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="annotated-cell-21-3"><a href="#annotated-cell-21-3" aria-hidden="true" tabindex="-1"></a>df_2 <span class="ot">&lt;-</span> CASchools <span class="sc">|&gt;</span></span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-21" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-21-4" class="code-annotation-target"><a href="#annotated-cell-21-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">str_cat =</span> <span class="fu">cut</span>(str, <span class="dv">25</span>)) <span class="sc">|&gt;</span></span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-21" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-21-5" class="code-annotation-target"><a href="#annotated-cell-21-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(str_cat) <span class="sc">|&gt;</span></span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-21" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-21-6" class="code-annotation-target"><a href="#annotated-cell-21-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">m =</span> <span class="fu">mean</span>(testscr), <span class="at">s =</span> <span class="fu">sd</span>(testscr), <span class="at">n =</span> <span class="fu">n</span>())</span>
 <span id="annotated-cell-21-7"><a href="#annotated-cell-21-7" aria-hidden="true" tabindex="-1"></a></span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-21" data-target-annotation="4" onclick="event.preventDefault();">4</a><span id="annotated-cell-21-8" class="code-annotation-target"><a href="#annotated-cell-21-8" aria-hidden="true" tabindex="-1"></a>df_2 <span class="sc">|&gt;</span> <span class="fu">kable</span>()</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-21" data-target-annotation="4" onclick="event.preventDefault();">4</a><span id="annotated-cell-21-8" class="code-annotation-target"><a href="#annotated-cell-21-8" aria-hidden="true" tabindex="-1"></a>df_2 <span class="sc">|&gt;</span> <span class="fu">kable</span>()</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-21" data-target-annotation="1">1</dt>
@@ -1159,12 +989,12 @@ Note
 <p>Alcuni degli errori standard sono uguali a <code>NA</code> perché in almeno uno dei gruppi il numero di osservazioni è inferiore a 2, il numero minimo per poter calcolare questa misura dispersione.</p>
 <p>Manipolando <code>df_2</code>, possiamo calcolare le differenze nelle media campionarie fra due intervalli adiacenti.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="annotated-cell-22"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-22" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-22-1" class="code-annotation-target"><a href="#annotated-cell-22-1" aria-hidden="true" tabindex="-1"></a>df_3 <span class="ot">&lt;-</span> df_2 <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">Delta_str =</span> <span class="fu">paste0</span>(str_cat, <span class="st">"-"</span>, <span class="fu">lag</span>(str_cat)),</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-22"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-22" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-22-1" class="code-annotation-target"><a href="#annotated-cell-22-1" aria-hidden="true" tabindex="-1"></a>df_3 <span class="ot">&lt;-</span> df_2 <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">Delta_str =</span> <span class="fu">paste0</span>(str_cat, <span class="st">"-"</span>, <span class="fu">lag</span>(str_cat)),</span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-22" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-22-2" class="code-annotation-target"><a href="#annotated-cell-22-2" aria-hidden="true" tabindex="-1"></a>               <span class="at">Delta_testscr =</span> m <span class="sc">-</span> <span class="fu">lag</span>(m),</span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-22" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-22-3" class="code-annotation-target"><a href="#annotated-cell-22-3" aria-hidden="true" tabindex="-1"></a>               <span class="at">stderr =</span> <span class="fu">sqrt</span>(s<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span>n <span class="sc">+</span> <span class="fu">lag</span>(s<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span>n))) <span class="sc">|&gt;</span></span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-22" data-target-annotation="4" onclick="event.preventDefault();">4</a><span id="annotated-cell-22-4" class="code-annotation-target"><a href="#annotated-cell-22-4" aria-hidden="true" tabindex="-1"></a>               <span class="fu">select</span>(Delta_str, Delta_testscr, stderr)</span>
 <span id="annotated-cell-22-5"><a href="#annotated-cell-22-5" aria-hidden="true" tabindex="-1"></a></span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-22" data-target-annotation="5" onclick="event.preventDefault();">5</a><span id="annotated-cell-22-6" class="code-annotation-target"><a href="#annotated-cell-22-6" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(df_3)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-22" data-target-annotation="5" onclick="event.preventDefault();">5</a><span id="annotated-cell-22-6" class="code-annotation-target"><a href="#annotated-cell-22-6" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(df_3)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-22" data-target-annotation="1">1</dt>
@@ -1336,17 +1166,17 @@ Note
 \]</span> e che quindi scuole con <span class="math inline">\(str\in (14.9,15.4]\)</span> hanno punteggi più alti di circa -12.0166626 punti rispetto a quelle con <span class="math inline">\(str\in (14.5,14.9]\)</span>. E così via per le altre righe.</p>
 <p>E’ molto probabile che tutte le stime e non soltanto quelle della prima riga siano particolarmente imprecise visto che sono tutte basate su un numero esiguo di osservazioni. Per quantificare la loro precisione, o la loro imprecisione, possiamo costruire l’intervallo di confidenza (al 95%) per ciascun valore dell’intervallo di <span class="math inline">\(str\)</span>. L’intervallo di confidenza al 95% è:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(df_3<span class="sc">$</span>Delta_testscr <span class="sc">-</span> <span class="fl">1.96</span> <span class="sc">*</span> df_3<span class="sc">$</span>stderr,</span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  df_3<span class="sc">$</span>Delta_testscr <span class="sc">+</span> <span class="fl">1.96</span> <span class="sc">*</span> df_3<span class="sc">$</span>stderr)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(df_3<span class="sc">$</span>Delta_testscr <span class="sc">-</span> <span class="fl">1.96</span> <span class="sc">*</span> df_3<span class="sc">$</span>stderr,</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  df_3<span class="sc">$</span>Delta_testscr <span class="sc">+</span> <span class="fl">1.96</span> <span class="sc">*</span> df_3<span class="sc">$</span>stderr)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>dove <code>stderr</code> è l’errore standard della differenza delle media che è stato calcolato nel precdedente blocco di codice.</p>
 <p>Per aggiungere l’intervallo di confidenza a <code>df_3</code> possiamo usare <code>dplyr</code> e la funzione <code>mutate</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="annotated-cell-24"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-24-1"><a href="#annotated-cell-24-1" aria-hidden="true" tabindex="-1"></a>df_3 <span class="ot">&lt;-</span> df_3 <span class="sc">|&gt;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-24"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-24-1"><a href="#annotated-cell-24-1" aria-hidden="true" tabindex="-1"></a>df_3 <span class="ot">&lt;-</span> df_3 <span class="sc">|&gt;</span></span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-24" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-24-2" class="code-annotation-target"><a href="#annotated-cell-24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">ci_sx =</span> Delta_testscr <span class="sc">-</span> <span class="fl">1.96</span> <span class="sc">*</span> stderr,</span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-24" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-24-3" class="code-annotation-target"><a href="#annotated-cell-24-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">ci_dx =</span> Delta_testscr <span class="sc">+</span> <span class="fl">1.96</span> <span class="sc">*</span> stderr)</span>
 <span id="annotated-cell-24-4"><a href="#annotated-cell-24-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="annotated-cell-24-5"><a href="#annotated-cell-24-5" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(df_3)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="annotated-cell-24-5"><a href="#annotated-cell-24-5" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(df_3)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-24" data-target-annotation="1">1</dt>
@@ -1560,12 +1390,12 @@ Note
 <p>Come si vede chiaramente dall’analisi della tabella, tutti gli intervalli di confidenza sono molto ampi. Come preannunciato, i dati a nostra disposizione non sono abbastanza informativi per poter stimare tutte le differenze su intervalli così poco numerosi. Anche nel caso in cui considerassimo la differenza delle medie in scuole con <span class="math inline">\(str\in(18.7,19.2]\)</span> (27 scuole) e scuole con <span class="math inline">\(str\in (18.2,18.7]\)</span> (47 scuole), l’intervallo di confidenza è molto ampio: <span class="math inline">\((-4.9953795, 12.7289653)\)</span>. Un intervallo di confidenza così ampio implica che non possiamo neanche quantificare con l’appropriata confidenza il segno della differenza che potrebbe essere -12 o 2.</p>
 <p>La rappresentazione grafica delle informazioni contenute in una tavole facilita spesso la comprensione dei risultati.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="annotated-cell-25"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-25" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-25-1" class="code-annotation-target"><a href="#annotated-cell-25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df_3, <span class="fu">aes</span>(<span class="at">x=</span>Delta_str,<span class="at">y=</span>Delta_testscr)) <span class="sc">+</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-25"><pre class="sourceCode r code-annotation-code code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-25" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-25-1" class="code-annotation-target"><a href="#annotated-cell-25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df_3, <span class="fu">aes</span>(<span class="at">x=</span>Delta_str,<span class="at">y=</span>Delta_testscr)) <span class="sc">+</span></span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-25" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-25-2" class="code-annotation-target"><a href="#annotated-cell-25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_pointrange</span>(<span class="fu">aes</span>(<span class="at">ymin=</span>ci_sx, <span class="at">ymax=</span>ci_dx)) <span class="sc">+</span></span>
 <a class="code-annotation-anchor" data-target-cell="annotated-cell-25" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-25-3" class="code-annotation-target"><a href="#annotated-cell-25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="dv">0</span>, <span class="at">col =</span> <span class="st">"darkred"</span>) <span class="sc">+</span></span>
 <span id="annotated-cell-25-4"><a href="#annotated-cell-25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
 <span id="annotated-cell-25-5"><a href="#annotated-cell-25-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">"Intervalli str"</span>) <span class="sc">+</span> <span class="fu">ylab</span>(<span class="st">"Delta Media testscr"</span>) <span class="sc">+</span></span>
-<a class="code-annotation-anchor" data-target-cell="annotated-cell-25" data-target-annotation="4" onclick="event.preventDefault();">4</a><span id="annotated-cell-25-6" class="code-annotation-target"><a href="#annotated-cell-25-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>, <span class="at">hjust=</span><span class="dv">1</span>))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-25" data-target-annotation="4" onclick="event.preventDefault();">4</a><span id="annotated-cell-25-6" class="code-annotation-target"><a href="#annotated-cell-25-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">90</span>, <span class="at">vjust =</span> <span class="fl">0.5</span>, <span class="at">hjust=</span><span class="dv">1</span>))</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-25" data-target-annotation="1">1</dt>
@@ -1651,13 +1481,14 @@ Note
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

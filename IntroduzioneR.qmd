@@ -151,26 +151,28 @@ I dataset inclusi nei pacchetti offrono diversi vantaggi:
 L'installazione rende disponibili i pacchetti sul proprio computer. Perché `R` possa utilizzare le funzionalità del pacchetto è necessario caricare i pacchetti utilizzando il comando **`library()`**. Ad esempio, per caricare il pacchetto `Ecdat` bisogna eseguire il seguente comando nella console R:
 
 ```{r}
-#| message: false
-#| warning: false
+#| eval: false
 library(AER)
 ```
 
 
 
-### I dataset di `Ecdat`
+### Il dataset `CASchools`
 
-Per avere un'idea dei dataset messi a disposizione da `Ecdat` possiamo utilizzare la funzione di `help`
+Per avere un'idea dei dataset messi a disposizione da `AER` possiamo utilizzare la funzione di `help`
 ```{r}
 #| eval: false
 help(package="AER")
 ```
 
-I dataset possono essere caricati nella sessione di `R` mediante il comando **`data()`**. Per esempio, il seguente comando
+In questo corso utilizzeremo il dataset `CASchools` che proviene dal pacchetto `AER`. Il dataset è stato salvato in formato CSV nella cartella `data/` e può essere caricato direttamente:
 ```{r}
-data(CASchools)
+#| message: false
+#| warning: false
+CASchools <- read.csv("data/CASchools.csv")
 ```
-rende disponibile il dataset `Caschool`. Il data set può essere richiamato semplicemente digitando il suo nome
+
+Il data set può essere esplorato utilizzando la funzione `summary()`
 ```{r}
 summary(CASchools)
 ```
@@ -214,8 +216,7 @@ Ecco un esempio di codice di base per creare un grafico a dispersione utilizzand
 
 ```{r}
 library(ggplot2)
-# Caricare i dati
-data(CASchools)
+# I dati CASchools sono già stati caricati in precedenza
 ## Creiamo le variabili
 library(dplyr)
 CASchools <- CASchools |> mutate(str=students/teachers, testscr=(read+math)/2)
@@ -264,7 +265,7 @@ scatterplot + geom_smooth(method="lm", col = "darkred")
 
 ## Prime manipolazione di dati usando  `dplyr`
 
-```{r, results='hide'}
+```{r}
 #| results: 'hide'
 #| message: false
 #| warning: false
