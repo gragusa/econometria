@@ -264,7 +264,7 @@ scatterplot + geom_smooth(method="lm", col = "darkred")
 
 ## Prime manipolazione di dati usando  `dplyr`
 
-```{r, results='hide'}
+```{r}
 #| results: 'hide'
 #| message: false
 #| warning: false
