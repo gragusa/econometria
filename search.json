@@ -39,7 +39,7 @@
     "href": "syllabus.html#orari-di-ricevimento",
     "title": "Syllabus",
     "section": "Orari di ricevimento",
-    "text": "Orari di ricevimento\nGli orari di ricevimento sono:\n\n\n\nGiorno\nOrario\n\n\n\n\nMartedì\n16:00-17:00\n\n\nVenerdì\n10:00-12:00\n\n\n\nE’ obbligatorio prenotare un appuntamento a questo link."
+    "text": "Orari di ricevimento\nGli orari di ricevimento sono:\n\n\n\nGiorno\nOrario\n\n\n\n\nMartedì\n15:00-16:00\n\n\nGiovedì\n15:00-17:00\n\n\n\nE’ obbligatorio prenotare un appuntamento a questo link."
   },
   {
     "objectID": "syllabus.html#modalità-di-valutazione",
@@ -47,6 +47,20 @@
     "title": "Syllabus",
     "section": "Modalità di valutazione",
     "text": "Modalità di valutazione\nL’esame di Econometria si compone di una prova scritta e una prova orale, entrambe obbligatorie.\nLa prova scritta valuterà la capacità degli studenti di comprendere e interpretare le stime dei modelli econometrici introdotti durante il corso e di applicarli in contesti specifici.\nLa prova orale è volta ad accertare in maniera più articolata le conoscenza acquisite nel corso.\nL’ammissione alla prova orale è consentita agli studenti che abbiano superato con sufficienza la prova scritta."
+  },
+  {
+    "objectID": "syllabus.html#programma-per-gli-studenti-dellordinamento-attuale-6-cfu",
+    "href": "syllabus.html#programma-per-gli-studenti-dellordinamento-attuale-6-cfu",
+    "title": "Syllabus",
+    "section": "Programma per gli Studenti dell’Ordinamento Attuale (6 cfu)",
+    "text": "Programma per gli Studenti dell’Ordinamento Attuale (6 cfu)\n\nParte I: Elementi Fondamentali\nCapitolo 1. Domande economiche e dati economici: Introduzione ai quesiti economici, effetti causali, esperimenti ideali e tipologie di dati (sezionali, serie temporali, panel).\nCapitolo 2. Richiami di probabilità: Variabili casuali, distribuzioni, valore atteso, varianza, covarianza e principali distribuzioni campionarie\nCapitolo 3. Richiami di statistica: Stima, verifica di ipotesi, intervalli di confidenza per medie di popolazioni e confronto tra medie.\n\n\nParte II: Analisi di Regressione\nCapitolo 4. Regressione lineare con un singolo regressore: Il modello OLS, assunzioni dei minimi quadrati, distribuzione campionaria, verifica di ipotesi e intervalli di confidenza.\nCapitolo 5. Regressione lineare con regressori multipli: Distorsione da variabile omessa, modello di regressione multipla, collinearità, verifica di ipotesi congiunte (statistica F) e misure di bontà dell’adattamento (\\(R^2\\) e \\(R^2\\) corretto).\nCapitolo 6. Funzioni di regressione non lineari: Modellazione di relazioni non lineari tramite polinomi, logaritmi e interazioni tra variabili.\nCapitolo 7. Valutazione di studi basati sulla regressione multipla: Validità interna ed esterna, minacce comuni (variabili omesse, errori di misurazione, causalità simultanea).\n\n\nParte III: Ulteriori Sviluppi dell’Analisi di Regressione\nCapitolo 8. Regressione con dati panel: Utilizzo di dati panel per controllare fattori non osservati tramite modelli a effetti fissi ed effetti temporali.\nCapitolo 9. Regressione con variabile dipendente binaria: Modello lineare di probabilità e introduzione ai modelli Probit e Logit.\nCapitolo 10. Regressione con variabili strumentali (IV): Logica della stima IV, lo stimatore dei minimi quadrati a due stadi (TSLS) e le condizioni di validità degli strumenti (rilevanza ed esogeneità)."
+  },
+  {
+    "objectID": "syllabus.html#programma-per-studenti-con-esame-da-9-cfu",
+    "href": "syllabus.html#programma-per-studenti-con-esame-da-9-cfu",
+    "title": "Syllabus",
+    "section": "Programma per Studenti con Esame da 9 CFU",
+    "text": "Programma per Studenti con Esame da 9 CFU\nGli studenti che devono sostenere l’esame da 9 crediti, sono tenuti a portare tutto il programma sopra elencato, con l’aggiunta dei seguenti capitoli relativi alle serie temporali:\n\nParte IV: Regressioni per Serie Temporali di Tipo Economico\nCapitolo 12. Introduzione a regressioni temporali e previsioni: Modelli autoregressivi (AR), stazionarietà, trend, rotture strutturali e criteri di informazione per la scelta della lunghezza dei ritardi.\nCapitolo 13. Stima degli effetti causali dinamici: Modelli a ritardi distribuiti (ADL), esogeneità e stima con errori autocorrelati (errori standard HAC)."
   },
   {
     "objectID": "index.html",

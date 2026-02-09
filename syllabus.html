@@ -72,6 +72,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -121,6 +150,16 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software">Software</a></li>
   <li><a href="#orari-di-ricevimento" id="toc-orari-di-ricevimento" class="nav-link" data-scroll-target="#orari-di-ricevimento">Orari di ricevimento</a></li>
   <li><a href="#modalità-di-valutazione" id="toc-modalità-di-valutazione" class="nav-link" data-scroll-target="#modalità-di-valutazione">Modalità di valutazione</a></li>
+  <li><a href="#programma-per-gli-studenti-dellordinamento-attuale-6-cfu" id="toc-programma-per-gli-studenti-dellordinamento-attuale-6-cfu" class="nav-link" data-scroll-target="#programma-per-gli-studenti-dellordinamento-attuale-6-cfu">Programma per gli Studenti dell’Ordinamento Attuale (6 cfu)</a>
+  <ul class="collapse">
+  <li><a href="#parte-i-elementi-fondamentali" id="toc-parte-i-elementi-fondamentali" class="nav-link" data-scroll-target="#parte-i-elementi-fondamentali">Parte I: Elementi Fondamentali</a></li>
+  <li><a href="#parte-ii-analisi-di-regressione" id="toc-parte-ii-analisi-di-regressione" class="nav-link" data-scroll-target="#parte-ii-analisi-di-regressione">Parte II: Analisi di Regressione</a></li>
+  <li><a href="#parte-iii-ulteriori-sviluppi-dellanalisi-di-regressione" id="toc-parte-iii-ulteriori-sviluppi-dellanalisi-di-regressione" class="nav-link" data-scroll-target="#parte-iii-ulteriori-sviluppi-dellanalisi-di-regressione">Parte III: Ulteriori Sviluppi dell’Analisi di Regressione</a></li>
+  </ul></li>
+  <li><a href="#programma-per-studenti-con-esame-da-9-cfu" id="toc-programma-per-studenti-con-esame-da-9-cfu" class="nav-link" data-scroll-target="#programma-per-studenti-con-esame-da-9-cfu">Programma per Studenti con Esame da 9 CFU</a>
+  <ul class="collapse">
+  <li><a href="#parte-iv-regressioni-per-serie-temporali-di-tipo-economico" id="toc-parte-iv-regressioni-per-serie-temporali-di-tipo-economico" class="nav-link" data-scroll-target="#parte-iv-regressioni-per-serie-temporali-di-tipo-economico">Parte IV: Regressioni per Serie Temporali di Tipo Economico</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -155,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
 <li><i class="fa-solid fa-university" aria-label="university"></i> &nbsp; Dipartimento di Economia e Diritto</li>
 <li><i class="fa-solid fa-university" aria-label="university"></i> &nbsp; Prof.&nbsp;Giuseppe Ragusa</li>
 <li><i class="fa-solid fa-envelope" aria-label="envelope"></i> &nbsp; giuseppe.ragusa@uniroma1.it</li>
-<li><i class="fa-solid fa-calendar-check" aria-label="calendar-check"></i> &nbsp; <a href="https://calendar.app.google/GqJnp3LKxM5ZQ3h37">Ricevimento</a></li>
+<li><i class="fa-solid fa-calendar-check" aria-label="calendar-check"></i> &nbsp; <a href="https://calendar.app.google/tsiBtSDWn4QQaRdf9">Ricevimento</a></li>
 </ul>
 </section>
 <section id="dettagli-del-corso" class="level3 g-col-6">
@@ -222,15 +261,15 @@ ul.task-list li input[type="checkbox"] {
 <tbody>
 <tr class="odd">
 <td>Martedì</td>
-<td>16:00-17:00</td>
+<td>15:00-16:00</td>
 </tr>
 <tr class="even">
-<td>Venerdì</td>
-<td>10:00-12:00</td>
+<td>Giovedì</td>
+<td>15:00-17:00</td>
 </tr>
 </tbody>
 </table>
-<p>E’ obbligatorio prenotare un appuntamento a <a href="https://calendar.app.google/GqJnp3LKxM5ZQ3h37">questo link</a>.</p>
+<p>E’ obbligatorio prenotare un appuntamento a <a href="https://calendar.app.google/tsiBtSDWn4QQaRdf9">questo link</a>.</p>
 </section>
 <section id="modalità-di-valutazione" class="level2">
 <h2 class="anchored" data-anchor-id="modalità-di-valutazione">Modalità di valutazione</h2>
@@ -238,8 +277,39 @@ ul.task-list li input[type="checkbox"] {
 <p>La prova scritta valuterà la capacità degli studenti di comprendere e interpretare le stime dei modelli econometrici introdotti durante il corso e di applicarli in contesti specifici.</p>
 <p>La prova orale è volta ad accertare in maniera più articolata le conoscenza acquisite nel corso.</p>
 <p>L’ammissione alla prova orale è consentita agli studenti che abbiano superato con sufficienza la prova scritta.</p>
+</section>
+<section id="programma-per-gli-studenti-dellordinamento-attuale-6-cfu" class="level2">
+<h2 class="anchored" data-anchor-id="programma-per-gli-studenti-dellordinamento-attuale-6-cfu">Programma per gli Studenti dell’Ordinamento Attuale (6 cfu)</h2>
+<section id="parte-i-elementi-fondamentali" class="level3">
+<h3 class="anchored" data-anchor-id="parte-i-elementi-fondamentali">Parte I: Elementi Fondamentali</h3>
+<p>Capitolo 1. <strong>Domande economiche e dati economici</strong>: Introduzione ai quesiti economici, effetti causali, esperimenti ideali e tipologie di dati (sezionali, serie temporali, panel).</p>
+<p>Capitolo 2. <strong>Richiami di probabilità</strong>: Variabili casuali, distribuzioni, valore atteso, varianza, covarianza e principali distribuzioni campionarie</p>
+<p>Capitolo 3. <strong>Richiami di statistica</strong>: Stima, verifica di ipotesi, intervalli di confidenza per medie di popolazioni e confronto tra medie.</p>
+</section>
+<section id="parte-ii-analisi-di-regressione" class="level3">
+<h3 class="anchored" data-anchor-id="parte-ii-analisi-di-regressione">Parte II: Analisi di Regressione</h3>
+<p>Capitolo 4. <strong>Regressione lineare con un singolo regressore</strong>: Il modello OLS, assunzioni dei minimi quadrati, distribuzione campionaria, verifica di ipotesi e intervalli di confidenza.</p>
+<p>Capitolo 5. <strong>Regressione lineare con regressori multipli</strong>: Distorsione da variabile omessa, modello di regressione multipla, collinearità, verifica di ipotesi congiunte (statistica F) e misure di bontà dell’adattamento (<span class="math inline">\(R^2\)</span> e <span class="math inline">\(R^2\)</span> corretto).</p>
+<p>Capitolo 6. <strong>Funzioni di regressione non lineari</strong>: Modellazione di relazioni non lineari tramite polinomi, logaritmi e interazioni tra variabili.</p>
+<p>Capitolo 7. <strong>Valutazione di studi basati sulla regressione multipla</strong>: Validità interna ed esterna, minacce comuni (variabili omesse, errori di misurazione, causalità simultanea).</p>
+</section>
+<section id="parte-iii-ulteriori-sviluppi-dellanalisi-di-regressione" class="level3">
+<h3 class="anchored" data-anchor-id="parte-iii-ulteriori-sviluppi-dellanalisi-di-regressione">Parte III: Ulteriori Sviluppi dell’Analisi di Regressione</h3>
+<p>Capitolo 8. <strong>Regressione con dati panel</strong>: Utilizzo di dati panel per controllare fattori non osservati tramite modelli a effetti fissi ed effetti temporali.</p>
+<p>Capitolo 9. <strong>Regressione con variabile dipendente binaria</strong>: Modello lineare di probabilità e introduzione ai modelli Probit e Logit.</p>
+<p>Capitolo 10. <strong>Regressione con variabili strumentali (IV)</strong>: Logica della stima IV, lo stimatore dei minimi quadrati a due stadi (TSLS) e le condizioni di validità degli strumenti (rilevanza ed esogeneità).</p>
+</section>
+</section>
+<section id="programma-per-studenti-con-esame-da-9-cfu" class="level2">
+<h2 class="anchored" data-anchor-id="programma-per-studenti-con-esame-da-9-cfu">Programma per Studenti con Esame da 9 CFU</h2>
+<p>Gli studenti che devono sostenere l’esame da 9 crediti, sono tenuti a portare <strong>tutto il programma sopra elencato</strong>, con l’<strong>aggiunta</strong> dei seguenti capitoli relativi alle serie temporali:</p>
+<section id="parte-iv-regressioni-per-serie-temporali-di-tipo-economico" class="level3">
+<h3 class="anchored" data-anchor-id="parte-iv-regressioni-per-serie-temporali-di-tipo-economico">Parte IV: Regressioni per Serie Temporali di Tipo Economico</h3>
+<p>Capitolo 12. <strong>Introduzione a regressioni temporali e previsioni</strong>: Modelli autoregressivi (AR), stazionarietà, trend, rotture strutturali e criteri di informazione per la scelta della lunghezza dei ritardi.</p>
+<p>Capitolo 13. <strong>Stima degli effetti causali dinamici</strong>: Modelli a ritardi distribuiti (ADL), esogeneità e stima con errori autocorrelati (errori standard HAC).</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
