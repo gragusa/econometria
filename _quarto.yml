@@ -13,7 +13,7 @@ execute:
 
 bibliography: files/bib/references.bib
 csl: files/bib/chicago-author-date.csl
-description-meta: "Econometria 2023/2024 - Giuseppe Ragusa - Sapienza"
+description-meta: "Econometria 2025/2026 - Giuseppe Ragusa - Sapienza"
 
 website:
   title: "Econometria"
@@ -35,75 +35,6 @@ website:
       - text: "Introduzione a `R`"
         icon: filetype-html
         href: IntroduzioneR.qmd
-      - text: "Slide Lezione 1"
-        icon: filetype-pdf
-        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione1.pdf?forcedownload=1
-      - text: "Slide Lezione 2"
-        icon: filetype-pdf
-        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione2.pdf?forcedownload=1
-      - text: "Slide Lezione 3"
-        icon: filetype-pdf
-        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione3.pdf?forcedownload=1
-      - text: "Slide Lezione 4"
-        icon: filetype-pdf
-        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione4.pdf?forcedownload=1
-      - text: "Slide Lezione 5"
-        icon: filetype-pdf
-        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione5.pdf?forcedownload=1
-      - text: "Slide Lezione 6"
-        icon: filetype-pdf
-        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione6.pdf?forcedownload=1
-      - text: "Slide Lezione 7"
-        icon: filetype-pdf
-        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione7.pdf?forcedownload=1
-      - text: "Lezione 8 (qmd)"
-        icon: code-slash
-        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione8.qmd?forcedownload=1
-      - text: "Lezione 8 (html)"
-        icon: filetype-html
-        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione8.html?forcedownload=1
-      - text: "Lezione 9-10"
-        icon: filetype-pdf
-        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione9-10.pdf?forcedownload=1
-      - text: "Lezione 11"
-        icon: filetype-pdf
-        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione11.pdf?forcedownload=1
-      - text: "Lezione 12 (qmd)"
-        icon: code-slash
-        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione12.qmd?forcedownload=1
-      - text: "Lezione 12 (html)"
-        icon: filetype-html
-        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione12.html?forcedownload=1
-      - text: "Lezione 13"
-        icon: filetype-pdf
-        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione13.pdf?forcedownload=1
-      - text: "Lezione 14"
-        icon: filetype-pdf
-        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione14.pdf?forcedownload=1
-      - text: "Lezione 15 & 16"
-        icon: filetype-pdf
-        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione15-16.pdf?forcedownload=1
-      - text: "Lezione 15 & 16 HMDA (qmd)"
-        icon: code-slash
-        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione15-16_hmda.qmd?forcedownload=1
-      - text: "Lezione 15 & 16 HMDA (html)"
-        icon: filetype-html
-        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione15-16_hmda.html?forcedownload=1
-      - text: "Lezione 17"
-        icon: filetype-pdf
-        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione17.pdf?forcedownload=1
-      - text: "Efficienza dei Marcati (html)"
-        icon: filetype-html
-        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/EfficienzaDeiMercati.html?forcedownload=1
-      - text: "Efficienza dei Marcati (qmd)"
-        icon: code-slash
-        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/EfficienzaDeiMercati.qmd?forcedownload=1
-      - text: "Lezione 18"
-        icon: filetype-pdf
-        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione18.pdf?forcedownload=1
-      - text: "Lezione 19"
-        icon: filetype-pdf
-        href: https://elearning.uniroma1.it/pluginfile.php/1479541/mod_folder/content/0/Lezione19.pdf?forcedownload=1
 
   page-footer:
     left: |

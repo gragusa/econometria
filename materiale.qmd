@@ -7,26 +7,24 @@ resources:
 
 
 ```{r packages-data, include=FALSE}
-library(pacman)
-p_load(tidyverse)
-p_load(knitr)
-p_load(kableExtra)
-p_load(xlsx)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+# library(xlsx) # Requires Java - use readxl instead if needed
 ```
 
 ::: {.home}
 
 - Questa pagina contiene i collegamenti al materiale didattico del corso. (Nella sidebar qui a sinistra)
 
-- Il materiale didattico è organizzato per lezione e a ciscuna lezione è associato
-  1. [le slide]{.high} {{< iconify bi filetype-pdf >}}
-  2. [dispense `R` in formato html]{.high} {{< iconify bi filetype-html >}}
-  3. [il codice `R` in formato qmd]{.high} in formato Rmd {{< iconify bi code-slash >}}
-  4. [letture consigliate]{.high} {{< iconify bi book >}}
+- Il materiale didattico è organizzato per lezione e a ciascuna lezione potrà essere associato:
+  1. [dispense `R` in formato html]{.high} {{< iconify bi filetype-html >}}
+  2. [il codice `R` in formato qmd]{.high} {{< iconify bi code-slash >}}
+  3. [letture consigliate]{.high} {{< iconify bi book >}}
 
 - I collegamenti (a sinistra) si attiveranno in sincrono con la progressione del corso.
 
-- Per scaricare le slides bisogna essersi registrati al [sito moodle del corso](https://elearning.uniroma1.it/course/view.php?id=16325) 
+- Per accedere al materiale didattico aggiuntivo consultare il [sito Moodle del corso](https://elearning.uniroma1.it/)
 
 :::
 

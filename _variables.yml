@@ -12,14 +12,14 @@ instructor:
 course:
   name: "Econometria"
   number: "1018133"
-  semester: "2024-2025"
-  days: "Martedì (Ma) e Mercoledì (Me)"
-  time: "(Ma) 14:00–16:00 (Me) 16:00-18:00"
-  location: "Aula 10"
-  dates: "18 febbraio, 2025 - 31 maggio 2025"
+  semester: "2025-2026"
+  days: "Martedì (Ma) e Giovedì (Gi)"
+  time: "(Ma) 14:00–16:00 (Gi) 18:00-20:00"
+  location: "TBA"
+  dates: "24 febbraio, 2026 - 28 maggio 2026"
   github: "https://www.github.com/gragusa/econometria"
   url: "https://gragusa.org/econometria"
-  copyright_year: "2023, 2024, 2025"
+  copyright_year: "2023, 2024, 2025, 2026"
 
 university:
   name: Sapienza, Università di Roma

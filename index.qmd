@@ -1,6 +1,6 @@
 ---
 title: "{{< var course.name >}} ({{< var course.number >}})"
-subtitle: "Canale A-L + Canele M-Z - Anno Accaddemico: 2024/2025"
+subtitle: "Canale A-L - Anno Accademico: 2025/2026"
 sidebar: false
 toc: false
 ---
