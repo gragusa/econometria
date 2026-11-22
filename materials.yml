@@ -1,0 +1,18 @@
+# Materiale didattico: una voce per ciascun file o collegamento, nell'ordine in
+# cui deve comparire. `file` punta a un file del repository (controllato da
+# scripts/check-materials.py); `href` è un collegamento esterno o a una pagina
+# del sito. Campi obbligatori: week, topic, kind, title. `date` è facoltativo.
+
+- week: "Introduzione"
+  topic: "Introduzione a R"
+  kind: "Dispense"
+  title: "Introduzione a R"
+  href: IntroduzioneR.html
+  note: "html"
+
+- week: "Introduzione"
+  topic: "Introduzione a R"
+  kind: "Codice"
+  title: "Introduzione a R"
+  file: IntroduzioneR.qmd
+  note: "codice R in formato qmd"

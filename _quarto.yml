@@ -1,19 +1,22 @@
 project:
   type: website
+  pre-render: scripts/check-materials.py
   render:
     - "*.qmd"
+    - "avvisi/*.md"
     - "!slides/"
     - "!ModelloLineare.qmd"
   resources:
     - "files/"
-    - "html/"
 
 execute:
   freeze: auto # Re-render only when source changes
 
+lang: it
+
 bibliography: files/bib/references.bib
 csl: files/bib/chicago-author-date.csl
-description-meta: "Econometria 2025/2026 - Giuseppe Ragusa - Sapienza"
+description-meta: "Econometria - Giuseppe Ragusa - Sapienza"
 
 website:
   title: "Econometria"
@@ -21,32 +24,25 @@ website:
   site-path: "/econometria/"
   favicon: "/files/icon-512.png"
   navbar:
-    pinned: true
-    background: "#344454"
+    title: "Econometria"
     right:
+      - text: "Avvisi"
+        href: avvisi.qmd
       - syllabus.qmd
       - text: "Materiale didattico"
         file: materiale.qmd
-
-  sidebar:
-    style: "docked"
-    search: true
-    contents:
-      - text: "Introduzione a `R`"
-        icon: filetype-html
-        href: IntroduzioneR.qmd
+      - icon: rss
+        href: avvisi.xml
+        aria-label: "Feed RSS degli avvisi"
 
   page-footer:
-    left: |
-    right: |
+    left: "Giuseppe Ragusa · Sapienza, Università di Roma"
+    right: "[gragusa.org](https://gragusa.org)"
 
 format:
-  html:
+  academic-html:
     email-obfuscation: javascript
-    theme:
-      - litera
-      - html/custom.scss
-    grid:
-      sidebar-width: 375px
-    toc: true
-    highlight-style: monokai
+    # Course identity: the only two values that differ between course sites.
+    include-in-header:
+      text: |
+        <style>:root { --course: #b95115; --course-mark: "EC"; }</style>

@@ -1,40 +1,69 @@
 ---
 title: "{{< var course.name >}} ({{< var course.number >}})"
-subtitle: "Canale A-L - Anno Accademico: 2025/2026"
-sidebar: false
-toc: false
+subtitle: "Canale A-L - Anno Accademico: {{< var course.semester >}}"
+body-classes: page-home
+listing:
+  id: avvisi
+  contents: avvisi
+  sort: "date desc"
+  max-items: 4
+  date-format: "D MMM YYYY"
+  max-description-length: 400
+  template: _extensions/gragusa/academic/listings/dated-list.ejs
+  template-params:
+    empty: "Nessun avviso per ora."
 ---
 
+::: {.course-hero}
+[Corso {{< var course.number >}} · Canale A-L · Anno Accademico {{< var course.semester >}}]{.kicker}
 
-::: {.grid .course-details}
+# {{< var course.name >}} {.course-title}
 
-::: {.g-col-6}
-### Docente
-
-- {{< fa user >}} &nbsp; [{{< var instructor.name >}}]({{< var instructor.url >}})
-- {{< fa university >}} &nbsp; {{< var university.name >}}
-- {{< fa university >}} &nbsp; {{< var school.name >}}
-- {{< fa university >}} &nbsp; {{< var instructor.office >}}
-- {{< fa envelope >}} &nbsp; [{{< var instructor.email >}}](mailto:{{< var instructor.email >}})
-- {{< fa calendar-check >}} &nbsp; [Ricevimento]({{< var instructor.appointment_url >}})
+[{{< var school.name >}}, {{< var university.name >}}]{.lede}
 :::
 
-::: {.g-col-6}
-### Dettagli del corso
-
-- {{< fa calendar >}} &nbsp; {{< var course.days >}}
-- {{< fa calendar-alt >}} &nbsp; {{< var course.dates >}}
-- {{< fa clock >}} &nbsp; {{< var course.time >}}
-- {{< fa location-dot >}} &nbsp; {{< var course.location >}}
-
+::: {.localnav}
+[Avvisi](avvisi.qmd) [Materiale didattico](materiale.qmd) [Syllabus](syllabus.qmd) [Feed RSS](avvisi.xml)
 :::
 
+## Avvisi
+
+::: {#avvisi}
 :::
+
+::: {.more-links}
+[Tutti gli avvisi](avvisi.qmd)
+:::
+
+## Docente e dettagli del corso
+
+:::: {.course-facts}
+::: {}
+[Docente]{.fact-label} [{{< var instructor.name >}}]({{< var instructor.url >}})
+:::
+::: {}
+[Email]{.fact-label} [{{< var instructor.email >}}](mailto:{{< var instructor.email >}})
+:::
+::: {}
+[Ricevimento]{.fact-label} [Prenota un appuntamento]({{< var instructor.appointment_url >}})
+:::
+::: {}
+[Studio]{.fact-label} {{< var instructor.office >}}
+:::
+::: {}
+[Giorni]{.fact-label} {{< var course.days >}}
+:::
+::: {}
+[Orario]{.fact-label} {{< var course.time >}}
+:::
+::: {}
+[Periodo]{.fact-label} {{< var course.dates >}}
+:::
+::: {}
+[Aula]{.fact-label} {{< var course.location >}}
+:::
+::::
 
 ## Descrizione del corso
 
-[{{< var course.name >}} ({{< var course.number >}})]{.coursename} offre agli studenti un'introduzione pratica all'econometria, strumento fondamentale per comprendere e analizzare l’economia da un punto di vista empirico. Attraverso un approccio equilibrato tra teoria e pratica, gli studenti esploreranno i concetti fondamentali e gli strumenti empirici necessari per comprendere le sfide relative all’impiego di tecniche quantitative in microeconomia, macroeconomia e finanza. 
-
-
-
-
+[{{< var course.name >}} ({{< var course.number >}})]{.coursename} offre agli studenti un'introduzione pratica all'econometria, strumento fondamentale per comprendere e analizzare l’economia da un punto di vista empirico. Attraverso un approccio equilibrato tra teoria e pratica, gli studenti esploreranno i concetti fondamentali e gli strumenti empirici necessari per comprendere le sfide relative all’impiego di tecniche quantitative in microeconomia, macroeconomia e finanza.

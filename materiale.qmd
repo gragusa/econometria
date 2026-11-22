@@ -1,28 +1,24 @@
 ---
 title: "Materiale didattico"
-sidebar: true
 resources: 
   - IntroduzioneR.qmd
+listing:
+  contents: materials.yml
+  sort: false
+  template: _extensions/gragusa/academic/listings/materials.ejs
 ---
 
 
-```{r packages-data, include=FALSE}
-library(tidyverse)
-library(knitr)
-library(kableExtra)
-# library(xlsx) # Requires Java - use readxl instead if needed
-```
-
 ::: {.home}
 
-- Questa pagina contiene i collegamenti al materiale didattico del corso. (Nella sidebar qui a sinistra)
+- Questa pagina contiene i collegamenti al materiale didattico del corso. (Qui sotto)
 
 - Il materiale didattico è organizzato per lezione e a ciascuna lezione potrà essere associato:
   1. [dispense `R` in formato html]{.high} {{< iconify bi filetype-html >}}
   2. [il codice `R` in formato qmd]{.high} {{< iconify bi code-slash >}}
   3. [letture consigliate]{.high} {{< iconify bi book >}}
 
-- I collegamenti (a sinistra) si attiveranno in sincrono con la progressione del corso.
+- I collegamenti (qui sotto) si attiveranno in sincrono con la progressione del corso.
 
 - Per accedere al materiale didattico aggiuntivo consultare il [sito Moodle del corso](https://elearning.uniroma1.it/)
 

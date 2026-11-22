@@ -1,0 +1,15 @@
+---
+title: "Avvisi"
+listing:
+  contents: avvisi
+  sort: "date desc"
+  date-format: "D MMM YYYY"
+  max-description-length: 400
+  template: _extensions/gragusa/academic/listings/dated-list.ejs
+  template-params:
+    empty: "Nessun avviso per ora."
+  feed:
+    type: full
+---
+
+Gli avvisi del corso, dal più recente. Per riceverli con un lettore di feed, usare il [feed RSS](avvisi.xml).

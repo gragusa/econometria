@@ -9,24 +9,24 @@ language:
 
 ::: {.grid .course-details}
 
-::: {.g-col-6}
+::: {.g-col-12 .g-col-md-6}
 ### Docente
 
 - {{< fa user >}} &nbsp; [{{< var instructor.name >}}]({{< var instructor.url >}})
 - {{< fa university >}} &nbsp; {{< var university.name >}}
 - {{< fa university >}} &nbsp; {{< var school.name >}}
-- {{< fa university >}} &nbsp; {{< var instructor.name >}}
+- {{< fa university >}} &nbsp; {{< var instructor.office >}}
 - {{< fa envelope >}} &nbsp; {{< var instructor.email >}}
 - {{< fa calendar-check >}} &nbsp; [Ricevimento]({{< var instructor.appointment_url >}})
 :::
 
-::: {.g-col-6}
+::: {.g-col-12 .g-col-md-6}
 ### Dettagli del corso
 
-- {{< fa calendar >}} &nbsp; {{< var course.days >}}
-- {{< fa calendar-alt >}} &nbsp; {{< var course.dates >}}
-- {{< fa clock >}} &nbsp; {{< var course.time >}}
-- {{< fa location-dot >}} &nbsp; {{< var course.location >}}
+- {{< fa calendar >}} &nbsp; Giorni: {{< var course.days >}}
+- {{< fa calendar-alt >}} &nbsp; Periodo: {{< var course.dates >}}
+- {{< fa clock >}} &nbsp; Orario: {{< var course.time >}}
+- {{< fa location-dot >}} &nbsp; Aula: {{< var course.location >}}
 
 :::
 
@@ -53,11 +53,11 @@ In particolare, gli studenti saranno in grado di:
 
 ::: {.grid .libro}
 
-::: {.g-col-4}
+::: {.g-col-12 .g-col-md-4}
 ![](sw.png){width=75%}
 :::
 
-::: {.g-col-8}
+::: {.g-col-12 .g-col-md-8}
 Il libro di testo utilizzato in questo corso è:
 
 
@@ -72,12 +72,12 @@ Durante il corso, gli studenti avranno accesso a slides didattiche che fornirann
 
 ::: {.grid .r}
 
-::: {.g-col-4}
+::: {.g-col-12 .g-col-md-4}
 ![](https://www.r-project.org/Rlogo.png)
 :::
 
 
-::: {.g-col-8}
+::: {.g-col-12 .g-col-md-8}
 Come già accennato, il corso prevede l'utilizzo di [R](http://r-project.org), uno dei linguaggi di programmazione statistico/econometrico più diffusi e potenti.
 
 [R](http://r-project.org) ha una licenza open-source (GNU GPL), è compatibile con i maggiori sistemi operativi (GNU/Linux, macOS, Microsoft Windows).
@@ -87,12 +87,7 @@ Come già accennato, il corso prevede l'utilizzo di [R](http://r-project.org), u
 
 ## Orari di ricevimento
 
-Gli orari di ricevimento sono:
-
-| Giorno    | Orario      |
-| --------- | ----------- |
-| Martedì   | 15:00-16:00 |
-| Giovedì   | 15:00-17:00 |
+Gli orari di ricevimento per l'anno accademico {{< var course.semester >}} sono da definire.
 
 E' obbligatorio prenotare un appuntamento a [questo link]({{< var instructor.appointment_url >}}).
 
